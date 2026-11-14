@@ -22,12 +22,14 @@ npm run preview
 ## First milestone
 
 - Responsive discovery page with genre filters.
-- Sample artist space preview.
+- Full artist storefront at `#/artist/mira-sol`: release player, catalog filters, product previews, artist story, studio journal, and demo newsletter.
+- Original synthesized 30-second ambient audio preview (shared across the fictional tracklist).
+- Follow preference saved on this device; newsletter and checkout remain demonstrations.
 - Original CSS artwork; fictional artists and releases.
 - React + TypeScript + Vite.
 - GitHub Pages deployment on pushes to `main`.
 
-This is a frontend concept. Audio, authentication, uploads, purchases, payouts, and artist customization are not implemented. No real artist claims, ownership guarantees, or commercial transactions are represented by the demo.
+This is a frontend concept. Audio previews are a synthesized demo, not the fictional artist’s recordings. Authentication, uploads, purchases, payouts, and artist customization are not implemented. No real artist claims, ownership guarantees, or commercial transactions are represented by the demo.
 
 ## Direction
 
