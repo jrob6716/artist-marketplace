@@ -1883,3 +1883,156 @@
     margin-left: 14px;
   }
 }
+
+/* Human photography anchors the visual identity without replacing release art. */
+.mt-hero-photo,
+.mt-photo-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 36%;
+}
+.mt-photo-shade {
+  background:
+    linear-gradient(
+      90deg,
+      #141313ed 0%,
+      #141313c4 30%,
+      #14131345 60%,
+      #1413130d 100%
+    ),
+    linear-gradient(0deg, #141313b0, transparent 35%);
+}
+.mt-photo-hero .mt-hero-orbit {
+  display: none;
+}
+.mt-photo-hero .mt-hero-grid {
+  opacity: 0.45;
+}
+.mt-photo-hero .mt-hero-top,
+.mt-photo-hero .mt-hero-caption {
+  color: #d0c6bf;
+}
+.mt-photo-hero .mt-hero-type {
+  right: 40%;
+  left: 6%;
+  top: 140px;
+}
+.m3tta-world .mt-photo-hero h1 {
+  font-size: clamp(100px, 13vw, 190px);
+}
+.mt-photo-hero .mt-hero-bottom {
+  display: block;
+}
+.mt-photo-hero .mt-hero-bottom > a {
+  width: max-content;
+  margin-top: 28px;
+}
+.mt-photo-hero .mt-hero-bottom em {
+  color: #d0c4bb;
+}
+.mt-photo-avatar {
+  overflow: hidden;
+  border: 1px solid #60544b;
+}
+.mt-photo-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 80% 25%;
+  transform: scale(1.35);
+  transform-origin: 80% 25%;
+}
+.mt-photo-story {
+  padding: 0;
+  min-height: 550px;
+}
+.mt-photo-story > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 77% center;
+}
+.mt-photo-story:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #111e 0%, #1111 55%, transparent);
+  pointer-events: none;
+}
+.mt-photo-story > span {
+  position: absolute;
+  bottom: 70px;
+  left: 30px;
+  right: 20px;
+  font-size: 48px;
+  letter-spacing: -0.5px;
+  z-index: 2;
+}
+.mt-photo-story > small {
+  z-index: 2;
+  left: 30px;
+  right: 20px;
+  font-size: 5px;
+  letter-spacing: 1.3px;
+  line-height: 1.8;
+}
+@media (max-width: 700px) {
+  .mt-photo-hero {
+    height: 540px;
+  }
+  .mt-hero-photo {
+    object-position: 75% 15%;
+  }
+  .mt-photo-shade {
+    background:
+      linear-gradient(0deg, #141313f5 0%, #141313c4 30%, #14131308 70%),
+      linear-gradient(90deg, #1115, transparent);
+  }
+  .mt-photo-hero .mt-hero-type {
+    top: auto;
+    bottom: 57px;
+    left: 6%;
+    right: 6%;
+  }
+  .m3tta-world .mt-photo-hero h1 {
+    font-size: clamp(95px, 21vw, 145px);
+  }
+  .mt-photo-hero .mt-hero-type > p {
+    font-size: 6px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  .mt-photo-hero .mt-hero-bottom {
+    display: flex;
+    margin-top: 22px;
+  }
+  .mt-photo-hero .mt-hero-bottom > a {
+    margin-top: 0;
+    gap: 14px;
+    font-size: 5px;
+  }
+  .mt-photo-hero .mt-hero-top {
+    color: #e6ded8;
+  }
+  .mt-photo-hero .mt-hero-caption {
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
+  .mt-photo-story {
+    min-height: 440px;
+  }
+  .mt-photo-story > span {
+    font-size: 46px;
+    bottom: 62px;
+    left: 25px;
+  }
+  .mt-photo-story > small {
+    left: 25px;
+    font-size: 5px;
+  }
+}

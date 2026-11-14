@@ -188,13 +188,11 @@ export default function M3ttaPage() {
     ) as HTMLAnchorElement | null;
     if (!anchor) return;
     event.preventDefault();
-    document
-      .getElementById(anchor.hash.slice(1))
-      ?.scrollIntoView({
-        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
-          ? "instant"
-          : "smooth",
-      });
+    document.getElementById(anchor.hash.slice(1))?.scrollIntoView({
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+    });
   }
   function close() {
     dialog.current?.close();
@@ -212,7 +210,16 @@ export default function M3ttaPage() {
         </a>
         <span>ARTIST SPACE / 002</span>
       </div>
-      <section className="mt-hero">
+      <section className="mt-hero mt-photo-hero">
+        <img
+          className="mt-hero-photo"
+          src={`${import.meta.env.BASE_URL}images/m3tta-studio-concept.jpg`}
+          alt="AI-generated concept photo of an electronic musician listening in a recording studio"
+          width="1536"
+          height="1024"
+          fetchPriority="high"
+        />
+        <div className="mt-photo-shade" />
         <div className="mt-hero-grid" />
         <div className="mt-hero-orbit" aria-hidden="true">
           <div />
@@ -242,12 +249,17 @@ export default function M3ttaPage() {
           </div>
         </div>
         <span className="mt-hero-caption">
-          VISUAL DIRECTION 01 / ARTIST STOREFRONT CONCEPT
+          M3TTA / STUDIO PORTRAIT CONCEPT · AI-GENERATED
         </span>
       </section>
       <div className="mt-identity">
-        <div className="mt-monogram" aria-hidden="true">
-          M3
+        <div className="mt-monogram mt-photo-avatar" aria-hidden="true">
+          <img
+            src={`${import.meta.env.BASE_URL}images/m3tta-studio-concept.jpg`}
+            alt=""
+            width="65"
+            height="65"
+          />
         </div>
         <div>
           <strong>
@@ -548,20 +560,20 @@ export default function M3ttaPage() {
           </div>
         </section>
         <section id="mt-about" className="mt-about">
-          <div
-            className="mt-about-visual"
-            role="img"
-            aria-label="Abstract M3TTA energy field"
-          >
-            <div className="mt-field" />
+          <div className="mt-about-visual mt-photo-story">
+            <img
+              src={`${import.meta.env.BASE_URL}images/m3tta-studio-concept.jpg`}
+              alt="Illustrative studio portrait of a fictional producer at a synthesizer"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
             <span>
-              BE
+              BE HERE.
               <br />
-              HERE.
-              <br />
-              <em>NOW.</em>
+              <em>FEEL SOMETHING.</em>
             </span>
-            <small>M3TTA / A SHARED FREQUENCY</small>
+            <small>AI-GENERATED CONCEPT PORTRAIT / NOT A PHOTO OF M3TTA</small>
           </div>
           <div className="mt-about-copy">
             <p className="mt-label">05 / THE VISION</p>
