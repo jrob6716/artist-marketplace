@@ -717,7 +717,7 @@ export default function M3ttaPage() {
         <p>
           INDEPENDENT SOUND. DIRECT CONNECTION.
           <small>
-            M3TTA brand mockup · Placeholder catalog, copy & merchandise.
+            M3TTA brand mockup · Concept catalog & merchandise.
           </small>
         </p>
         <a className="mt-footer-am" href="#">
