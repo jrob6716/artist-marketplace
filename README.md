@@ -22,6 +22,7 @@ npm run preview
 ## First milestone
 
 - Responsive discovery page with genre filters.
+- M3TTA storefront at `#/artist/m3tta`, with a monochrome/red visual direction, concept releases, merchandise previews, and the real Sessions archive link.
 - Full artist storefront at `#/artist/mira-sol`: release player, catalog filters, product previews, artist story, studio journal, and demo newsletter.
 - Original synthesized 30-second ambient audio preview (shared across the fictional tracklist).
 - Follow preference saved on this device; newsletter and checkout remain demonstrations.
@@ -40,3 +41,7 @@ See [the project brief](docs/project-brief.md) for scope and next decisions.
 ## Hosting
 
 GitHub Pages serves the static prototype. Future accounts, protected downloads, payments, and media uploads will require backend services. Vite's base path is configured for the `artist-marketplace` repository.
+
+## M3TTA brand reference
+
+The founder supplied the [M3TTA Sessions #001 Amazon Music page](https://music.amazon.com/podcasts/f49790e6-2e1f-4289-a97a-8bd93219b708/episodes/9514ae60-78c3-4e12-8aa9-fbd35a195ae8/metta-sessions-m3tta-sessions-001) as a visual reference. Its series artwork is stored at `public/images/m3tta-sessions-reference.jpg`. The source image itself says Episode 002; the UI presents it as series artwork and links to the supplied #001 episode. The storefront wordmark is a typographic interpretation, not a supplied vector logo. All other M3TTA cover designs, releases, merchandise, prices, and biography copy are proposed concepts. Preview audio is the shared synthesized demo, not a M3TTA recording.

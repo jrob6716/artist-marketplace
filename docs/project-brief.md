@@ -19,6 +19,11 @@ Discovery page, genre filtering, and fictional artist preview. No backend or com
 4. Purchase/download model and platform economics.
 5. Artist signup, upload, and publishing experience.
 
+## Additional artist mockup: M3TTA
+- Route: `#/artist/m3tta`.
+- Founder direction: simple, minimal, futuristic; supplied M3TTA Sessions artwork informs charcoal, white, red, and tightly set typography.
+- Includes a real external Sessions #001 link. All storefront releases, products, prices, and bio copy are concept material.
+
 ## Suggested implementation sequence
 1. Refine discovery and artist storefront designs.
 2. Add release pages and licensed preview audio.
