@@ -72,20 +72,20 @@ function Cover({
   const artwork =
     variant === "current"
       ? {
-          file: "m3tta-inner-current-art.jpg",
+          file: "m3tta-inner-current-sculpture.jpg",
           title: "Inner Current",
           number: "002",
           subtitle: "INNER / CURRENT",
         }
       : variant === "portal"
         ? {
-            file: "m3tta-no-separation-art.jpg",
+            file: "m3tta-no-separation-sculpture.jpg",
             title: "No Separation",
             number: "003",
             subtitle: "NO / SEPARATION",
           }
         : {
-            file: "m3tta-third-state-art.jpg",
+            file: "m3tta-third-state-sculpture.jpg",
             title: "Third State",
             number: "001",
             subtitle: "THIRD / STATE",

@@ -2383,3 +2383,27 @@
     letter-spacing: 0.7px;
   }
 }
+
+/* Cool sculptural series, inspired by the founder's visual reference. */
+.mt-cover.visual-art {
+  background: #030608;
+}
+.mt-cover.visual-art:after {
+  background: linear-gradient(
+    180deg,
+    #01030445,
+    transparent 22%,
+    transparent 61%,
+    #010304c9
+  );
+}
+.visual-art .mt-cover-brand {
+  color: #edf3f7;
+}
+.visual-art .mt-cover-bottom > strong {
+  color: #f0f5f8;
+  letter-spacing: 0.4px;
+}
+.visual-art .mt-cover-bottom > span {
+  color: #aebfcd;
+}
