@@ -105,14 +105,17 @@ function Cover({
 }
 function Shirt() {
   return (
-    <div className="mt-shirt">
-      <span>
-        M3TTA<small>SOUND IS A STATE OF BEING</small>
-        <i>✳</i>
-      </span>
-    </div>
+    <img
+      className="mt-tee-photo"
+      width="1448"
+      height="1086"
+      src={`${import.meta.env.BASE_URL}images/m3tta-frequency-tee.jpg`}
+      alt="Realistic concept mockup of a washed-black heavyweight tee with a white M3TTA chest print and small red accent"
+      loading="lazy"
+    />
   );
 }
+
 const time = (value: number) =>
   `${Math.floor(value / 60)}:${String(Math.floor(value % 60)).padStart(2, "0")}`;
 
@@ -235,53 +238,9 @@ export default function M3ttaPage() {
         </div>
         <div className="mt-hero-type">
           <p>SOUND. ENERGY. CONNECTION.</p>
-          <h1 className="mt-future-wordmark" aria-label="M3TTA">
-            <svg
-              viewBox="0 0 850 180"
-              role="presentation"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <defs>
-                <linearGradient
-                  id="mt-wordmark-metal"
-                  x1="0"
-                  y1="0"
-                  x2="0"
-                  y2="1"
-                >
-                  <stop offset="0" stopColor="#ffffff" />
-                  <stop offset="0.48" stopColor="#f5f4f1" />
-                  <stop offset="1" stopColor="#b6b8b9" />
-                </linearGradient>
-                <mask id="mt-wordmark-cut">
-                  <path fill="white" d="M0 0H850V180H0z" />
-                  <path fill="black" d="M0 90H850V94H0z" />
-                </mask>
-              </defs>
-              <g fill="url(#mt-wordmark-metal)" mask="url(#mt-wordmark-cut)">
-                <path d="M0 168V12H40L83 76 126 12H166V168H126V78L83 137 40 78V168Z" />
-                <path d="M184 12H298L325 39V72L308 88 325 105V141L298 168H184V133H278V105H213V75H278V47H184Z" />
-                <path d="M342 12H492V48H437V168H397V48H342Z" />
-                <path d="M503 12H653V48H598V168H558V48H503Z" />
-                <path
-                  fillRule="evenodd"
-                  d="M728 12H771L840 168H795L783 138H714L702 168H658ZM729 105H771L750 54Z"
-                />
-              </g>
-              <path
-                className="mt-wordmark-signal"
-                fill="#ff3929"
-                d="M213 75H278V88H213Z"
-              />
-            </svg>
+          <h1>
+            M3TTA<span aria-hidden="true">✳</span>
           </h1>
-          <div className="mt-wordmark-caption" aria-hidden="true">
-            <span>INDEPENDENT SOUND SYSTEM</span>
-            <span>
-              M3 / 001 <i />
-            </span>
-          </div>
           <div className="mt-hero-bottom">
             <p>
               Sound is a<br />
@@ -821,7 +780,7 @@ export default function M3ttaPage() {
         </button>
         <p className="mt-label">M3TTA / OBJECT PREVIEW</p>
         {product?.kind === "shirt" ? (
-          <div className="mt-dialog-scene">
+          <div className="mt-dialog-scene mt-tee-detail">
             <Shirt />
           </div>
         ) : product?.kind === "record" ? (
