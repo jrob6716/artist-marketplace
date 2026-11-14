@@ -628,42 +628,51 @@ export default function M3ttaPage() {
               <span className="mt-bio-alias">M3TTA / DIRTYFREQS</span>
             </h2>
             <p className="mt-bio-role">PRODUCER / COMPOSER / PROGRAMMER</p>
-            <p>
-              Jason Robinson is a Southern California–based music producer,
-              composer, and programmer whose work spans pop, electronic music,
-              and original composition for film, television, and advertising.
-              Also known as DIRTYFREQS and M3TTA, he brings a love of melody,
-              rhythm, and sonic detail to both his collaborations and
-              independent releases.
-            </p>
-            <p>
-              Jason’s interest in music began with a Casio keyboard and guitar,
-              sparking a curiosity that developed into a career in production.
-              Through his longstanding collaboration with Grammy-winning remixer
-              Dave Audé, he has contributed production and programming to
-              projects involving Selena Gomez, Lady Gaga, Beyoncé, Keri Hilson,
-              Paul Oakenfold, and Hilary Duff. His credits include work with
-              Rock Mafia and Audé on Selena Gomez’s “Kill Em with Kindness,”
-              along with production and reprogramming contributions to seven
-              tracks on Sting’s <em>My Songs</em>. His collaborations with
-              Justin Caruso have also reached millions of streams.
-            </p>
-            <p>
-              As M3TTA, Jason explores the intersection of progressive house,
-              trance, synthwave, and techno, pairing nostalgic textures with
-              driving basslines and emotive melodies. His releases and remixes
-              have received support from Armin van Buuren’s{" "}
-              <em>A State of Trance</em>, Above &amp; Beyond’s{" "}
-              <em>Group Therapy</em>, Paul van Dyk, Paul Oakenfold, and
-              Christopher Lawrence.
-            </p>
-            <p>
-              Through Dirtyfreqs, Jason applies that range to music for picture,
-              creating everything from intimate atmospheric pieces to energetic
-              electronic productions. Whether supporting an artist’s vision or
-              shaping the mood of a scene, his focus is on music that serves the
-              project and connects with the listener.
-            </p>
+            <div
+              className="mt-bio-scroll"
+              role="region"
+              aria-label="Jason Robinson biography"
+              tabIndex={0}
+            >
+              <p>
+                Jason Robinson is a Southern California–based music producer,
+                composer, and programmer whose work spans pop, electronic music,
+                and original composition for film, television, and advertising.
+                Also known as DIRTYFREQS and M3TTA, he brings a love of melody,
+                rhythm, and sonic detail to both his collaborations and
+                independent releases.
+              </p>
+              <p>
+                Jason’s interest in music began with a Casio keyboard and
+                guitar, sparking a curiosity that developed into a career in
+                production. Through his longstanding collaboration with
+                Grammy-winning remixer Dave Audé, he has contributed production
+                and programming to projects involving Selena Gomez, Lady Gaga,
+                Beyoncé, Keri Hilson, Paul Oakenfold, and Hilary Duff. His
+                credits include work with Rock Mafia and Audé on Selena Gomez’s
+                “Kill Em with Kindness,” along with production and reprogramming
+                contributions to seven tracks on Sting’s <em>My Songs</em>. His
+                collaborations with Justin Caruso have also reached millions of
+                streams.
+              </p>
+              <p>
+                As M3TTA, Jason explores the intersection of progressive house,
+                trance, synthwave, and techno, pairing nostalgic textures with
+                driving basslines and emotive melodies. His releases and remixes
+                have received support from Armin van Buuren’s{" "}
+                <em>A State of Trance</em>, Above &amp; Beyond’s{" "}
+                <em>Group Therapy</em>, Paul van Dyk, Paul Oakenfold, and
+                Christopher Lawrence.
+              </p>
+              <p>
+                Through Dirtyfreqs, Jason applies that range to music for
+                picture, creating everything from intimate atmospheric pieces to
+                energetic electronic productions. Whether supporting an artist’s
+                vision or shaping the mood of a scene, his focus is on music
+                that serves the project and connects with the listener.
+              </p>
+            </div>
+            <span className="mt-bio-scroll-hint">SCROLL TO READ BIO ↓</span>
             <button className="mt-text-link" onClick={share}>
               SHARE THE FREQUENCY ↗
             </button>
@@ -716,9 +725,7 @@ export default function M3ttaPage() {
         </a>
         <p>
           INDEPENDENT SOUND. DIRECT CONNECTION.
-          <small>
-            M3TTA brand mockup · Concept catalog & merchandise.
-          </small>
+          <small>M3TTA brand mockup · Concept catalog & merchandise.</small>
         </p>
         <a className="mt-footer-am" href="#">
           A SPACE ON <strong>am↗</strong>

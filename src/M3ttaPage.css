@@ -2171,3 +2171,64 @@
     line-height: 1.6;
   }
 }
+
+/* Keep the artist card contained; only the full biography scrolls. */
+.mt-about-copy {
+  height: 620px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.mt-about-copy > .mt-label,
+.mt-about-copy > h2,
+.mt-about-copy > .mt-bio-role,
+.mt-about-copy > .mt-text-link,
+.mt-bio-scroll-hint {
+  flex-shrink: 0;
+}
+.mt-about-copy > .mt-text-link {
+  align-self: flex-start;
+}
+.mt-about .mt-photo-story {
+  position: relative;
+  top: auto;
+}
+.mt-bio-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #a29489 #282421;
+  padding-right: 14px;
+}
+.mt-bio-scroll p {
+  font-size: 13px;
+  line-height: 1.95;
+  color: #beb5ad;
+  margin: 0 0 20px;
+}
+.mt-bio-scroll p:last-child {
+  margin-bottom: 0;
+}
+.mt-bio-scroll:focus-visible {
+  outline: 1px solid var(--mt-red);
+  outline-offset: 5px;
+}
+.mt-bio-scroll-hint {
+  margin-top: 14px;
+  font-size: 6px;
+  letter-spacing: 1.4px;
+  color: #a79a8f;
+}
+@media (max-width: 700px) {
+  .mt-about-copy {
+    height: 480px;
+  }
+  .mt-bio-scroll p {
+    line-height: 1.9;
+  }
+  .mt-about-copy > .mt-bio-role {
+    margin: 16px 0 20px;
+  }
+}
