@@ -2151,9 +2151,12 @@
   }
 }
 
-/* Restored typographic hero with a compact, tightly joined wordmark. */
+/* Taller, tightly joined lettering with space reserved above its visual height. */
 .m3tta-world .mt-photo-hero h1 {
-  letter-spacing: -0.1em;
+  letter-spacing: -0.11em;
+  transform: scaleY(1.2);
+  transform-origin: left bottom;
+  margin-top: clamp(16px, 2vw, 30px);
 }
 .mt-photo-hero .mt-hero-type > p {
   letter-spacing: 1.7px;
