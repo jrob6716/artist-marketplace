@@ -2175,7 +2175,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .mt-tee-detail {
   max-width: 100%;
@@ -2200,4 +2200,14 @@
   .mt-photo-hero h1 > span {
     margin-left: 10px;
   }
+}
+
+/* Preserve regular garment proportions and keep the full hem visible. */
+.mt-product-scene.tee {
+  background: #2a2724;
+}
+.mt-tee-detail {
+  aspect-ratio: 4 / 5;
+  max-height: 50dvh;
+  background: #2a2724;
 }

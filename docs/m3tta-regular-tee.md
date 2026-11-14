@@ -1,0 +1,8 @@
+# Regular-fit M3TTA tee
+
+Built-in image_gen output, replacing the oversized tee in the storefront. Saved asset: `public/images/m3tta-regular-tee.jpg`. Classic regular fit with full-length torso. The entire garment is displayed without cropping in both merchandise and product preview. Generated merchandise concept, not a manufactured product photograph.
+
+## Final prompt
+
+Use case: product-mockup. Asset type: realistic artist merchandise product photograph. A single STANDARD REGULAR-FIT ADULT UNISEX BLACK T-SHIRT, full front view, neatly laid flat on a warm dark charcoal studio surface. Crucial silhouette: NORMAL LONG TORSO reaching to the hip, straight side seams, classic everyday proportions, NOT cropped, NOT boxy, NOT oversized, NOT wide and short, not a fashion crop top. Torso length from shoulder to bottom hem visibly about 1.5 times the torso width; modest standard-length short sleeves with shoulder seams at natural shoulder. Entire shirt fully in frame with generous margin above collar and below bottom hem. Classic black midweight cotton, realistic fine texture, thick but ordinary ribbed crew neck, subtle natural folds, visible realistic stitching. Center chest graphic reads exactly "M3TTA" in bold white tightly spaced clean sans serif, a small red bar underneath and a small white subtitle "SOUND IS A STATE OF BEING". Keep branding modest sized, centered on upper chest. Soft premium ecommerce lighting and credible contact shadows, true-to-life normal retail T-shirt product photography. Portrait 4:5 composition to emphasize full regular-length garment. No person, hanger, props, extra garments, UI, watermark or borders. Deliver one photograph.
+

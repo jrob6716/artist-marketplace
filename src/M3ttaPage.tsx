@@ -107,10 +107,10 @@ function Shirt() {
   return (
     <img
       className="mt-tee-photo"
-      width="1448"
-      height="1086"
-      src={`${import.meta.env.BASE_URL}images/m3tta-frequency-tee.jpg`}
-      alt="Realistic concept mockup of a washed-black heavyweight tee with a white M3TTA chest print and small red accent"
+      width="1122"
+      height="1402"
+      src={`${import.meta.env.BASE_URL}images/m3tta-regular-tee.jpg`}
+      alt="Regular-fit, full-length black cotton tee concept with a white M3TTA chest print and small red accent"
       loading="lazy"
     />
   );
@@ -542,7 +542,7 @@ export default function M3ttaPage() {
               className="mt-merch-card"
               onClick={() =>
                 setProduct({
-                  title: "Frequency · Heavyweight tee",
+                  title: "Frequency · Classic tee",
                   price: "$38",
                   kind: "shirt",
                 })
@@ -555,10 +555,10 @@ export default function M3ttaPage() {
                 </span>
               </div>
               <div className="mt-card-title">
-                <h3>Frequency / Heavyweight tee</h3>
+                <h3>Frequency / Classic tee</h3>
                 <span>$38</span>
               </div>
-              <p>Oversized silhouette concept · Faded black</p>
+              <p>Regular fit · Full-length cotton tee · Black</p>
               <span className="mt-text-link">VIEW OBJECT ↗</span>
             </button>
           </div>
