@@ -59,7 +59,7 @@ export default function App() {
   if (route === "#/artist/m3tta") return <M3ttaPage />;
   if (route.startsWith("#/artist/")) return <ArtistPage />;
   return (
-    <>
+    <div className="marketplace-page">
       <header>
         <a className="brand" href="#">
           am<span>↗</span>
@@ -217,6 +217,6 @@ export default function App() {
           Working concept · Sample artists and releases · No purchases available
         </small>
       </footer>
-    </>
+    </div>
   );
 }
