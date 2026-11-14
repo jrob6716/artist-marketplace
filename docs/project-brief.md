@@ -22,7 +22,7 @@ Discovery page, genre filtering, and fictional artist preview. No backend or com
 ## Additional artist mockup: M3TTA
 - Route: `#/artist/m3tta`.
 - Founder direction: simple, minimal, futuristic; supplied M3TTA Sessions artwork informs charcoal, white, red, and tightly set typography.
-- Includes a real external Sessions #001 link. All storefront releases, products, prices, and bio copy are concept material.
+- Includes a real external Sessions #001 link. Storefront releases, products, and prices are concept material. The artist bio is supplied by Jason Robinson.
 
 ## Suggested implementation sequence
 1. Refine discovery and artist storefront designs.

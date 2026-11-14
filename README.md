@@ -44,7 +44,7 @@ GitHub Pages serves the static prototype. Future accounts, protected downloads, 
 
 ## M3TTA brand reference
 
-The founder supplied the [M3TTA Sessions #001 Amazon Music page](https://music.amazon.com/podcasts/f49790e6-2e1f-4289-a97a-8bd93219b708/episodes/9514ae60-78c3-4e12-8aa9-fbd35a195ae8/metta-sessions-m3tta-sessions-001) as a visual reference. Its series artwork is stored at `public/images/m3tta-sessions-reference.jpg`. The source image itself says Episode 002; the UI presents it as series artwork and links to the supplied #001 episode. The storefront wordmark is a typographic interpretation, not a supplied vector logo. All other M3TTA cover designs, releases, merchandise, prices, and biography copy are proposed concepts. Preview audio is the shared synthesized demo, not a M3TTA recording.
+The founder supplied the [M3TTA Sessions #001 Amazon Music page](https://music.amazon.com/podcasts/f49790e6-2e1f-4289-a97a-8bd93219b708/episodes/9514ae60-78c3-4e12-8aa9-fbd35a195ae8/metta-sessions-m3tta-sessions-001) as a visual reference. Its series artwork is stored at `public/images/m3tta-sessions-reference.jpg`. The source image itself says Episode 002; the UI presents it as series artwork and links to the supplied #001 episode. The storefront wordmark is a typographic interpretation, not a supplied vector logo. M3TTA cover designs, releases, merchandise, and prices are proposed concepts. The artist biography is the text supplied by Jason Robinson. Preview audio is the shared synthesized demo, not a M3TTA recording.
 
 ## Artist portraits
 

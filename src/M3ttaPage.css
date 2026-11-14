@@ -2118,3 +2118,56 @@
     font-size: 14px;
   }
 }
+
+/* Longer artist biography: comfortable reading beside a contained portrait. */
+.mt-about {
+  align-items: start;
+  background: #181717;
+}
+.mt-about-copy .mt-bio-alias {
+  font-size: 0.53em;
+  letter-spacing: 1.5px;
+  color: #b3a9a1;
+}
+.mt-about-copy > .mt-bio-role {
+  font-size: 7px;
+  letter-spacing: 1.2px;
+  color: var(--mt-red);
+  margin: 22px 0 28px;
+}
+.mt-about-copy > p:not(.mt-label):not(.mt-bio-role) {
+  font-size: 13px;
+  line-height: 1.95;
+  color: #beb5ad;
+}
+.mt-about-copy > .mt-text-link {
+  margin-top: 15px;
+}
+.mt-about .mt-photo-story {
+  position: sticky;
+  top: 78px;
+  height: 620px;
+  min-height: 0;
+  width: 100%;
+}
+.mt-tags {
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  .mt-about .mt-photo-story {
+    position: relative;
+    top: auto;
+    height: 440px;
+  }
+  .mt-about-copy > p:not(.mt-label):not(.mt-bio-role) {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+  .mt-about-copy h2 {
+    font-size: 40px;
+  }
+  .mt-identity p {
+    max-width: 210px;
+    line-height: 1.6;
+  }
+}

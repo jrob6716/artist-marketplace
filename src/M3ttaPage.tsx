@@ -309,11 +309,12 @@ export default function M3ttaPage() {
           <strong>
             M3TTA <span>✳</span>
           </strong>
-          <p>Independent sound. A world of your own.</p>
+          <p>Jason Robinson · Producer, composer & programmer.</p>
           <div className="mt-tags">
-            <span>ELECTRONIC</span>
-            <span>PROGRESSIVE</span>
-            <span>SESSIONS</span>
+            <span>PROGRESSIVE HOUSE</span>
+            <span>TRANCE</span>
+            <span>SYNTHWAVE</span>
+            <span>TECHNO</span>
           </div>
         </div>
         <div className="mt-identity-actions">
@@ -339,7 +340,7 @@ export default function M3ttaPage() {
           <a href="#mt-releases">02 / RELEASES</a>
           <a href="#mt-sessions">03 / SESSIONS</a>
           <a href="#mt-objects">04 / OBJECTS</a>
-          <a href="#mt-about">05 / THE VISION</a>
+          <a href="#mt-about">05 / THE ARTIST</a>
         </div>
         <span>DIRECT FROM THE ARTIST</span>
       </nav>
@@ -620,35 +621,49 @@ export default function M3ttaPage() {
             <small>AI-GENERATED CONCEPT PORTRAIT / NOT A PHOTO OF M3TTA</small>
           </div>
           <div className="mt-about-copy">
-            <p className="mt-label">05 / THE VISION</p>
+            <p className="mt-label">05 / THE ARTIST</p>
             <h2>
-              ONE ARTIST.
+              JASON ROBINSON.
               <br />
-              AN ENTIRE WORLD.
+              <span className="mt-bio-alias">M3TTA / DIRTYFREQS</span>
             </h2>
-            <p className="mt-about-intro">
-              A space for the music.
-              <br />A space for the connection.
+            <p className="mt-bio-role">PRODUCER / COMPOSER / PROGRAMMER</p>
+            <p>
+              Jason Robinson is a Southern California–based music producer,
+              composer, and programmer whose work spans pop, electronic music,
+              and original composition for film, television, and advertising.
+              Also known as DIRTYFREQS and M3TTA, he brings a love of melody,
+              rhythm, and sonic detail to both his collaborations and
+              independent releases.
             </p>
             <p>
-              This M3TTA direction brings a minimal, futuristic visual language
-              to an independent artist space: monochrome graphics, precise
-              typography, immersive sound, and a direct relationship with the
-              people listening.
+              Jason’s interest in music began with a Casio keyboard and guitar,
+              sparking a curiosity that developed into a career in production.
+              Through his longstanding collaboration with Grammy-winning remixer
+              Dave Audé, he has contributed production and programming to
+              projects involving Selena Gomez, Lady Gaga, Beyoncé, Keri Hilson,
+              Paul Oakenfold, and Hilary Duff. His credits include work with
+              Rock Mafia and Audé on Selena Gomez’s “Kill Em with Kindness,”
+              along with production and reprogramming contributions to seven
+              tracks on Sting’s <em>My Songs</em>. His collaborations with
+              Justin Caruso have also reached millions of streams.
             </p>
             <p>
-              The artist’s world runs through every detail—from the first track
-              to the physical objects. A storefront that feels like an extension
-              of the work.
+              As M3TTA, Jason explores the intersection of progressive house,
+              trance, synthwave, and techno, pairing nostalgic textures with
+              driving basslines and emotive melodies. His releases and remixes
+              have received support from Armin van Buuren’s{" "}
+              <em>A State of Trance</em>, Above &amp; Beyond’s{" "}
+              <em>Group Therapy</em>, Paul van Dyk, Paul Oakenfold, and
+              Christopher Lawrence.
             </p>
-            <div className="mt-copy-note">
-              CONCEPT BIO
-              <br />
-              <span>
-                This is proposed brand copy. Your artist story, real releases,
-                imagery, and links can take its place.
-              </span>
-            </div>
+            <p>
+              Through Dirtyfreqs, Jason applies that range to music for picture,
+              creating everything from intimate atmospheric pieces to energetic
+              electronic productions. Whether supporting an artist’s vision or
+              shaping the mood of a scene, his focus is on music that serves the
+              project and connects with the listener.
+            </p>
             <button className="mt-text-link" onClick={share}>
               SHARE THE FREQUENCY ↗
             </button>
