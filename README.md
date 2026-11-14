@@ -49,3 +49,13 @@ The founder supplied the [M3TTA Sessions #001 Amazon Music page](https://music.a
 ## Artist portraits
 
 M3TTA uses Jason Robinson’s supplied studio photograph in the banner, avatar, and biography. Mira Sol retains AI-generated concept photography of a fictional person. See [image assets and generation prompts](docs/artist-imagery.md).
+
+## Expanded discovery collection
+
+The marketplace includes 25 clearly labeled public Bandcamp reference profiles, plus M3TTA and Mira Sol. Search by artist, release, genre, tag, or location; filter by genre; load additional artists; and open each artist’s own preview route. Reference pages use locally stored artwork/artist images, original short summaries, release metadata, track listings, related artists, and external source links. No reference-profile music or purchases are hosted.
+
+Bandcamp Discover itself returned an access challenge; public search-indexed artist/release pages supplied the sample instead. See the [source inventory and collection notes](docs/bandcamp-reference-profiles.md).
+
+```sh
+npm run check:discovery
+```

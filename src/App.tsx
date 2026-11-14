@@ -2,44 +2,52 @@ import { useEffect, useState } from "react";
 import ArtistPage from "./ArtistPage";
 import M3ttaPage from "./M3ttaPage";
 import "./App.css";
+import DiscoveryArtistPage from "./DiscoveryArtistPage";
+import { discoveryArtists, discoveryGenres } from "./data/discovery";
 
 const releases = [
   {
     title: "Third State",
     artist: "M3TTA",
+    slug: "m3tta",
     genre: "Electronic",
     style: "m3tta",
-    type: "EP · Storefront concept",
-    initials: "M3",
+    type: "EP · Artist concept",
+    image: "images/m3tta-third-state-sculpture.jpg",
+    location: "Southern California",
+    reference: false,
+    searchText: "electronic progressive house trance synthwave downtempo",
   },
   {
     title: "After the last light",
     artist: "Mira Sol",
+    slug: "mira-sol",
     genre: "Electronic",
     style: "sunset",
-    type: "EP · 5 tracks",
-    initials: "MS",
+    type: "EP · Artist concept",
+    image: "",
+    location: "Los Angeles",
+    reference: false,
+    searchText: "electronic soul downtempo alternative",
   },
-  {
-    title: "Somewhere, slowly",
-    artist: "August Blue",
-    genre: "Jazz",
-    style: "blue",
-    type: "EP · 4 tracks",
-    initials: "AB",
-  },
-  {
-    title: "Earth / echo",
-    artist: "Field Assembly",
-    genre: "Ambient",
-    style: "earth",
-    type: "Album · 7 tracks",
-    initials: "FA",
-  },
+  ...discoveryArtists.map((artist) => ({
+    title: artist.release.title,
+    artist: artist.name,
+    slug: artist.slug,
+    genre: artist.genre,
+    style: "reference",
+    type: `${artist.release.trackCount} tracks · Reference profile`,
+    image: artist.artwork,
+    location: artist.location,
+    reference: true,
+    searchText: artist.tags.join(" "),
+  })),
 ];
 
 export default function App() {
   const [genre, setGenre] = useState("All sounds");
+  const [query, setQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(12);
   const [route, setRoute] = useState(window.location.hash);
   useEffect(() => {
     const update = () => {
@@ -57,7 +65,34 @@ export default function App() {
     return () => window.removeEventListener("hashchange", update);
   }, []);
   if (route === "#/artist/m3tta") return <M3ttaPage />;
-  if (route.startsWith("#/artist/")) return <ArtistPage />;
+  if (route === "#/artist/mira-sol") return <ArtistPage />;
+  const referenceArtist = discoveryArtists.find(
+    (artist) => route === `#/artist/${artist.slug}`,
+  );
+  if (referenceArtist)
+    return (
+      <DiscoveryArtistPage
+        key={referenceArtist.slug}
+        artist={referenceArtist}
+      />
+    );
+  if (route.startsWith("#/artist/"))
+    return (
+      <div className="marketplace-page missing-profile">
+        <h1>Profile not found.</h1>
+        <a className="button light" href="#discover">
+          Back to discovery ↗
+        </a>
+      </div>
+    );
+  const normalizedQuery = query.trim().toLocaleLowerCase();
+  const filteredReleases = releases.filter(
+    (release) =>
+      (genre === "All sounds" || release.genre === genre) &&
+      `${release.artist} ${release.title} ${release.genre} ${release.location} ${release.searchText}`
+        .toLocaleLowerCase()
+        .includes(normalizedQuery),
+  );
   return (
     <div className="marketplace-page">
       <header>
@@ -131,55 +166,117 @@ export default function App() {
               </h2>
             </div>
             <p>
-              A few sounds to get lost in.
-              <br />
-              Sample releases for our first chapter.
+              27 artist spaces to explore.
+              <br />2 artist concepts + 25 Bandcamp reference profiles.
             </p>
           </div>
+          <div className="discovery-search-row">
+            <label className="discovery-search">
+              <span>SEARCH THE COLLECTION</span>
+              <input
+                type="search"
+                placeholder="Artist, release, sound, or location…"
+                value={query}
+                onChange={(event) => {
+                  setQuery(event.target.value);
+                  setVisibleCount(12);
+                }}
+              />
+            </label>
+            <span className="discovery-result-count" role="status">
+              {filteredReleases.length}{" "}
+              {filteredReleases.length === 1 ? "artist" : "artists"} to explore
+            </span>
+          </div>
           <div className="filters" aria-label="Filter releases by genre">
-            {["All sounds", "Electronic", "Jazz", "Ambient"].map((item) => (
+            {discoveryGenres.map((item) => (
               <button
                 key={item}
                 aria-pressed={genre === item}
                 className={genre === item ? "active" : ""}
-                onClick={() => setGenre(item)}
+                onClick={() => {
+                  setGenre(item);
+                  setVisibleCount(12);
+                }}
               >
                 {item}
               </button>
             ))}
           </div>
           <div className="releases">
-            {releases
-              .filter(
-                (release) => genre === "All sounds" || release.genre === genre,
-              )
-              .map((release) => (
-                <button
-                  className="release"
-                  key={release.title}
-                  onClick={() => {
-                    window.location.hash =
-                      release.artist === "M3TTA"
-                        ? "/artist/m3tta"
-                        : "/artist/mira-sol";
-                  }}
+            {filteredReleases.slice(0, visibleCount).map((release) => (
+              <a
+                className="release"
+                key={release.slug}
+                href={`#/artist/${release.slug}`}
+                aria-label={`Explore ${release.artist} artist preview`}
+              >
+                <div
+                  className={`cover ${release.style} ${release.image ? "image-cover" : ""}`}
                 >
-                  <div className={`cover ${release.style}`}>
-                    <span className="cover-top">{release.artist}</span>
-                    <div className="cover-shape" />
-                    <span className="cover-bottom">{release.title}</span>
-                    <span className="open">↗</span>
-                  </div>
-                  <div className="release-meta">
-                    <h3>{release.title}</h3>
-                    <span>↗</span>
-                  </div>
-                  <p>{release.artist}</p>
-                  <small>
-                    {release.genre} / {release.type}
-                  </small>
-                </button>
-              ))}
+                  {release.image ? (
+                    <img
+                      src={`${import.meta.env.BASE_URL}${release.image}`}
+                      alt={`${release.title} cover artwork`}
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <>
+                      <span className="cover-top">{release.artist}</span>
+                      <div className="cover-shape" />
+                      <span className="cover-bottom">{release.title}</span>
+                    </>
+                  )}
+                  <span className="card-profile-type">
+                    {release.reference ? "REFERENCE PROFILE" : "ARTIST CONCEPT"}
+                  </span>
+                  <span className="open">↗</span>
+                </div>
+                <div className="release-meta">
+                  <h3>{release.title}</h3>
+                  <span>↗</span>
+                </div>
+                <p>{release.artist}</p>
+                <small>
+                  {release.genre} / {release.type}
+                </small>
+              </a>
+            ))}
+          </div>
+          {filteredReleases.length === 0 && (
+            <div className="discovery-empty">
+              <h3>No matches yet.</h3>
+              <p>Try another name, sound, or location.</p>
+              <button
+                className="button light"
+                onClick={() => {
+                  setQuery("");
+                  setGenre("All sounds");
+                  setVisibleCount(12);
+                }}
+              >
+                Clear filters ↗
+              </button>
+            </div>
+          )}
+          <div className="discovery-bottom">
+            <p>
+              Reference profiles are independent design mockups using public
+              Bandcamp metadata and images. No affiliation, audio, or purchases.
+            </p>
+            {visibleCount < filteredReleases.length && (
+              <button
+                className="button light"
+                onClick={() => setVisibleCount((count) => count + 12)}
+              >
+                Explore more artists{" "}
+                <span>
+                  + {Math.min(12, filteredReleases.length - visibleCount)}
+                </span>
+              </button>
+            )}
           </div>
         </section>
         <section id="artists" className="artist-section">

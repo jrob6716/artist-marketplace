@@ -1,0 +1,158 @@
+{
+  "collected": 25,
+  "audioImported": false,
+  "discoverFeedAccessible": false,
+  "failures": [],
+  "sources": [
+    {
+      "artist": "The Hanging Stars",
+      "url": "https://thehangingstars.bandcamp.com/album/just-a-day",
+      "artwork": "https://f4.bcbits.com/img/a2461540339_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0045656485_21.jpg"
+    },
+    {
+      "artist": "Vanessa Bedoret",
+      "url": "https://vanessabedoret.bandcamp.com/album/about-time",
+      "artwork": "https://f4.bcbits.com/img/a0651871111_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0041633218_21.jpg"
+    },
+    {
+      "artist": "BON",
+      "url": "https://soundsofbon.bandcamp.com/album/woven-in-light",
+      "artwork": "https://f4.bcbits.com/img/a1418983522_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0047824715_21.jpg"
+    },
+    {
+      "artist": "Wil Bolton",
+      "url": "https://wilbolton.bandcamp.com/album/margins",
+      "artwork": "https://f4.bcbits.com/img/a3623253979_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0017580948_21.jpg"
+    },
+    {
+      "artist": "Paris Paloma",
+      "url": "https://parispaloma.bandcamp.com/album/the-fatal-flaw",
+      "artwork": "https://f4.bcbits.com/img/a1190567899_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0044819117_21.jpg"
+    },
+    {
+      "artist": "Blue",
+      "url": "https://officialblue.bandcamp.com/album/reflections",
+      "artwork": "https://f4.bcbits.com/img/a1433117649_10.jpg",
+      "portrait": ""
+    },
+    {
+      "artist": "Kirk Monteux",
+      "url": "https://kirkmonteux.bandcamp.com/album/tales-from-far-away",
+      "artwork": "https://f4.bcbits.com/img/a2480465997_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0048593090_21.jpg"
+    },
+    {
+      "artist": "Polky",
+      "url": "https://polkyband.bandcamp.com/album/mother-tongue",
+      "artwork": "https://f4.bcbits.com/img/a1552655184_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0045493350_21.jpg"
+    },
+    {
+      "artist": "iZerolite",
+      "url": "https://izerolite.bandcamp.com/album/emergence",
+      "artwork": "https://f4.bcbits.com/img/a0777011061_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0046640991_21.jpg"
+    },
+    {
+      "artist": "Hadamard",
+      "url": "https://hadamard.bandcamp.com/album/ikeno",
+      "artwork": "https://f4.bcbits.com/img/a3748216795_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0047959871_21.jpg"
+    },
+    {
+      "artist": "Crooked Mouth",
+      "url": "https://crooked-mouth.bandcamp.com/album/cosmic-folklore",
+      "artwork": "https://f4.bcbits.com/img/a0425143096_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0045366336_21.jpg"
+    },
+    {
+      "artist": "Andrew Firth",
+      "url": "https://andrewfirth.bandcamp.com/album/copernicus",
+      "artwork": "https://f4.bcbits.com/img/a0712494370_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0028005287_21.jpg"
+    },
+    {
+      "artist": "Fortresses",
+      "url": "https://fortressesmusic.bandcamp.com/album/here",
+      "artwork": "https://f4.bcbits.com/img/a3795930010_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0034674533_21.jpg"
+    },
+    {
+      "artist": "Amy Hopwood",
+      "url": "https://amyhopwood.bandcamp.com/album/gone-to-flowers",
+      "artwork": "https://f4.bcbits.com/img/a2025195173_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0029319924_21.jpg"
+    },
+    {
+      "artist": "HAIR CONTROL",
+      "url": "https://haircontrol.bandcamp.com/album/electric-pleasure",
+      "artwork": "https://f4.bcbits.com/img/a0036646452_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0048270758_21.jpg"
+    },
+    {
+      "artist": "Ellen Stekert",
+      "url": "https://ellenstekert.bandcamp.com/album/all-my-friends-a-queer-folk-songbook",
+      "artwork": "https://f4.bcbits.com/img/a3476682303_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0038281963_21.jpg"
+    },
+    {
+      "artist": "The Departures",
+      "url": "https://thedepartures.bandcamp.com/album/why-the-long-face",
+      "artwork": "https://f4.bcbits.com/img/a2513813208_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0046158314_21.jpg"
+    },
+    {
+      "artist": "Bandie",
+      "url": "https://bandiemusic.bandcamp.com/album/slow-down",
+      "artwork": "https://f4.bcbits.com/img/a4212064398_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0042396722_21.jpg"
+    },
+    {
+      "artist": "The Darling Range",
+      "url": "https://thedarlingrange.bandcamp.com/album/dearly",
+      "artwork": "https://f4.bcbits.com/img/a4046735712_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0045502479_21.jpg"
+    },
+    {
+      "artist": "Ballpark!",
+      "url": "https://ballparktheband.bandcamp.com/album/ballpark",
+      "artwork": "https://f4.bcbits.com/img/a3111568182_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0042684195_21.jpg"
+    },
+    {
+      "artist": "Modern Holiday",
+      "url": "https://modernholiday.bandcamp.com/album/modern-holiday",
+      "artwork": "https://f4.bcbits.com/img/a2550809630_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0043062684_21.jpg"
+    },
+    {
+      "artist": "Claud Six & Big Jess",
+      "url": "https://claudsix.bandcamp.com/album/grab-a-shovel",
+      "artwork": "https://f4.bcbits.com/img/a3554859729_10.jpg",
+      "portrait": ""
+    },
+    {
+      "artist": "Focused",
+      "url": "https://focusedrap.bandcamp.com/album/blind-sight",
+      "artwork": "https://f4.bcbits.com/img/a4224890410_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0046478336_21.jpg"
+    },
+    {
+      "artist": "Paul Janoschka",
+      "url": "https://pauljanoschka.bandcamp.com/album/trio",
+      "artwork": "https://f4.bcbits.com/img/a2495642533_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0046275504_21.jpg"
+    },
+    {
+      "artist": "Chris Madsen",
+      "url": "https://chrismadsen.bandcamp.com/album/threefold",
+      "artwork": "https://f4.bcbits.com/img/a4111875894_10.jpg",
+      "portrait": "https://f4.bcbits.com/img/0019140647_21.jpg"
+    }
+  ]
+}
