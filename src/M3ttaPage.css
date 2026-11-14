@@ -2211,3 +2211,25 @@
   max-height: 50dvh;
   background: #2a2724;
 }
+
+/* Supplied release art is shown in full, including its original border. */
+.mt-cover.supplied-art > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.mt-cover.supplied-art:after {
+  display: none;
+}
+.mt-release-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.mt-dialog > .mt-cover.supplied-art {
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .mt-release-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

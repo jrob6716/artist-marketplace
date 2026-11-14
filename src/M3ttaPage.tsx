@@ -12,6 +12,14 @@ const tracks = [
 ];
 const releases = [
   {
+    title: "Duality",
+    type: "Release",
+    art: "duality",
+    index: "",
+    price: "",
+    note: "M3TTA / Fluentia Music",
+  },
+  {
     title: "Third State",
     type: "EP",
     art: "orbital",
@@ -49,6 +57,18 @@ function Cover({
   variant?: string;
   small?: boolean;
 }) {
+  if (variant === "duality")
+    return (
+      <div className={`mt-cover supplied-art ${small ? "small" : ""}`}>
+        <img
+          src={`${import.meta.env.BASE_URL}images/m3tta-beatport-artwork.jpg`}
+          alt="M3TTA — Duality, Fluentia Music: monochrome aerial forest artwork with an off-white border"
+          width="1400"
+          height="1400"
+          loading="lazy"
+        />
+      </div>
+    );
   return (
     <div
       className={`mt-cover ${variant} ${small ? "small" : ""}`}
@@ -428,7 +448,10 @@ export default function M3ttaPage() {
                   key={item.title}
                   onClick={() =>
                     setProduct({
-                      title: `${item.title} · Digital ${item.type}`,
+                      title:
+                        item.art === "duality"
+                          ? "Duality · M3TTA"
+                          : `${item.title} · Digital ${item.type}`,
                       price: item.price,
                       art: item.art,
                     })
@@ -442,9 +465,13 @@ export default function M3ttaPage() {
                   <p>{item.note}</p>
                   <div className="mt-card-meta">
                     <span>
-                      {item.type.toUpperCase()} / CONCEPT {item.index}
+                      {item.art === "duality"
+                        ? "FLUENTIA MUSIC / RELEASE ARTWORK"
+                        : `${item.type.toUpperCase()} / CONCEPT ${item.index}`}
                     </span>
-                    <span>{item.price}</span>
+                    <span>
+                      {item.art === "duality" ? "VIEW ↗" : item.price}
+                    </span>
                   </div>
                 </button>
               ))}
@@ -778,7 +805,11 @@ export default function M3ttaPage() {
         >
           ✕
         </button>
-        <p className="mt-label">M3TTA / OBJECT PREVIEW</p>
+        <p className="mt-label">
+          {product?.art === "duality"
+            ? "M3TTA / RELEASE ARTWORK"
+            : "M3TTA / OBJECT PREVIEW"}
+        </p>
         {product?.kind === "shirt" ? (
           <div className="mt-dialog-scene mt-tee-detail">
             <Shirt />
@@ -796,15 +827,25 @@ export default function M3ttaPage() {
           <Cover variant={product?.art} />
         )}
         <h2 id="mt-product-title">{product?.title}</h2>
-        <strong className="mt-dialog-price">{product?.price}</strong>
-        <p>A preview of the direct-to-fan purchase experience.</p>
-        <div className="mt-dialog-note">
-          <strong>CONCEPT PRODUCT / NO CHECKOUT</strong>
+        {product?.art === "duality" ? (
           <p>
-            Names, artwork, and prices are placeholders. No order or payment
-            will be made.
+            Duality · Fluentia Music.
+            <br />
+            Original release artwork supplied by M3TTA.
           </p>
-        </div>
+        ) : (
+          <>
+            <strong className="mt-dialog-price">{product?.price}</strong>
+            <p>A preview of the direct-to-fan purchase experience.</p>
+            <div className="mt-dialog-note">
+              <strong>CONCEPT PRODUCT / NO CHECKOUT</strong>
+              <p>
+                Names, artwork, and prices are placeholders. No order or payment
+                will be made.
+              </p>
+            </div>
+          </>
+        )}
         <button className="mt-button" onClick={close}>
           BACK TO THE FREQUENCY ↗
         </button>
