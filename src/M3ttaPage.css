@@ -2036,3 +2036,85 @@
     font-size: 5px;
   }
 }
+
+/* Custom angular lettering, kept as vector artwork for crisp scaling. */
+.m3tta-world .mt-photo-hero .mt-future-wordmark {
+  display: block;
+  position: relative;
+  width: min(100%, 740px);
+  margin: 0;
+  padding: 6px 0;
+  line-height: 0;
+  filter: drop-shadow(0 8px 20px #0004);
+}
+.mt-future-wordmark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.mt-wordmark-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, 740px);
+  border-top: 1px solid #ffffff38;
+  padding-top: 13px;
+  margin-top: 15px;
+  font-size: 6px;
+  letter-spacing: 2px;
+  color: #c9c8c5;
+}
+.mt-wordmark-caption > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.mt-wordmark-caption i {
+  width: 18px;
+  height: 3px;
+  background: var(--mt-red);
+  box-shadow: 0 0 12px #ff392940;
+}
+.mt-photo-hero .mt-hero-type > p {
+  font-size: 8px;
+  letter-spacing: 3.5px;
+  margin-bottom: 22px;
+}
+.mt-photo-hero .mt-hero-bottom {
+  margin-top: 27px;
+}
+.mt-photo-hero .mt-hero-bottom > p {
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.35;
+}
+@media (max-width: 700px) {
+  .m3tta-world .mt-photo-hero .mt-future-wordmark {
+    width: 100%;
+    max-width: 480px;
+    padding: 4px 0;
+  }
+  .mt-wordmark-caption {
+    max-width: 480px;
+    font-size: 5px;
+    letter-spacing: 1.3px;
+    margin-top: 9px;
+    padding-top: 10px;
+  }
+  .mt-wordmark-caption i {
+    width: 12px;
+    height: 2px;
+  }
+  .mt-photo-hero .mt-hero-type > p {
+    font-size: 6px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  .mt-photo-hero .mt-hero-bottom {
+    margin-top: 20px;
+  }
+  .mt-photo-hero .mt-hero-bottom > p {
+    font-size: 14px;
+  }
+}
