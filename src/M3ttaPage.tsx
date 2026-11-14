@@ -69,60 +69,56 @@ function Cover({
         />
       </div>
     );
+  const artwork =
+    variant === "current"
+      ? {
+          file: "m3tta-inner-current-art.jpg",
+          title: "Inner Current",
+          number: "002",
+          subtitle: "INNER / CURRENT",
+        }
+      : variant === "portal"
+        ? {
+            file: "m3tta-no-separation-art.jpg",
+            title: "No Separation",
+            number: "003",
+            subtitle: "NO / SEPARATION",
+          }
+        : {
+            file: "m3tta-third-state-art.jpg",
+            title: "Third State",
+            number: "001",
+            subtitle: "THIRD / STATE",
+          };
   return (
     <div
-      className={`mt-cover ${variant} ${small ? "small" : ""}`}
+      className={`mt-cover visual-art ${variant} ${small ? "small" : ""}`}
       role="img"
-      aria-label={`Concept cover art for ${variant === "orbital" ? "Third State" : variant === "current" ? "Inner Current" : "No Separation"}`}
+      aria-label={`M3TTA — ${artwork.title}, concept release artwork`}
     >
+      <img
+        className="mt-release-image"
+        src={`${import.meta.env.BASE_URL}images/${artwork.file}`}
+        alt=""
+        width="1024"
+        height="1024"
+        loading="lazy"
+      />
       <span className="mt-cover-brand">
-        M3TTA
-        <span>
-          CONCEPT /{" "}
-          {variant === "orbital"
-            ? "001"
-            : variant === "current"
-              ? "002"
-              : "003"}
-        </span>
+        M3TTA<span>M3 / {artwork.number}</span>
       </span>
-      <div className="mt-cover-object">
-        <i />
-        <i />
-        <i />
-        <i />
-      </div>
       <div className="mt-cover-bottom">
-        <strong>
-          {variant === "orbital" ? (
-            <>
-              THIRD
-              <br />
-              STATE
-            </>
-          ) : variant === "current" ? (
-            <>
-              INNER
-              <br />
-              CURRENT
-            </>
-          ) : (
-            <>
-              NO
-              <br />
-              SEPARATION
-            </>
-          )}
-        </strong>
+        <strong>{artwork.title}</strong>
         <span>
-          SOUND / ENERGY / CONNECTION
+          INDEPENDENT FREQUENCY
           <br />
-          INDEPENDENT RELEASE CONCEPT
+          {artwork.subtitle}
         </span>
       </div>
     </div>
   );
 }
+
 function Shirt() {
   return (
     <img
