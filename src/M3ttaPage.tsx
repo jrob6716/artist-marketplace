@@ -236,10 +236,10 @@ export default function M3ttaPage() {
       <section className="mt-hero mt-photo-hero">
         <img
           className="mt-hero-photo"
-          src={`${import.meta.env.BASE_URL}images/m3tta-studio-concept.jpg`}
-          alt="AI-generated concept photo of an electronic musician listening in a recording studio"
-          width="1536"
-          height="1024"
+          src={`${import.meta.env.BASE_URL}images/m3tta-jason-studio.jpg`}
+          alt="Jason Robinson, also known as M3TTA, working at a keyboard in his studio"
+          width="1024"
+          height="1536"
           fetchPriority="high"
         />
         <div className="mt-photo-shade" />
@@ -272,13 +272,13 @@ export default function M3ttaPage() {
           </div>
         </div>
         <span className="mt-hero-caption">
-          M3TTA / STUDIO PORTRAIT CONCEPT · AI-GENERATED
+          M3TTA / JASON ROBINSON · IN THE STUDIO
         </span>
       </section>
       <div className="mt-identity">
         <div className="mt-monogram mt-photo-avatar" aria-hidden="true">
           <img
-            src={`${import.meta.env.BASE_URL}images/m3tta-studio-concept.jpg`}
+            src={`${import.meta.env.BASE_URL}images/m3tta-jason-studio.jpg`}
             alt=""
             width="65"
             height="65"
@@ -593,10 +593,10 @@ export default function M3ttaPage() {
         <section id="mt-about" className="mt-about">
           <div className="mt-about-visual mt-photo-story">
             <img
-              src={`${import.meta.env.BASE_URL}images/m3tta-studio-concept.jpg`}
-              alt="Illustrative studio portrait of a fictional producer at a synthesizer"
-              width="1536"
-              height="1024"
+              src={`${import.meta.env.BASE_URL}images/m3tta-jason-studio.jpg`}
+              alt="Jason Robinson at work in the studio"
+              width="1024"
+              height="1536"
               loading="lazy"
             />
             <span>
@@ -604,7 +604,7 @@ export default function M3ttaPage() {
               <br />
               <em>FEEL SOMETHING.</em>
             </span>
-            <small>AI-GENERATED CONCEPT PORTRAIT / NOT A PHOTO OF M3TTA</small>
+            <small>JASON ROBINSON / M3TTA</small>
           </div>
           <div className="mt-about-copy">
             <p className="mt-label">05 / THE ARTIST</p>

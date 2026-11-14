@@ -2233,3 +2233,44 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Jason's real studio portrait: keep his face to the right of the hero copy. */
+.mt-photo-hero .mt-hero-photo {
+  width: 55%;
+  left: auto;
+  right: 0;
+  object-position: 38% 20%;
+}
+.mt-photo-hero .mt-photo-shade {
+  background:
+    linear-gradient(
+      90deg,
+      #141313 0%,
+      #141313 40%,
+      #141313b3 50%,
+      #14131310 76%
+    ),
+    linear-gradient(0deg, #141313b0, transparent 35%);
+}
+.mt-photo-avatar img {
+  object-position: 37% 28%;
+  transform: scale(1.85);
+  transform-origin: 37% 28%;
+}
+.mt-photo-story > img {
+  object-position: 40% 20%;
+}
+@media (max-width: 700px) {
+  .mt-photo-hero .mt-hero-photo {
+    width: 100%;
+    object-position: 38% 18%;
+  }
+  .mt-photo-hero .mt-photo-shade {
+    background:
+      linear-gradient(0deg, #141313f5 0%, #141313c4 30%, #14131300 72%),
+      linear-gradient(180deg, #14131380, transparent 22%);
+  }
+  .mt-photo-story > img {
+    object-position: 40% 20%;
+  }
+}

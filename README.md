@@ -48,4 +48,4 @@ The founder supplied the [M3TTA Sessions #001 Amazon Music page](https://music.a
 
 ## Artist portraits
 
-Both artist pages now include original AI-generated concept photography in the banner, avatar, and artist-story section. These are fictional people, not photos of M3TTA or a real Mira Sol artist. See [image assets and generation prompts](docs/artist-imagery.md).
+M3TTA uses Jason Robinson’s supplied studio photograph in the banner, avatar, and biography. Mira Sol retains AI-generated concept photography of a fictional person. See [image assets and generation prompts](docs/artist-imagery.md).
