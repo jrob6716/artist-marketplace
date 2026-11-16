@@ -264,7 +264,7 @@ export default function DiscoveryArtistPage({
           <strong>About this preview</strong>
           <p>
             This is a design mockup using public artist and release information,
-            collected November 14, 2026. Artwork and artist imagery belong to
+            collected {releaseDate(artist.collectedAt)}. Artwork and artist imagery belong to
             their respective owners. Summaries are editorial descriptions. Save
             actions apply only to this device. No artist account, endorsement,
             audio upload, or sale is implied.

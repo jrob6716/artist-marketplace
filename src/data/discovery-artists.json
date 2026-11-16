@@ -1612,5 +1612,799 @@
         }
       ]
     }
+  },
+  {
+    "slug": "simon-herody",
+    "name": "Simon Herody",
+    "genre": "Jazz",
+    "summary": "Acoustic instruments and electronics meet in an imagined journey through space.",
+    "location": "Berlin, Germany",
+    "tags": [
+      "#ambient",
+      "#electronica",
+      "#jazz",
+      "#neoclassical",
+      "#soundtrack",
+      "Ambient",
+      "Jazz",
+      "ambient"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/simon-herody-release.jpg",
+    "portrait": "images/discovery/simon-herody-portrait.jpg",
+    "release": {
+      "title": "Water From Mars",
+      "date": "10 Jul 2026 00:00:00 GMT",
+      "trackCount": 10,
+      "tracks": [
+        {
+          "title": "So quiet here",
+          "duration": "P00H03M32S"
+        },
+        {
+          "title": "Just U & I",
+          "duration": "P00H02M22S"
+        },
+        {
+          "title": "Watakama",
+          "duration": "P00H06M03S"
+        },
+        {
+          "title": "Spectral Odysee",
+          "duration": "P00H04M28S"
+        },
+        {
+          "title": "Exode",
+          "duration": "P00H03M30S"
+        },
+        {
+          "title": "Elements",
+          "duration": "P00H03M14S"
+        },
+        {
+          "title": "Discovery Zone",
+          "duration": "P00H05M44S"
+        },
+        {
+          "title": "Twin Spirits",
+          "duration": "P00H03M26S"
+        },
+        {
+          "title": "Splash Down",
+          "duration": "P00H03M29S"
+        },
+        {
+          "title": "Perseverance",
+          "duration": "P00H02M43S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "binaural-space",
+    "name": "Binaural Space",
+    "genre": "Electronic",
+    "summary": "Layered synthesizer compositions explore melodic patterns and shifting atmospheres.",
+    "location": "",
+    "tags": [
+      "Cool Jazz",
+      "Electronic",
+      "ambient",
+      "art rock",
+      "chill",
+      "chill-out",
+      "dark ambient",
+      "epic"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/binaural-space-release.jpg",
+    "portrait": "images/discovery/binaural-space-portrait.jpg",
+    "release": {
+      "title": "Neural Bloom",
+      "date": "04 Sep 2026 00:00:00 GMT",
+      "trackCount": 5,
+      "tracks": [
+        {
+          "title": "Attack",
+          "duration": "P00H09M50S"
+        },
+        {
+          "title": "Decay",
+          "duration": "P00H06M46S"
+        },
+        {
+          "title": "Sustain",
+          "duration": "P00H13M14S"
+        },
+        {
+          "title": "Release",
+          "duration": "P00H07M52S"
+        },
+        {
+          "title": "BONUS TRACK: Sustain (with tail)",
+          "duration": "P00H13M59S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "fritz-mayr",
+    "name": "Fritz Mayr",
+    "genre": "Ambient",
+    "summary": "Berlin School sequences unfold through spacious synthesizers and gentle melodic movement.",
+    "location": "Wels, Austria",
+    "tags": [
+      "Berlin School",
+      "Berlin School. Electronic Music",
+      "Electronic",
+      "ambient",
+      "electronic music",
+      "epiano",
+      "guitar",
+      "jazz electronica"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/fritz-mayr-release.jpg",
+    "portrait": "images/discovery/fritz-mayr-portrait.jpg",
+    "release": {
+      "title": "Droplets",
+      "date": "06 Nov 2026 12:30:07 GMT",
+      "trackCount": 3,
+      "tracks": [
+        {
+          "title": "Rhodes Elegy",
+          "duration": "P00H24M46S"
+        },
+        {
+          "title": "Droplets",
+          "duration": "P00H24M26S"
+        },
+        {
+          "title": "Shiny Sparkles",
+          "duration": "P00H16M45S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "sunhyun-yoo",
+    "name": "Sunhyun Yoo",
+    "genre": "Jazz",
+    "summary": "Saxophone-led quartet interplay opens into electronic textures and collective improvisation.",
+    "location": "Brooklyn, New York",
+    "tags": [
+      "Jazz",
+      "alternative jazz",
+      "ambient",
+      "contemporary",
+      "electronic jazz",
+      "free improvisation",
+      "modern",
+      "newyork"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/sunhyun-yoo-release.jpg",
+    "portrait": "images/discovery/sunhyun-yoo-portrait.jpg",
+    "release": {
+      "title": "PLAiDE",
+      "date": "02 Oct 2026 00:00:00 GMT",
+      "trackCount": 9,
+      "tracks": [
+        {
+          "title": "Sweet Sorrow",
+          "duration": "P00H07M29S"
+        },
+        {
+          "title": "In A Dream",
+          "duration": "P00H05M28S"
+        },
+        {
+          "title": "Neon City",
+          "duration": "P00H04M58S"
+        },
+        {
+          "title": "Formless, like water",
+          "duration": "P00H04M10S"
+        },
+        {
+          "title": "Memory 16",
+          "duration": "P00H06M03S"
+        },
+        {
+          "title": "Now She Waits",
+          "duration": "P00H05M23S"
+        },
+        {
+          "title": "Jellyfish",
+          "duration": "P00H04M53S"
+        },
+        {
+          "title": "The Places I Call Home",
+          "duration": "P00H05M38S"
+        },
+        {
+          "title": "Weaving",
+          "duration": "P00H05M11S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "nick-schofield",
+    "name": "Nick Schofield",
+    "genre": "Ambient",
+    "summary": "Synthesizer textures and improvisation trace the quieter edges of electronic music.",
+    "location": "Gatineau, Québec",
+    "tags": [
+      "Canada",
+      "Experimental",
+      "Montréal",
+      "ambient",
+      "canada",
+      "electronic",
+      "improvisation",
+      "jazz"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/nick-schofield-release.jpg",
+    "portrait": "images/discovery/nick-schofield-portrait.jpg",
+    "release": {
+      "title": "Blue Hour",
+      "date": "06 Feb 2026 00:00:00 GMT",
+      "trackCount": 10,
+      "tracks": [
+        {
+          "title": "Sky Cafe",
+          "duration": "P00H03M42S"
+        },
+        {
+          "title": "Magic Touch",
+          "duration": "P00H04M53S"
+        },
+        {
+          "title": "Dream On",
+          "duration": "P00H03M44S"
+        },
+        {
+          "title": "Goodnight Sun",
+          "duration": "P00H03M59S"
+        },
+        {
+          "title": "Imagine Space",
+          "duration": "P00H04M25S"
+        },
+        {
+          "title": "Natural Wonder",
+          "duration": "P00H04M54S"
+        },
+        {
+          "title": "Hidden Corner",
+          "duration": "P00H04M43S"
+        },
+        {
+          "title": "Hotel Cloud",
+          "duration": "P00H03M22S"
+        },
+        {
+          "title": "Kyoto Kiss",
+          "duration": "P00H03M37S"
+        },
+        {
+          "title": "Times",
+          "duration": "P00H03M46S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "laurence-pike",
+    "name": "Laurence Pike",
+    "genre": "Jazz",
+    "summary": "Percussion and ensemble improvisation open a conversation between jazz and experimental sound.",
+    "location": "Sydney, Australia",
+    "tags": [
+      "Electronic",
+      "Experimental",
+      "Jazz",
+      "ambient",
+      "contemporary jazz",
+      "drums",
+      "improvisation",
+      "improvising"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/laurence-pike-release.jpg",
+    "portrait": "",
+    "release": {
+      "title": "Possible Utopias for Jazz Quintet",
+      "date": "29 May 2026 00:00:00 GMT",
+      "trackCount": 7,
+      "tracks": [
+        {
+          "title": "Guardians of Memory",
+          "duration": "P00H05M37S"
+        },
+        {
+          "title": "The Shame of Jazz to Come",
+          "duration": "P00H07M08S"
+        },
+        {
+          "title": "502 Bad Gateway",
+          "duration": "P00H07M37S"
+        },
+        {
+          "title": "Night Bird",
+          "duration": "P00H04M34S"
+        },
+        {
+          "title": "Possible Utopias",
+          "duration": "P00H06M06S"
+        },
+        {
+          "title": "Mid Journey",
+          "duration": "P00H06M39S"
+        },
+        {
+          "title": "Even Given",
+          "duration": "P00H05M30S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "danxgerous",
+    "name": "DANXGEROUS",
+    "genre": "Pop",
+    "summary": "Dreamy pop melodies and fingerpicked guitars frame reflective songwriting.",
+    "location": "",
+    "tags": [
+      "Pop",
+      "alternative",
+      "ambient",
+      "indie",
+      "psychedelic pop",
+      "Italy"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/danxgerous-release.jpg",
+    "portrait": "",
+    "release": {
+      "title": "Old Soul",
+      "date": "16 Oct 2026 00:00:00 GMT",
+      "trackCount": 10,
+      "tracks": [
+        {
+          "title": "Leo Rising",
+          "duration": "P00H03M16S"
+        },
+        {
+          "title": "Clairvoyant",
+          "duration": "P00H02M32S"
+        },
+        {
+          "title": "Child",
+          "duration": "P00H03M57S"
+        },
+        {
+          "title": "Where The Love Is",
+          "duration": "P00H03M04S"
+        },
+        {
+          "title": "Fresh Roses",
+          "duration": "P00H03M40S"
+        },
+        {
+          "title": "Disillusionment",
+          "duration": "P00H03M15S"
+        },
+        {
+          "title": "Old Soul",
+          "duration": "P00H03M04S"
+        },
+        {
+          "title": "Teach",
+          "duration": "P00H03M22S"
+        },
+        {
+          "title": "White Moon",
+          "duration": "P00H03M20S"
+        },
+        {
+          "title": "Mission",
+          "duration": "P00H03M10S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "static-soul",
+    "name": "Static Soul",
+    "genre": "Hip-Hop",
+    "summary": "Rap, soulful production, and guest voices come together in a debut solo collection.",
+    "location": "Kansas",
+    "tags": [
+      "Hip Hop",
+      "Hip-Hop",
+      "Hip-Hop/Rap",
+      "RNB AND HIPHOP",
+      "Rap",
+      "RnB",
+      "beat tape",
+      "golden era"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/static-soul-release.jpg",
+    "portrait": "images/discovery/static-soul-portrait.jpg",
+    "release": {
+      "title": "Souliloquy",
+      "date": "02 Jan 2026 00:00:00 GMT",
+      "trackCount": 13,
+      "tracks": [
+        {
+          "title": "Gather Round",
+          "duration": "P00H01M31S"
+        },
+        {
+          "title": "My Zone",
+          "duration": "P00H03M48S"
+        },
+        {
+          "title": "Someday featuring Keeran Woode",
+          "duration": "P00H03M54S"
+        },
+        {
+          "title": "The Wind Blows",
+          "duration": "P00H03M10S"
+        },
+        {
+          "title": "& We Go featuring Jordan Opere",
+          "duration": "P00H03M27S"
+        },
+        {
+          "title": "Beat of my Drum featuring Chill Mac",
+          "duration": "P00H03M17S"
+        },
+        {
+          "title": "Middle",
+          "duration": "P00H03M32S"
+        },
+        {
+          "title": "Minds Eye featuring Sleep Sinatra",
+          "duration": "P00H03M42S"
+        },
+        {
+          "title": "Man in the Mirror featuring Jordan Opere",
+          "duration": "P00H02M40S"
+        },
+        {
+          "title": "Like Water",
+          "duration": "P00H01M29S"
+        },
+        {
+          "title": "Nothin 2 Lose featuring Chill Mac",
+          "duration": "P00H03M23S"
+        },
+        {
+          "title": "Dream Girl",
+          "duration": "P00H03M39S"
+        },
+        {
+          "title": "Drifting",
+          "duration": "P00H02M52S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "bobbyy",
+    "name": "Bobbyy",
+    "genre": "Electronic",
+    "summary": "Sampler-led production brings together adventurous beats, jazz, and a wide circle of collaborators.",
+    "location": "Los Angeles, California",
+    "tags": [
+      "Electronic",
+      "Hip-Hop",
+      "Jazz",
+      "Rap",
+      "electronic",
+      "hip-hop",
+      "jazz",
+      "sample-based"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/bobbyy-release.jpg",
+    "portrait": "images/discovery/bobbyy-portrait.jpg",
+    "release": {
+      "title": "TACKYY",
+      "date": "16 Oct 2026 00:00:00 GMT",
+      "trackCount": 20,
+      "tracks": [
+        {
+          "title": "Fantastique (feat. Miguel Atwood-Ferguson)",
+          "duration": "P00H02M09S"
+        },
+        {
+          "title": "Divine!!!",
+          "duration": "P00H03M07S"
+        },
+        {
+          "title": "You've Got The Magic",
+          "duration": "P00H02M24S"
+        },
+        {
+          "title": "World Stage (feat. Javier Santiago)",
+          "duration": "P00H02M33S"
+        },
+        {
+          "title": "Linkupp (feat. Pink Siifu)",
+          "duration": "P00H02M09S"
+        },
+        {
+          "title": "Lands Far Away (feat. Salami Rose Joe Louis)",
+          "duration": "P00H03M06S"
+        },
+        {
+          "title": "Warpath (ft. Sam Gendel)",
+          "duration": "P00H02M08S"
+        },
+        {
+          "title": "Blush (feat. Anthony Ferraro)",
+          "duration": "P00H02M38S"
+        },
+        {
+          "title": "Por Ejemplo (feat. Telemakus)",
+          "duration": "P00H02M16S"
+        },
+        {
+          "title": "Break My Fall (feat. Niki Randa)",
+          "duration": "P00H02M56S"
+        },
+        {
+          "title": "Home (feat. Demae, Mndsgn, Telemakus)",
+          "duration": "P00H02M30S"
+        },
+        {
+          "title": "Vision!!! (feat. Tony Bontana)",
+          "duration": "P00H02M33S"
+        },
+        {
+          "title": "In Your Eye (feat. Telemakus)",
+          "duration": "P00H02M08S"
+        },
+        {
+          "title": "Gentle Reminders (feat. AKAI SOLO)",
+          "duration": "P00H02M22S"
+        },
+        {
+          "title": "Cosmic Dramas",
+          "duration": "P00H03M05S"
+        },
+        {
+          "title": "Tried Calling You (feat. Qur'an Shaheed)",
+          "duration": "P00H02M45S"
+        },
+        {
+          "title": "Alive + Well",
+          "duration": "P00H02M23S"
+        },
+        {
+          "title": "Don't Break (feat. Tony Bontana)",
+          "duration": "P00H02M59S"
+        },
+        {
+          "title": "Boundless, Thankful",
+          "duration": "P00H01M25S"
+        },
+        {
+          "title": "Give Me The Light!!! (feat. Miguel Atwood-Ferguson)",
+          "duration": "P00H03M36S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "john-lebanon",
+    "name": "John Lebanon",
+    "genre": "Folk",
+    "summary": "Twelve-string folk textures grow into layered indie rock and synth-driven arrangements.",
+    "location": "Boston, Massachusetts",
+    "tags": [
+      "12 string guitar",
+      "Folk",
+      "Lebanese Indie Band",
+      "alternative rock",
+      "art rock",
+      "folk rock",
+      "indie alt rock",
+      "indie folk"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/john-lebanon-release.jpg",
+    "portrait": "images/discovery/john-lebanon-portrait.jpg",
+    "release": {
+      "title": "kite without a string",
+      "date": "12 Jun 2026 00:00:00 GMT",
+      "trackCount": 8,
+      "tracks": [
+        {
+          "title": "Hurricane Eyes",
+          "duration": "P00H02M31S"
+        },
+        {
+          "title": "Kite without a string",
+          "duration": "P00H02M52S"
+        },
+        {
+          "title": "Maksour",
+          "duration": "P00H02M39S"
+        },
+        {
+          "title": "Vermontier (dusk edition)",
+          "duration": "P00H02M04S"
+        },
+        {
+          "title": "Mizuri",
+          "duration": "P00H02M44S"
+        },
+        {
+          "title": "Petit Pierre",
+          "duration": "P00H03M24S"
+        },
+        {
+          "title": "Self made world",
+          "duration": "P00H02M22S"
+        },
+        {
+          "title": "I like to play (17' bones)",
+          "duration": "P00H02M55S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "inland-years",
+    "name": "Inland Years",
+    "genre": "Rock",
+    "summary": "Concise songwriting blends jangling guitars, lo-fi textures, and folk influences.",
+    "location": "Brooklyn, New York",
+    "tags": [
+      "Alternative",
+      "DIY",
+      "analog",
+      "home recording",
+      "indie pop",
+      "indie rock",
+      "outsider pop",
+      "Brooklyn"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/inland-years-release.jpg",
+    "portrait": "images/discovery/inland-years-portrait.jpg",
+    "release": {
+      "title": "Nowadays",
+      "date": "14 Jul 2026 00:00:00 GMT",
+      "trackCount": 13,
+      "tracks": [
+        {
+          "title": "Around we go",
+          "duration": "P00H00M58S"
+        },
+        {
+          "title": "Way it goes",
+          "duration": "P00H01M41S"
+        },
+        {
+          "title": "I know this more than anyone",
+          "duration": "P00H00M47S"
+        },
+        {
+          "title": "Breadcrumb Trail",
+          "duration": "P00H00M51S"
+        },
+        {
+          "title": "Morning train",
+          "duration": "P00H01M01S"
+        },
+        {
+          "title": "Every single time",
+          "duration": "P00H01M13S"
+        },
+        {
+          "title": "Drove away",
+          "duration": "P00H01M19S"
+        },
+        {
+          "title": "A thousand miles",
+          "duration": "P00H01M35S"
+        },
+        {
+          "title": "Only in dreams",
+          "duration": "P00H01M25S"
+        },
+        {
+          "title": "Haunt",
+          "duration": "P00H00M56S"
+        },
+        {
+          "title": "Cold",
+          "duration": "P00H01M36S"
+        },
+        {
+          "title": "Brand new",
+          "duration": "P00H00M53S"
+        },
+        {
+          "title": "Nothing left to say",
+          "duration": "P00H01M23S"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "july-morning",
+    "name": "July Morning",
+    "genre": "Rock",
+    "summary": "Sydney art rock draws together psychedelic color, folk influences, and progressive arrangements.",
+    "location": "Sydney, Australia",
+    "tags": [
+      "Art Rock",
+      "Folk Rock",
+      "Indie Rock",
+      "Progressive Rock",
+      "Psychedelic Rock",
+      "Rock",
+      "alternative",
+      "Sydney"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/july-morning-release.jpg",
+    "portrait": "images/discovery/july-morning-portrait.jpg",
+    "release": {
+      "title": "The Colours of Darkness",
+      "date": "17 Apr 2026 00:00:00 GMT",
+      "trackCount": 10,
+      "tracks": [
+        {
+          "title": "Page After Page",
+          "duration": "P00H05M14S"
+        },
+        {
+          "title": "The Canary Song",
+          "duration": "P00H04M12S"
+        },
+        {
+          "title": "Upper Hand",
+          "duration": "P00H06M34S"
+        },
+        {
+          "title": "Scorched Earth",
+          "duration": "P00H04M03S"
+        },
+        {
+          "title": "Force of Nature",
+          "duration": "P00H03M26S"
+        },
+        {
+          "title": "Beacon",
+          "duration": "P00H03M40S"
+        },
+        {
+          "title": "The Colours of Darkness",
+          "duration": "P00H06M24S"
+        },
+        {
+          "title": "Ex Nihilo",
+          "duration": "P00H05M54S"
+        },
+        {
+          "title": "Fruitless Pursuit",
+          "duration": "P00H06M42S"
+        },
+        {
+          "title": "Page After Page (Reprise)",
+          "duration": "P00H01M42S"
+        }
+      ]
+    }
   }
 ]

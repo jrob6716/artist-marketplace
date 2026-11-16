@@ -1,5 +1,5 @@
 """Collect public page metadata and images only. Never save or request audio."""
-import concurrent.futures, html, json, pathlib, re, subprocess
+import concurrent.futures, html, json, pathlib, re, subprocess, tempfile
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 SEEDS=[
 ('the-hanging-stars','https://thehangingstars.bandcamp.com/album/just-a-day','Folk','Harmonies and twelve-string guitars connect country, folk, and psychedelic rock.'),
@@ -41,11 +41,21 @@ def full_size_portrait(url):
 def save_image(url,slug,kind):
  if not url:return ''
  if not re.match(r'https://[^/]*bcbits\.com/img/',url):return ''
- ext='.jpg' if '.jpg' in url else '.png'
+ ext='.jpg'
  path=f'images/discovery/{slug}-{kind}{ext}'
- blob=fetch(url)
+ blob=fetch(full_size_portrait(url))
  if len(blob)<1000:raise ValueError('Image response too small')
- (ROOT/'public'/path).write_bytes(blob)
+ with tempfile.TemporaryDirectory() as tmp:
+  original=pathlib.Path(tmp)/('image'+ext)
+  original.write_bytes(blob)
+  metadata=subprocess.check_output(['sips','-g','pixelWidth','-g','pixelHeight',str(original)],text=True)
+  dimensions=[int(n) for n in re.findall(r'pixel(?:Width|Height): (\d+)',metadata)]
+  # Never enlarge thumbnails. Use release artwork when a portrait is too small.
+  if len(dimensions)!=2 or min(dimensions)<800:
+   if kind=='portrait':return ''
+   raise ValueError(f'{slug}: artwork too small: {dimensions}')
+  subprocess.run(['sips','-Z','2000','-s','format','jpeg','-s','formatOptions','75',str(original)],check=True,capture_output=True)
+  (ROOT/'public'/path).write_bytes(original.read_bytes())
  return path
 def collect(seed):
  slug,url,genre,summary=seed
@@ -74,7 +84,7 @@ if __name__=='__main__':
    try:results.append(f.result())
    except Exception as e:failures.append({'slug':futures[f][0],'error':str(e)[:250]});print('FAILED',failures[-1],flush=True)
  order={s[0]:i for i,s in enumerate(SEEDS)};results.sort(key=lambda x:order[x['slug']])
- if failures or len(results)!=25:
+ if failures or len(results)!=len(SEEDS):
   raise SystemExit('Collection incomplete; keeping the existing profile dataset unchanged. '+str(failures))
  # Keep source attribution in the collection report, outside the public app dataset.
  private_fields={'sourceUrl','artistUrl','provenance','artworkSource','portraitSource'}

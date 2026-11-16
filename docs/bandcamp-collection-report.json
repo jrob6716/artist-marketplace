@@ -1,5 +1,5 @@
 {
-  "collected": 25,
+  "collected": 37,
   "audioImported": false,
   "discoverFeedAccessible": false,
   "failures": [],
@@ -153,6 +153,78 @@
       "url": "https://chrismadsen.bandcamp.com/album/threefold",
       "artwork": "https://f4.bcbits.com/img/a4111875894_10.jpg",
       "portrait": "https://f4.bcbits.com/img/0019140647_0.jpg"
+    },
+    {
+      "artist": "Simon Herody",
+      "url": "https://simonherody.bandcamp.com/album/water-from-mars",
+      "artwork": "https://f4.bcbits.com/img/a0066754414_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0038456382_0.jpg"
+    },
+    {
+      "artist": "Binaural Space",
+      "url": "https://binaural-space.bandcamp.com/album/neural-bloom",
+      "artwork": "https://f4.bcbits.com/img/a2581743093_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0014361095_0.jpg"
+    },
+    {
+      "artist": "Fritz Mayr",
+      "url": "https://fritzmayr.bandcamp.com/album/droplets",
+      "artwork": "https://f4.bcbits.com/img/a0896939004_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0023256861_0.jpg"
+    },
+    {
+      "artist": "Sunhyun Yoo",
+      "url": "https://sunhyunyoo.bandcamp.com/album/plaide",
+      "artwork": "https://f4.bcbits.com/img/a2929152973_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0045865149_0.jpg"
+    },
+    {
+      "artist": "Nick Schofield",
+      "url": "https://nickschofield.bandcamp.com/album/blue-hour",
+      "artwork": "https://f4.bcbits.com/img/a2170595141_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0041332204_0.jpg"
+    },
+    {
+      "artist": "Laurence Pike",
+      "url": "https://laurencepike.bandcamp.com/album/possible-utopias-for-jazz-quintet",
+      "artwork": "https://f4.bcbits.com/img/a0786842562_0.jpg",
+      "portrait": ""
+    },
+    {
+      "artist": "DANXGEROUS",
+      "url": "https://wwnbb.bandcamp.com/album/old-soul",
+      "artwork": "https://f4.bcbits.com/img/a4145814696_0.jpg",
+      "portrait": ""
+    },
+    {
+      "artist": "Static Soul",
+      "url": "https://staticsoul.bandcamp.com/album/souliloquy",
+      "artwork": "https://f4.bcbits.com/img/a2996390255_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0034817844_0.jpg"
+    },
+    {
+      "artist": "Bobbyy",
+      "url": "https://bobbyy.bandcamp.com/album/tackyy",
+      "artwork": "https://f4.bcbits.com/img/a0370542242_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0045509012_0.jpg"
+    },
+    {
+      "artist": "John Lebanon",
+      "url": "https://johnlebanonmusic.bandcamp.com/album/kite-without-a-string",
+      "artwork": "https://f4.bcbits.com/img/a0402724451_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0041641917_0.jpg"
+    },
+    {
+      "artist": "Inland Years",
+      "url": "https://inlandyears.bandcamp.com/album/nowadays",
+      "artwork": "https://f4.bcbits.com/img/a4143575723_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0033645451_0.jpg"
+    },
+    {
+      "artist": "July Morning",
+      "url": "https://julymorningmusic.bandcamp.com/album/the-colours-of-darkness",
+      "artwork": "https://f4.bcbits.com/img/a4285015754_0.jpg",
+      "portrait": "https://f4.bcbits.com/img/0040446253_0.jpg"
     }
   ]
 }

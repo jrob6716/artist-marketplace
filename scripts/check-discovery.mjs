@@ -9,8 +9,8 @@ const records = JSON.parse(
     "utf8",
   ),
 );
-assert.equal(records.length, 25);
-assert.equal(new Set(records.map((x) => x.slug)).size, 25);
+assert.ok(records.length >= 37, "Expected the expanded artist collection");
+assert.equal(new Set(records.map((x) => x.slug)).size, records.length);
 for (const artist of records) {
   assert.ok(artist.name && artist.release.title && artist.summary);
   for (const field of ["artwork", "portrait"])
@@ -57,7 +57,7 @@ try {
   globalThis.window = { location: { hash: "#/discover" } };
   const platform = renderToString(React.createElement(App));
   assert.ok(platform.includes("Discover your next favorite"));
-  assert.ok(platform.includes("25 artist reference profiles"));
+  assert.ok(platform.includes(`${records.length}<!-- --> artist reference profiles`));
   assert.ok(!/bandcamp/i.test(home), "Homepage contains unwanted platform copy or links");
   assert.ok(
     platform.includes("#/artist/m3tta") && platform.includes("#/artist/mira-sol"),
@@ -90,7 +90,7 @@ try {
     renderToString(React.createElement(App)).includes("Profile not found."),
   );
   console.log(
-    "Verified 25 unique profiles, 48 images, complete track counts, no audio/lyrics/contact data, all artist routes, marketplace paging, existing artist pages, and unknown-route handling.",
+    `Verified ${records.length} unique reference profiles, complete track counts, no audio/lyrics/contact data, all artist routes, landing and platform routes, and saved previews.`,
   );
 } finally {
   await server.close();

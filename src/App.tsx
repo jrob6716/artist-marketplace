@@ -31,7 +31,7 @@ const releases = [
     reference: false,
     searchText: "electronic soul downtempo alternative",
   },
-  ...discoveryArtists.map((artist) => ({
+  ...[...discoveryArtists].sort((a, b) => b.collectedAt.localeCompare(a.collectedAt)).map((artist) => ({
     title: artist.release.title,
     artist: artist.name,
     slug: artist.slug,
@@ -127,7 +127,7 @@ export default function App() {
               <p className="eyebrow">{collection ? "Your collection" : "A little discovery goes a long way"}</p>
               <h2>{collection ? "Saved previews" : "Discover your next favorite"}</h2>
             </div>
-            <p>{collection ? "Artist worlds you’ve saved on this device." : "27 artist spaces. Endless possibilities."}</p>
+            <p>{collection ? "Artist worlds you’ve saved on this device." : `${releases.length} artist spaces. Endless possibilities.`}</p>
           </div>
           <div className="discovery-search-row">
             <label className="discovery-search">
@@ -239,7 +239,7 @@ export default function App() {
             )}
           </div>
         </section>
-        <footer className="platform-footer"><p>Independent by design.</p><small>2 artist concepts + 25 artist reference profiles · Preview only</small><a href="#">About us ↗</a></footer>
+        <footer className="platform-footer"><p>Independent by design.</p><small>2 artist concepts + {discoveryArtists.length} artist reference profiles · Preview only</small><a href="#">About us ↗</a></footer>
       </main>
     </div>
   );
