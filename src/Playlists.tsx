@@ -55,8 +55,13 @@ export function PlaylistProvider({ children }: { children: ReactNode }) {
     commit(addPlaylistItem(playlists, playlist.id, modal.slug), `Added to ${playlist.name} on this device.`);
     setModal(null);
   }
+  function saveMix(name: string, items: string[], genres: string[]) {
+    const playlist: Playlist = { id: crypto.randomUUID(), name, items: [...new Set(items)], genres };
+    commit([...playlists, playlist], "Mix saved to your playlists on this device.");
+    window.location.hash = `/playlist/${playlist.id}`;
+  }
   function remove(id: string, slug: string) { commit(removePlaylistItem(playlists, id, slug), "Preview removed from playlist."); }
-  return <PlaylistContextProvider value={{ playlists, open, remove }}>
+  return <PlaylistContextProvider value={{ playlists, open, remove, saveMix }}>
     {children}
     <dialog className={`playlist-dialog${modal?.mode === "mood" ? " mood-dialog" : ""}`} ref={dialog} aria-labelledby={`${id}-title`} aria-describedby={`${id}-note`} onCancel={event => { event.preventDefault(); setModal(null); }} onClose={() => setModal(null)}>
       {modal && <>
@@ -64,7 +69,7 @@ export function PlaylistProvider({ children }: { children: ReactNode }) {
         <span className="playlist-eyebrow">{modal.mode === "mood" ? "✧ MIX STUDIO / YOUR SOUND, YOUR WAY" : "YOUR OWN LITTLE UNIVERSE"}</span>
         <h2 id={`${id}-title`}>{modal.mode === "mood" ? "Make it your mix." : modal.mode === "add" ? "Add to playlist" : modal.mode === "delete" ? "Delete playlist?" : modal.mode === "rename" ? "Rename playlist" : "Create a playlist"}</h2>
         <p id={`${id}-note`}>{modal.mode === "mood" ? "Mix Studio · Build by mood or genre, using local profile matching. It curates existing artist previews; it does not generate music. Saved on this device only, with no audio playback." : "Local demo · Playlist collections contain artist and release previews. Saved on this device only; no audio playback."}</p>
-        {modal.mode === "mood" ? <MixStudio onSave={draft => {
+        {modal.mode === "mood" ? <MixStudio initialGenres={modal.genres} initialMood={modal.mood} onSave={draft => {
           const playlist: Playlist = { ...draft, id: crypto.randomUUID() };
           commit([...playlists, playlist], "Mix Studio playlist created on this device.");
           setModal(null); window.location.hash = `/playlist/${playlist.id}`;

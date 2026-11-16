@@ -1,7 +1,8 @@
 import DesignCredit from "./DesignCredit";
 import { usePlaylists } from "./PlaylistContext";
 import { PlaylistProvider, PlaylistSidebar, PlaylistLibrary, PlaylistActions, PlaylistItemButton } from "./Playlists";
-import { demoPopularity } from "./data/popularity";
+import { releases } from "./data/catalog";
+import GenrePages from "./GenrePages";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useState } from "react";
 import LandingPage from "./LandingPage";
@@ -12,46 +13,6 @@ import "./Playlists.css";
 import DiscoveryArtistPage from "./DiscoveryArtistPage";
 import { discoveryArtists, discoveryGenres } from "./data/discovery";
 
-const releases = [
-  {
-    title: "Third State",
-    artist: "M3TTA",
-    slug: "m3tta",
-    genre: "Electronic",
-    style: "m3tta",
-    type: "EP · Artist concept",
-    image: "images/m3tta-third-state-sculpture.jpg",
-    location: "Southern California",
-    reference: false,
-    searchText: "electronic progressive house trance synthwave downtempo",
-  },
-  {
-    title: "After the last light",
-    artist: "Mira Sol",
-    slug: "mira-sol",
-    genre: "Electronic",
-    style: "sunset",
-    type: "EP · Artist concept",
-    image: "",
-    location: "Los Angeles",
-    reference: false,
-    searchText: "electronic soul downtempo alternative",
-  },
-  ...[...discoveryArtists].sort((a, b) => b.collectedAt.localeCompare(a.collectedAt)).map((artist) => ({
-    title: artist.release.title,
-    artist: artist.name,
-    slug: artist.slug,
-    genre: artist.genre,
-    style: "reference",
-    type: artist.release.trackCount === 0 ? "Reference profile" : `${artist.release.trackCount} tracks · Reference profile`,
-    image: artist.artwork,
-    location: artist.location,
-    reference: true,
-    searchText: artist.tags.join(" "),
-  })),
-].map(release => ({ ...release, popularity: demoPopularity(release.slug) }))
-  .sort((a, b) => b.popularity - a.popularity || a.artist.localeCompare(b.artist))
-  .map((release, index) => ({ ...release, rank: index + 1 }));
 
 function isSaved(slug: string) {
   try { return localStorage.getItem(`reference-${slug}`) === "yes"; }
@@ -115,7 +76,8 @@ function AppContent() {
         </a>
       </div>
     );
-  const isPlatform = route === "#/discover" || route === "#discover" || route === "#/collection" || route === "#/playlists" || route.startsWith("#/playlist/");
+  const exploreRoute = ["#/explore", "#/genres"].includes(route) || ["#/genre/", "#/curated/", "#/release/"].some(prefix => route.startsWith(prefix));
+  const isPlatform = exploreRoute || route === "#/discover" || route === "#discover" || route === "#/collection" || route === "#/playlists" || route.startsWith("#/playlist/");
   if (!isPlatform) return <LandingPage />;
   const collection = route === "#/collection";
   const library = route === "#/playlists";
@@ -137,7 +99,8 @@ function AppContent() {
         <a className="brand" href="#" aria-label="Artist Marketplace home">am<span>↗</span></a>
         <span className="sidebar-caption">YOUR MUSIC UNIVERSE</span>
         <nav aria-label="Platform navigation">
-          <a className={!collection && !library && !playlistRoute ? "selected" : ""} href="#/discover"><span>◈</span> Discover</a>
+          <a className={!collection && !library && !playlistRoute && !exploreRoute ? "selected" : ""} href="#/discover"><span>◈</span> Discover</a>
+          <a className={exploreRoute ? "selected" : ""} href="#/explore"><span>◎</span> Explore</a>
           <a className={collection ? "selected" : ""} href="#/collection"><span>♡</span> Saved previews</a>
           <a className={library || playlistRoute ? "selected" : ""} href="#/playlists"><span>♫</span> Playlists</a>
         </nav>
@@ -146,12 +109,12 @@ function AppContent() {
         <div className="sidebar-bottom"><p>Independent music.<br/>Individual worlds.</p><a href="#">About artist marketplace ↗</a><small>Working concept / 001</small></div>
       </aside>
       <main className="platform-main">
-        <div className="platform-topbar"><span>Music / {playlist?.name ?? (library || playlistRoute ? "Playlists" : collection ? "Your collection" : "Discover")}</span><a href="#">artist marketplace <span>↗</span></a></div>
-        {!collection && !library && !playlistRoute && <section className="platform-feature">
+        <div className="platform-topbar"><span>Music / {playlist?.name ?? (exploreRoute ? "Explore" : library || playlistRoute ? "Playlists" : collection ? "Your collection" : "Discover")}</span><a href="#">artist marketplace <span>↗</span></a></div>
+        {!exploreRoute && !collection && !library && !playlistRoute && <section className="platform-feature">
           <img src={`${import.meta.env.BASE_URL}images/m3tta-third-state-sculpture.jpg`} alt="Third State by M3TTA"/>
           <div className="platform-feature-copy"><p className="eyebrow">IN THE SPOTLIGHT / M3TTA</p><h1>Find your<br/>third state.</h1><p>Electronic explorations. A world between movement and stillness.</p><a className="brand-cta" href="#/artist/m3tta">Explore M3TTA <span>↗</span></a></div><span className="feature-index">01 / ARTIST CONCEPT</span>
         </section>}
-        {library ? <PlaylistLibrary /> : <section id="discover" className="discover">
+        {exploreRoute ? <GenrePages key={route} route={route} /> : library ? <PlaylistLibrary /> : <section id="discover" className="discover">
           <div className="section-heading">
             <div>
               <p className="eyebrow">{playlistRoute ? "Your playlist / local demo" : collection ? "Your collection" : "A little discovery goes a long way"}</p>

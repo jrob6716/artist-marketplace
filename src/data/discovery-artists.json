@@ -1,5 +1,138 @@
 [
   {
+    "slug": "genre-artist-7164492",
+    "name": "Eli Brown",
+    "genre": "Electronic",
+    "summary": "Explore this artist’s electronic music catalog through a public release preview.",
+    "location": "",
+    "tags": [
+      "Electronic"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-7164492-release.jpg",
+    "portrait": "",
+    "release": {
+      "title": "Panic Attack",
+      "date": "2026-11-13",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-26941550",
+    "name": "DJ Heartstring",
+    "genre": "Electronic",
+    "summary": "Explore this artist’s electronic music catalog through a public release preview.",
+    "location": "",
+    "tags": [
+      "Electronic"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-26941550-release.jpg",
+    "portrait": "",
+    "release": {
+      "title": "Sentimental Ultra",
+      "date": "2026-11-13",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-3852731",
+    "name": "Marcel Dettmann",
+    "genre": "Electronic",
+    "summary": "Explore this artist’s electronic music catalog through a public release preview.",
+    "location": "",
+    "tags": [
+      "Electronic"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-3852731-release.jpg",
+    "portrait": "",
+    "release": {
+      "title": "My Own Shadow - Album",
+      "date": "2026-11-13",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-15799768",
+    "name": "Because of Art",
+    "genre": "Electronic",
+    "summary": "Explore this artist’s electronic music catalog through a public release preview.",
+    "location": "",
+    "tags": [
+      "Electronic"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-15799768-release.jpg",
+    "portrait": "images/discovery/genre-artist-15799768-portrait.jpg",
+    "release": {
+      "title": "Because of Art",
+      "date": "2026-11-13",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-4210874",
+    "name": "iNTROSPEKT",
+    "genre": "Electronic",
+    "summary": "Explore this artist’s electronic music catalog through a public release preview.",
+    "location": "",
+    "tags": [
+      "Electronic"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-4210874-release.jpg",
+    "portrait": "images/discovery/genre-artist-4210874-portrait.jpg",
+    "release": {
+      "title": "Mutant Transmissions",
+      "date": "2026-11-13",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-9101",
+    "name": "Air",
+    "genre": "Electronic",
+    "summary": "Explore this artist’s electronic music catalog through a public release preview.",
+    "location": "",
+    "tags": [
+      "Electronic"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-9101-release.jpg",
+    "portrait": "",
+    "release": {
+      "title": "Moon Safari",
+      "date": "1998-01-19",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-3531604",
+    "name": "Aphex Twin",
+    "genre": "Electronic",
+    "summary": "Explore this artist’s electronic music catalog through a public release preview.",
+    "location": "",
+    "tags": [
+      "Electronic"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-3531604-release.jpg",
+    "portrait": "",
+    "release": {
+      "title": "Selected Ambient Works 85-92",
+      "date": "1992-11-09",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
     "slug": "spotlight-10000207",
     "name": "Paja Kratak",
     "genre": "Artist spotlight",

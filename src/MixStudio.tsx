@@ -5,11 +5,11 @@ import { generateGenrePlaylist, generateMoodPlaylist, moodPresets } from "./data
 import type { MoodId, MoodPick } from "./data/moodPlaylists";
 import type { Playlist } from "./data/playlists";
 
-export default function MixStudio({ onSave }: { onSave: (draft: Pick<Playlist, "name" | "items" | "mood" | "prompt" | "genres">) => void }) {
+export default function MixStudio({ onSave, initialGenres = [], initialMood = "focus" }: { initialGenres?: string[]; initialMood?: MoodId; onSave: (draft: Pick<Playlist, "name" | "items" | "mood" | "prompt" | "genres">) => void }) {
   const id = useId();
-  const [mode, setMode] = useState<"mood" | "genre">("mood");
-  const [genres, setGenres] = useState<string[]>([]);
-  const [mood, setMood] = useState<MoodId>("focus");
+  const [mode, setMode] = useState<"mood" | "genre">(initialGenres.length ? "genre" : "mood");
+  const [genres, setGenres] = useState<string[]>(initialGenres);
+  const [mood, setMood] = useState<MoodId>(initialMood);
   const [prompt, setPrompt] = useState("");
   const [count, setCount] = useState(10);
   const [variation, setVariation] = useState(0);

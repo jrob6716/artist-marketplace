@@ -1,8 +1,9 @@
+import type { MoodId } from "./data/moodPlaylists";
 import { createContext, useContext } from "react";
 import type { Playlist } from "./data/playlists";
 
-export type PlaylistModal = { mode: "create" | "rename" | "delete" | "add" | "mood"; id?: string; slug?: string; artist?: string };
-type PlaylistContext = { playlists: Playlist[]; open: (modal: PlaylistModal) => void; remove: (id: string, slug: string) => void };
+export type PlaylistModal = { mode: "create" | "rename" | "delete" | "add" | "mood"; id?: string; slug?: string; artist?: string; genres?: string[]; mood?: MoodId };
+type PlaylistContext = { playlists: Playlist[]; open: (modal: PlaylistModal) => void; saveMix: (name: string, items: string[], genres: string[]) => void; remove: (id: string, slug: string) => void };
 const Context = createContext<PlaylistContext | null>(null);
 export const PlaylistContextProvider = Context.Provider;
 export function usePlaylists() {

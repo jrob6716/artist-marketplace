@@ -50,7 +50,8 @@ export default function DiscoveryArtistPage({
       return false;
     }
   });
-  const artistOnly = artist.release.trackCount === 0;
+  const artistOnly = artist.release.title === "Artist spotlight";
+  const hasTracks = artist.release.tracks.length > 0;
   const [copied, setCopied] = useState(false);
   const [accent, tone] = palettes[artist.genre] ?? palettes.Electronic;
   const related = discoveryArtists
@@ -184,16 +185,16 @@ export default function DiscoveryArtistPage({
             <h2 id="ref-release-title">{artistOnly ? artist.name : artist.release.title}</h2>
             {!artistOnly && <p className="ref-byline">by <strong>{artist.name}</strong></p>}
             {!artistOnly && <div className="ref-release-facts">
-              <span>{artist.release.trackCount} TRACKS</span>
+              {hasTracks && <span>{artist.release.trackCount} TRACKS</span>}
               <span>{releaseDate(artist.release.date)}</span>
             </div>}
             <p className="ref-release-intro">
               {artistOnly ? `Meet ${artist.name}. Step into another artist world and keep exploring the collection below.` : `A window into ${artist.name}’s catalog. Explore the release details below and discover the tracks behind the artwork.`}
             </p>
             <p className="ref-player-note">
-              {artistOnly ? "Artist preview only. Release and track information is not included in this profile. No music is hosted or played here." : "Track listing preview only. No music is hosted or played here."}
+              {artistOnly ? "Artist preview only. Release and track information is not included in this profile. No music is hosted or played here." : hasTracks ? "Track listing preview only. No music is hosted or played here." : "Release preview only. Track details are not included. No music is hosted or played here."}
             </p>
-            {!artistOnly && <div
+            {hasTracks && <div
               className="ref-tracklist"
               role="list"
               aria-label={`${artist.release.title} track listing`}

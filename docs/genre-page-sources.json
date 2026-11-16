@@ -1,0 +1,66 @@
+{
+  "collectedAt": "2026-11-16",
+  "audioImported": false,
+  "layoutReferences": [
+    "https://tidal.com/view/pages/explore",
+    "https://tidal.com/view/pages/genre_dance_electronic"
+  ],
+  "sources": [
+    {
+      "artist": "Eli Brown",
+      "artistUrl": "https://tidal.com/artist/eli-brown/7164492",
+      "releaseUrl": "https://tidal.com/album/569596764",
+      "artwork": "https://resources.tidal.com/images/e3d3190f/ae9d/497d/bbb1/79c503ed8aff/1280x1280.jpg",
+      "portrait": "",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "DJ Heartstring",
+      "artistUrl": "https://tidal.com/artist/dj-heartstring/26941550",
+      "releaseUrl": "https://tidal.com/album/563818141",
+      "artwork": "https://resources.tidal.com/images/43827d1a/719c/45c9/9b72/6279f08f7914/1280x1280.jpg",
+      "portrait": "",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "Marcel Dettmann",
+      "artistUrl": "https://tidal.com/artist/marcel-dettmann/3852731",
+      "releaseUrl": "https://tidal.com/album/565357871",
+      "artwork": "https://resources.tidal.com/images/eee0739d/668c/4680/aa5a/4be3a3be8438/1280x1280.jpg",
+      "portrait": "",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "Because of Art",
+      "artistUrl": "https://tidal.com/artist/because-of-art/15799768",
+      "releaseUrl": "https://tidal.com/album/576452519",
+      "artwork": "https://resources.tidal.com/images/3080e335/5dd3/4b57/b96f/a45a0a0c3448/1280x1280.jpg",
+      "portrait": "https://resources.tidal.com/images/3080e335/5dd3/4b57/b96f/a45a0a0c3448/1280x1280.jpg",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "iNTROSPEKT",
+      "artistUrl": "https://tidal.com/artist/introspekt/4210874",
+      "releaseUrl": "https://tidal.com/album/563043987",
+      "artwork": "https://resources.tidal.com/images/d02132bb/64ba/41fc/b0b6/41de48ddf05e/1280x1280.jpg",
+      "portrait": "https://resources.tidal.com/images/3e4cf0c6/9dba/444b/908f/699abe1242de/1280x1280.jpg",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "Air",
+      "artistUrl": "https://tidal.com/artist/air/9101",
+      "releaseUrl": "https://tidal.com/album/43710473",
+      "artwork": "https://resources.tidal.com/images/e0adb945/b2c9/4368/9c2c/8a2f5c3784f7/1280x1280.jpg",
+      "portrait": "",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "Aphex Twin",
+      "artistUrl": "https://tidal.com/artist/aphex-twin/3531604",
+      "releaseUrl": "https://tidal.com/album/59962969",
+      "artwork": "https://resources.tidal.com/images/b43ecf41/7f43/4370/906d/e8cddc678e74/1280x1280.jpg",
+      "portrait": "",
+      "trackMetadataAvailable": false
+    }
+  ]
+}

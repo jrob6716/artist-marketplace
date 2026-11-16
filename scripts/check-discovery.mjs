@@ -49,7 +49,7 @@ try {
     assert.ok(page.includes("Suspected AI-generated music"));
     assert.ok(page.includes("Reports stay in this browser"));
     assert.ok(page.includes("Save demo report"));
-    if (artist.release.trackCount === 0) {
+    if (artist.release.title === "Artist spotlight") {
       assert.ok(page.includes("ARTIST PORTRAIT"));
       assert.ok(!page.includes('class="ref-tracklist"'));
       assert.ok(!page.includes("0 TRACKS"));
@@ -100,6 +100,43 @@ try {
   assert.equal((saved.match(/class="release"/g) || []).length, 1);
   assert.ok(saved.includes(records[0].release.title));
   globalThis.localStorage = { getItem: () => null };
+  const { genrePages, curatedMixes, genreCatalog, styleSlug } = await server.ssrLoadModule("/src/data/genrePages.ts");
+  globalThis.window = { location: { hash: "#/explore" } };
+  const explore = renderToString(React.createElement(App));
+  assert.ok(explore.includes("Moods &amp; moments"));
+  assert.ok(explore.includes('href="#/genre/dance-electronic"'));
+  for (const genre of genrePages) {
+    assert.ok(genreCatalog(genre.selection).length > 0);
+    assert.ok(existsSync(new URL(`../public/${genre.image}`, import.meta.url)));
+    assert.ok(explore.includes(`href="#/genre/${genre.id}"`));
+    for (const suffix of ["", "/artists", "/releases", ...genre.styles.map(style => `/style/${styleSlug(style)}`)]) {
+      globalThis.window = { location: { hash: `#/genre/${genre.id}${suffix}` } };
+      const page = renderToString(React.createElement(App));
+      assert.ok(page.includes("genre-detail-hero"), `Missing genre page: ${genre.id}${suffix}`);
+      assert.ok(!/href="https?:[^"]*(?:tidal|bandcamp)/i.test(page));
+    }
+  }
+  for (const mix of curatedMixes) {
+    assert.ok(mix.items.length > 0);
+    assert.equal(new Set(mix.items).size, mix.items.length);
+    globalThis.window = { location: { hash: `#/curated/${mix.id}` } };
+    const page = renderToString(React.createElement(App));
+    assert.ok(page.includes("Save to my playlists"));
+    assert.ok(page.includes("No audio playback"));
+  }
+  const { releases } = await server.ssrLoadModule("/src/data/catalog.ts");
+  for (const release of releases.filter(item => item.title !== "Artist spotlight")) {
+    globalThis.window = { location: { hash: `#/release/${release.slug}` } };
+    const page = renderToString(React.createElement(App));
+    assert.ok(page.includes("genre-release-hero"));
+    assert.ok(page.includes(`href="#/artist/${release.slug}"`));
+    assert.ok(page.includes("Add to playlist"));
+  }
+  for (const hash of ["#/genre/missing", "#/genre/dance-electronic/style/missing", "#/curated/missing", "#/release/missing"]) {
+    globalThis.window = { location: { hash } };
+    assert.ok(renderToString(React.createElement(App)).includes("That world isn’t here yet."));
+  }
+  globalThis.window = { location: { hash: "#/discover" } };
   const { generateMoodPlaylist, generateGenrePlaylist, genreMatchCount } = await server.ssrLoadModule("/src/data/moodPlaylists.ts");
   assert.ok(platform.includes("Mix Studio"));
   assert.ok(!platform.includes("AI playlist"));
