@@ -1,3 +1,4 @@
+import ReportArtist from "./ReportArtist";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
@@ -146,6 +147,7 @@ export default function DiscoveryArtistPage({
           </div>
         </div>
         <div className="ref-profile-actions">
+          <ReportArtist slug={artist.slug} name={artist.name} />
           <button
             className="ref-button"
             onClick={toggleSaved}

@@ -46,6 +46,9 @@ try {
       page.includes("This artist has not joined or endorsed this marketplace."),
     );
     assert.ok(page.includes(artist.artwork));
+    assert.ok(page.includes("Suspected AI-generated music"));
+    assert.ok(page.includes("Reports stay in this browser"));
+    assert.ok(page.includes("Save demo report"));
     if (artist.release.trackCount === 0) {
       assert.ok(page.includes("ARTIST PORTRAIT"));
       assert.ok(!page.includes('class="ref-tracklist"'));

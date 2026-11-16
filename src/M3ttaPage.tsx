@@ -1,3 +1,4 @@
+import ReportArtist from "./ReportArtist";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useRef, useState } from "react";
 import type { MouseEvent } from "react";
@@ -295,6 +296,7 @@ export default function M3ttaPage() {
           </div>
         </div>
         <div className="mt-identity-actions">
+          <ReportArtist slug="m3tta" name="M3TTA" />
           <button
             className="mt-button"
             onClick={follow}

@@ -1,3 +1,4 @@
+import ReportArtist from "./ReportArtist";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useRef, useState } from "react";
 import type { MouseEvent } from "react";
@@ -273,6 +274,7 @@ export default function ArtistPage() {
           </div>
         </div>
         <div className="profile-actions">
+          <ReportArtist slug="mira-sol" name="Mira Sol" />
           <button
             className={`ms-button ${following ? "is-following" : ""}`}
             onClick={follow}
