@@ -48,6 +48,7 @@ export default function DiscoveryArtistPage({
       return false;
     }
   });
+  const artistOnly = artist.release.trackCount === 0;
   const [copied, setCopied] = useState(false);
   const [accent, tone] = palettes[artist.genre] ?? palettes.Electronic;
   const related = discoveryArtists
@@ -166,33 +167,30 @@ export default function DiscoveryArtistPage({
           <div className="ref-feature-art">
             <img
               src={asset(artist.artwork)}
-              alt={`${artist.release.title} by ${artist.name} — original release artwork`}
+              alt={artistOnly ? `${artist.name} artist portrait` : `${artist.release.title} by ${artist.name} — original release artwork`}
               width="700"
               height="700"
             />
             <div className="ref-art-caption">
-              <span>RELEASE ARTWORK</span>
+              <span>{artistOnly ? "ARTIST PORTRAIT" : "RELEASE ARTWORK"}</span>
               <span>{artist.genre.toUpperCase()}</span>
             </div>
           </div>
           <div className="ref-release-copy">
-            <p className="ref-label">Selected release</p>
-            <h2 id="ref-release-title">{artist.release.title}</h2>
-            <p className="ref-byline">
-              by <strong>{artist.name}</strong>
-            </p>
-            <div className="ref-release-facts">
+            <p className="ref-label">{artistOnly ? "Artist spotlight" : "Selected release"}</p>
+            <h2 id="ref-release-title">{artistOnly ? artist.name : artist.release.title}</h2>
+            {!artistOnly && <p className="ref-byline">by <strong>{artist.name}</strong></p>}
+            {!artistOnly && <div className="ref-release-facts">
               <span>{artist.release.trackCount} TRACKS</span>
               <span>{releaseDate(artist.release.date)}</span>
-            </div>
+            </div>}
             <p className="ref-release-intro">
-              A window into {artist.name}’s catalog. Explore the release details
-              below and discover the tracks behind the artwork.
+              {artistOnly ? `Meet ${artist.name}. Step into another artist world and keep exploring the collection below.` : `A window into ${artist.name}’s catalog. Explore the release details below and discover the tracks behind the artwork.`}
             </p>
             <p className="ref-player-note">
-              Track listing preview only. No music is hosted or played here.
+              {artistOnly ? "Artist preview only. Release and track information is not included in this profile. No music is hosted or played here." : "Track listing preview only. No music is hosted or played here."}
             </p>
-            <div
+            {!artistOnly && <div
               className="ref-tracklist"
               role="list"
               aria-label={`${artist.release.title} track listing`}
@@ -208,7 +206,7 @@ export default function DiscoveryArtistPage({
                   <time>{displayDuration(track.duration)}</time>
                 </div>
               ))}
-            </div>
+            </div>}
           </div>
         </section>
         <section className="ref-about">
@@ -246,7 +244,7 @@ export default function DiscoveryArtistPage({
               <a key={item.slug} href={`#/artist/${item.slug}`}>
                 <img
                   src={asset(item.artwork)}
-                  alt={`${item.release.title} cover artwork`}
+                  alt={item.release.trackCount === 0 ? `${item.name} artist portrait` : `${item.release.title} cover artwork`}
                   width="300"
                   height="300"
                   loading="lazy"

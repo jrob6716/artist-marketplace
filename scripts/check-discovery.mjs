@@ -9,7 +9,7 @@ const records = JSON.parse(
     "utf8",
   ),
 );
-assert.ok(records.length >= 37, "Expected the expanded artist collection");
+assert.ok(records.length >= 137, "Expected the expanded artist collection");
 assert.equal(new Set(records.map((x) => x.slug)).size, records.length);
 for (const artist of records) {
   assert.ok(artist.name && artist.release.title && artist.summary);
@@ -46,10 +46,15 @@ try {
       page.includes("This artist has not joined or endorsed this marketplace."),
     );
     assert.ok(page.includes(artist.artwork));
+    if (artist.release.trackCount === 0) {
+      assert.ok(page.includes("ARTIST PORTRAIT"));
+      assert.ok(!page.includes('class="ref-tracklist"'));
+      assert.ok(!page.includes("0 TRACKS"));
+    }
     assert.ok(page.includes("Verified artist badge demo."));
     assert.ok(page.includes("have not been verified."));
     assert.ok(page.includes("Verified artist · No AI music"));
-    assert.ok(!/bandcamp/i.test(page), `${artist.slug}: unwanted platform mention or link`);
+    assert.ok(!/bandcamp|tidal\.com/i.test(page), `${artist.slug}: unwanted platform mention or link`);
     assert.ok(!page.includes("<audio") && !page.includes("<iframe"));
   }
   globalThis.window = { location: { hash: "" } };

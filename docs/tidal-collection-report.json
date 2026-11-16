@@ -1,0 +1,939 @@
+{
+  "collectedAt": "2026-11-16",
+  "collected": 100,
+  "sourceIndex": "https://tidal.com/sitemaps/artists/artists-000.xml.gz",
+  "audioImported": false,
+  "releaseMetadataImported": false,
+  "sources": [
+    {
+      "artist": "Paja Kratak",
+      "url": "https://tidal.com/artist/paja-kratak/10000207",
+      "imageSource": "https://resources.tidal.com/images/b8bfea2b/7834/4396/aaa5/31e152e7467b/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10000207-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "5c531768defc674359b579d11a92f0165247c7c2643a2f408eb6ccfb2d505197"
+    },
+    {
+      "artist": "Nate W.",
+      "url": "https://tidal.com/artist/nate-w/10000978",
+      "imageSource": "https://resources.tidal.com/images/501efd91/506d/4473/9866/7076be03aba5/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10000978-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "56e32f3cf405eea2008fa94aff3e7c700b16561041f142917b6ab1d6197a5bcb"
+    },
+    {
+      "artist": "Vlxl",
+      "url": "https://tidal.com/artist/vlxl/10002105",
+      "imageSource": "https://resources.tidal.com/images/8485c7d6/67d1/44bd/bd3e/7c856dfe68dc/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10002105-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "0249497778ef11bdc13adca4dfaba83af88a9a47ab7268db5f97e7366f8af68c"
+    },
+    {
+      "artist": "Indë",
+      "url": "https://tidal.com/artist/ind%C3%AB/10004829",
+      "imageSource": "https://resources.tidal.com/images/4c0205e8/bc90/4021/ab3e/41f22363e4f6/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10004829-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "a54421487b487835f83794b653b9460afd6f6dd120c0cc2e8d605954f334a3eb"
+    },
+    {
+      "artist": "Anikv",
+      "url": "https://tidal.com/artist/anikv/10005552",
+      "imageSource": "https://resources.tidal.com/images/5a34989b/6977/4da7/8442/f98f9ac2998b/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10005552-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "8c0960a8d66987c5b2f922ea6a9d90a3b3f9ffd87e1204ad13c7fc55cca69ffe"
+    },
+    {
+      "artist": "X.I",
+      "url": "https://tidal.com/artist/x-i/10005595",
+      "imageSource": "https://resources.tidal.com/images/f7aa98fc/0c45/4c96/808e/9a38c031a8e8/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10005595-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "2c03eee747edc62e3f7308af012bddb8e273763f9557d8c5c455b1fd2f884bc4"
+    },
+    {
+      "artist": "Regnum Noricum",
+      "url": "https://tidal.com/artist/regnum-noricum/10005926",
+      "imageSource": "https://resources.tidal.com/images/a06997ed/e442/412b/b97a/747142d6c26f/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10005926-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "3e597b832a9672f31017fcb1acb509674c66e043cf4360155ffb30d3237efea0"
+    },
+    {
+      "artist": "Fortnox",
+      "url": "https://tidal.com/artist/fortnox/10007019",
+      "imageSource": "https://resources.tidal.com/images/0e82443c/1d0b/4ed0/ad64/4c9b3f4e1f94/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10007019-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "a909ab5b577b97da9eb84f40f86de8c9f3aeddebbeb28eb069647149a2fb5102"
+    },
+    {
+      "artist": "Cthulhu Basscraft",
+      "url": "https://tidal.com/artist/cthulhu-basscraft/10007748",
+      "imageSource": "https://resources.tidal.com/images/fb36b4c1/67a0/4f13/bf41/6149894571d9/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10007748-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "ab353395d2d6940e38c6c97618308cef158dcee85b11c9fb54703a9941dbb9b6"
+    },
+    {
+      "artist": "Wesdaruler",
+      "url": "https://tidal.com/artist/wesdaruler/10008227",
+      "imageSource": "https://resources.tidal.com/images/8c785a3c/6030/4f9b/a613/67a45d8fe3a6/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10008227-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "e5609376b185872d5a2f76e2fa2b5f71edef18e9867693fed42ff995f81956c4"
+    },
+    {
+      "artist": "Decultivate",
+      "url": "https://tidal.com/artist/decultivate/10010784",
+      "imageSource": "https://resources.tidal.com/images/e206060c/25c7/487f/b269/5ce929bdc808/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10010784-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "5e8f69e68f27f1a0064881cbc144dad515a511b94e2ceef3dbbfae1ee54e6fcf"
+    },
+    {
+      "artist": "Trill Santana",
+      "url": "https://tidal.com/artist/trill-santana/10011595",
+      "imageSource": "https://resources.tidal.com/images/9e2806f0/e062/4d73/b273/96eb895fc0d6/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10011595-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "e8423fc72ce4ceb5e994e6ea9002273686088844105b3322fd9708f3d54b157e"
+    },
+    {
+      "artist": "Sly C",
+      "url": "https://tidal.com/artist/sly-c/10011624",
+      "imageSource": "https://resources.tidal.com/images/53375ea8/1bb5/44ad/b37a/844201f80795/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10011624-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "bc71a006a79ae35333192b7f6a3e9a6bf539872df1451d1b9043f623a9cde67c"
+    },
+    {
+      "artist": "Michael Curse Kurth",
+      "url": "https://tidal.com/artist/michael-curse-kurth/10012070",
+      "imageSource": "https://resources.tidal.com/images/073fc580/54a3/4efa/ae02/12bb05998f6b/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10012070-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "e6fe9491f2b55fd5738591dc03b1a4dc845ca6fc72ae1465919366074d194926"
+    },
+    {
+      "artist": "Kyle Austin",
+      "url": "https://tidal.com/artist/kyle-austin/10012982",
+      "imageSource": "https://resources.tidal.com/images/4f184d90/6415/4046/b897/532d55c18d7d/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10012982-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "1d027ce3149022aaf450d529150a8c66d65506d07307ec88b8f0c2d1a0aeb942"
+    },
+    {
+      "artist": "Gilberto Rodriguez y Los Intocables",
+      "url": "https://tidal.com/artist/gilberto-rodriguez-y-los-intocables/10013454",
+      "imageSource": "https://resources.tidal.com/images/29507032/f7a4/4756/936c/4edbf0773ac3/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10013454-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "801ee1c7feb0c3a2cdee72becbe691b75a9c377a0323c47007c1877146df9be6"
+    },
+    {
+      "artist": "Café De Sol",
+      "url": "https://tidal.com/artist/caf%C3%A9-de-sol/10014133",
+      "imageSource": "https://resources.tidal.com/images/49c3b3de/ad96/4d69/a426/ba6c72fa90d4/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10014133-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "ea347b47ae1c21cac0b0494115c8fd0e4fbd609fe308e13cee02218f095ee12f"
+    },
+    {
+      "artist": "Ché Wilson",
+      "url": "https://tidal.com/artist/ch%C3%A9-wilson/10014273",
+      "imageSource": "https://resources.tidal.com/images/7318c408/1dbb/40e1/8bc5/a6e4eec92655/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10014273-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "e1b6ab5a8620e93254a8e539cc1d6af5692aad59d4546bf79dc723fa66b00306"
+    },
+    {
+      "artist": "Kayi",
+      "url": "https://tidal.com/artist/kayi/10014496",
+      "imageSource": "https://resources.tidal.com/images/ee3d80cf/2387/48d0/b10a/f126f7dbcd48/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10014496-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "658bdb6c5dbd192e669f075247ca35048348e293fa88f2b9c74b60b8bbee2ed6"
+    },
+    {
+      "artist": "Cool Maze",
+      "url": "https://tidal.com/artist/cool-maze/10015045",
+      "imageSource": "https://resources.tidal.com/images/93570385/89a3/4444/840d/18ab428c9857/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10015045-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "c54b7c4689cdf03363fcfbea24abbff80fcdadd68ecbebfa58b8c50c4e3873fb"
+    },
+    {
+      "artist": "Halit Kakınç",
+      "url": "https://tidal.com/artist/halit-kak%C4%B1n%C3%A7/10015244",
+      "imageSource": "https://resources.tidal.com/images/240a5d3f/47df/4ccb/a721/110aac778773/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10015244-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "362444bb947a4ae23a123b13453340537c8077f0107ab7471ef3e31d5d151008"
+    },
+    {
+      "artist": "L NUN",
+      "url": "https://tidal.com/artist/l-nun/10015592",
+      "imageSource": "https://resources.tidal.com/images/b2966fbc/f9f4/410f/9fbd/446243622aae/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10015592-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "6f9dafec26266c296f794d515bbd03b78f297293007323dec3cee5460146985e"
+    },
+    {
+      "artist": "Benjamin's Kite",
+      "url": "https://tidal.com/artist/benjamins-kite/10016060",
+      "imageSource": "https://resources.tidal.com/images/52b824d4/721d/4cef/b10e/d3d4093ce10d/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10016060-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "021d6248d25f32de710ccc6e46e0c78006ab160f47330a28a42b605718b396db"
+    },
+    {
+      "artist": "Yung Dyl",
+      "url": "https://tidal.com/artist/yung-dyl/10016397",
+      "imageSource": "https://resources.tidal.com/images/7d33aae6/54d3/48b0/9b58/cbed65587513/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10016397-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "6ca86a738956935bb32e728fc2fc0c9def704f1705147a5c50f53c70f3219955"
+    },
+    {
+      "artist": "Terrores Nocturnos",
+      "url": "https://tidal.com/artist/terrores-nocturnos/10016531",
+      "imageSource": "https://resources.tidal.com/images/f4b89df7/2f64/4f51/a103/bfba1a968d92/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10016531-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "ab933be11305563fb1f0b13d72c19ce9edbdf2a2400aba6d5b7941615e7a14d7"
+    },
+    {
+      "artist": "Cengiz Arslanpay",
+      "url": "https://tidal.com/artist/cengiz-arslanpay/10018063",
+      "imageSource": "https://resources.tidal.com/images/8e87a605/22b3/4bff/b42c/e69e42198e72/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10018063-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "f911e0e9f12306f185999d2883acd0517936129ec86a0523162bcd1d08eba09b"
+    },
+    {
+      "artist": "king Dough CCE",
+      "url": "https://tidal.com/artist/king-dough-cce/10018318",
+      "imageSource": "https://resources.tidal.com/images/62e24820/d2d7/4d6d/99dc/228cbdf1b8d2/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10018318-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "a85cb3dd749e77e117c3f0cd8348cb3a4c6e5d5d0957bd66a4911a98dea88088"
+    },
+    {
+      "artist": "Consumer Culture",
+      "url": "https://tidal.com/artist/consumer-culture/10019153",
+      "imageSource": "https://resources.tidal.com/images/857e95f4/2f20/4023/9476/444d7b8264c8/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10019153-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "32f52be24f75d1bbcd5023252018a7a70dca6fc69cb6a416d223c8f0e41bc562"
+    },
+    {
+      "artist": "Bowling Shoes",
+      "url": "https://tidal.com/artist/bowling-shoes/10019382",
+      "imageSource": "https://resources.tidal.com/images/bf6fe793/c75c/4384/bcde/62d7a732d0d5/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10019382-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "9c49272ca8b47f1bdbdede4ab35301b31df4281840e79d15abdc591e6a54c986"
+    },
+    {
+      "artist": "Matthias Puech",
+      "url": "https://tidal.com/artist/matthias-puech/10020024",
+      "imageSource": "https://resources.tidal.com/images/bb16f411/0f14/4188/ab3b/46aac1cf317a/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10020024-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "53349da453e11953ad5ab9a04a7d65726364069ba3cbce8e5cd4a99ab052cbfe"
+    },
+    {
+      "artist": "A Murder of Crows",
+      "url": "https://tidal.com/artist/a-murder-of-crows/10020142",
+      "imageSource": "https://resources.tidal.com/images/519377b8/a2fb/42ae/b67e/90ab60774ac5/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10020142-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "eafc927707c824c47e0762e3cd6305a02f400f02a5daaf1597b1678c3f769602"
+    },
+    {
+      "artist": "Daz Dillanger",
+      "url": "https://tidal.com/artist/daz-dillanger/10020505",
+      "imageSource": "https://resources.tidal.com/images/e05dd248/2f21/4dab/a8e2/f385872c21cf/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10020505-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "5e50a89a6b9e12971d7403f7aedb645b97fad11e883a15441f2a997607a3563a"
+    },
+    {
+      "artist": "Sofie Torp",
+      "url": "https://tidal.com/artist/sofie-torp/10021252",
+      "imageSource": "https://resources.tidal.com/images/a7d5db76/d205/4caa/b618/2200fefa50e3/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10021252-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "5b485923ff55d0cc943de4c5d5bd76614b39dd845d14fed8d04ddcbd66c3c4c4"
+    },
+    {
+      "artist": "Geju,Iorie, Waxwood",
+      "url": "https://tidal.com/artist/geju-iorie-waxwood/10021816",
+      "imageSource": "https://resources.tidal.com/images/d0629631/bc42/4e01/a378/8f05cd7fb59f/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10021816-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "5524b69bdbb29415b44388b1a351fa41c7cbf23929a8eb90a877e61c095ce602"
+    },
+    {
+      "artist": "Palé",
+      "url": "https://tidal.com/artist/pal%C3%A9/10021945",
+      "imageSource": "https://resources.tidal.com/images/9d7b2e31/c2fb/432c/9582/8469fe80e5bb/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10021945-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "02f901695f66b415156b38f78499b260e49e04e59eeadfe3265c4eb6cbd3710b"
+    },
+    {
+      "artist": "Andrea garcia",
+      "url": "https://tidal.com/artist/andrea-garcia/10023768",
+      "imageSource": "https://resources.tidal.com/images/c2cda88f/78d0/4740/8c8c/4d8369522927/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10023768-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "20305765defabe8d2fb3daafc54b218001e1da86b54b51316dc41022e59f66be"
+    },
+    {
+      "artist": "Randall Fowler",
+      "url": "https://tidal.com/artist/randall-fowler/10024323",
+      "imageSource": "https://resources.tidal.com/images/6844b066/aa1f/478a/87b5/7189be51567b/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10024323-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "1f1f32f67dc9277666c120428ebdba721d12372f7a3ccfed68d724fa9b1abf0d"
+    },
+    {
+      "artist": "DDob",
+      "url": "https://tidal.com/artist/ddob/10024339",
+      "imageSource": "https://resources.tidal.com/images/5a0d37ab/2316/41e3/a4b8/3ec7fd4eddbd/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10024339-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "7e96968174ea9e4df465c7870e139162eec78a0f160f72391ab673da2dc0700e"
+    },
+    {
+      "artist": "Planetary Cymatic Resonance",
+      "url": "https://tidal.com/artist/planetary-cymatic-resonance/10024686",
+      "imageSource": "https://resources.tidal.com/images/9c419cc8/662b/4f7e/82b3/852b67ab588d/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10024686-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "182725827a7bfec36e1d848227367ed85d45e08d53d9731ce481431fc0a5b924"
+    },
+    {
+      "artist": "Rzypo",
+      "url": "https://tidal.com/artist/rzypo/10024827",
+      "imageSource": "https://resources.tidal.com/images/70d15623/e8f8/4080/8b5c/2c8a9842538c/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10024827-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "c115e9c62d9b28b50e68caaa4415ec3d9ede588226d43386ed70ee4e64a4ebd7"
+    },
+    {
+      "artist": "Blade Killer",
+      "url": "https://tidal.com/artist/blade-killer/10025736",
+      "imageSource": "https://resources.tidal.com/images/8a344887/e006/43ff/b7c0/098e85877703/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10025736-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "48bc4d42a8faa66ccf25e1b025b630e92bb566e31fc22148d433ae3d016d37d8"
+    },
+    {
+      "artist": "Kunami",
+      "url": "https://tidal.com/artist/kunami/10025770",
+      "imageSource": "https://resources.tidal.com/images/b35bb9a1/c57a/4c02/a264/14ed4a695db4/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10025770-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "79ba4742466a7127a3c28ea103f7353f753d5561dc37d7e75b21a34585a052b9"
+    },
+    {
+      "artist": "Soca Boy",
+      "url": "https://tidal.com/artist/soca-boy/10026668",
+      "imageSource": "https://resources.tidal.com/images/2a016b21/ff9b/40ac/8ecc/918096e8335a/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10026668-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "f21c9d1041e834f71ce62fbaf238c9ae8fc22ecb5cc134897529473c1383db11"
+    },
+    {
+      "artist": "VDKA",
+      "url": "https://tidal.com/artist/vdka/10026955",
+      "imageSource": "https://resources.tidal.com/images/66f7beeb/1bf9/49c6/b191/b45a4e334537/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10026955-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "609ea5945997e63c9f9a1dd9105faefd8de6c044bd5f388207e22a0435bde545"
+    },
+    {
+      "artist": "Albert0ro",
+      "url": "https://tidal.com/artist/albert0ro/10028310",
+      "imageSource": "https://resources.tidal.com/images/61a00577/2795/46f8/b8af/ee171fb7eaf7/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10028310-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "5179a02a00010285ff943a3d1c08e996ca21c827be617aa1e0104cba2038e3df"
+    },
+    {
+      "artist": "Debe Dollaz",
+      "url": "https://tidal.com/artist/debe-dollaz/10028790",
+      "imageSource": "https://resources.tidal.com/images/95893bad/1541/473a/9db1/fe67ccdb9349/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10028790-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "55b5fe6b9cb423cd867105f9de9b03a7b935752ce2f4125bf1f710db59ce784a"
+    },
+    {
+      "artist": "Pat Hull",
+      "url": "https://tidal.com/artist/pat-hull/10028826",
+      "imageSource": "https://resources.tidal.com/images/5dd40050/d60a/41dd/a7ad/ee5c936ee771/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10028826-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "afbc50e8e372be3abba9a1ceb4defcc46fce32639fa2448f42f03246f7a943da"
+    },
+    {
+      "artist": "Lars Berteig Andersen",
+      "url": "https://tidal.com/artist/lars-berteig-andersen/10029839",
+      "imageSource": "https://resources.tidal.com/images/e0f42b80/6239/4621/8ea7/4e1660c48623/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10029839-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "7d2edff0f3faf59ed56f4bdf336514cec3855d7f841eb0ace9ed974d3f313978"
+    },
+    {
+      "artist": "Siti Monroe",
+      "url": "https://tidal.com/artist/siti-monroe/10030071",
+      "imageSource": "https://resources.tidal.com/images/6a96496d/9129/4150/9296/a53d98052b35/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10030071-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "460d043729b0c2e10ae9147b5163c7219b37710cdd813cf8fe16e815fcbd015a"
+    },
+    {
+      "artist": "Tito Rodriguez Jr",
+      "url": "https://tidal.com/artist/tito-rodriguez-jr/10030140",
+      "imageSource": "https://resources.tidal.com/images/2cc180cf/ebad/4562/be47/e3034db1a160/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10030140-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "9d9dbb57b539085bbfcd9a3778e08c67012f7f1df6f27dcb2022aec97df599ea"
+    },
+    {
+      "artist": "Git it Boyz",
+      "url": "https://tidal.com/artist/git-it-boyz/10031147",
+      "imageSource": "https://resources.tidal.com/images/df2eadff/959d/42d8/85d0/100a20c129ea/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10031147-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "1ed3c2bb3aac223e9041f571cb2d91c7ebd48dc10efc6e263d6a8de67488c498"
+    },
+    {
+      "artist": "Psytrance Network",
+      "url": "https://tidal.com/artist/psytrance-network/10031469",
+      "imageSource": "https://resources.tidal.com/images/a1cd9a35/fd9e/4815/99d5/d6e0fa4c5cd3/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10031469-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "1dea062783ad2d5a0e6366dd9d1fd0fa49b875132caebf060c9e236ecbca0566"
+    },
+    {
+      "artist": "Asad Bhopali",
+      "url": "https://tidal.com/artist/asad-bhopali/10032078",
+      "imageSource": "https://resources.tidal.com/images/210b0cd2/6a4f/4db6/b148/344f61079230/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10032078-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "d63ea1cc64da93f45802cc35eaa432ba16fe244c39ccb9b3d1b2dda84bce65a7"
+    },
+    {
+      "artist": "Starry Bay Trio",
+      "url": "https://tidal.com/artist/starry-bay-trio/10032441",
+      "imageSource": "https://resources.tidal.com/images/afb25c1d/2fa7/421c/8991/4ee1e0f42d11/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10032441-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "f014a1be1450acfb64f792a94a5870006e3ef35a1f93d28f6421fe632fae39ab"
+    },
+    {
+      "artist": "Rothko String Quartet",
+      "url": "https://tidal.com/artist/rothko-string-quartet/10033158",
+      "imageSource": "https://resources.tidal.com/images/9155676d/d4b6/407b/9173/57d0663d6681/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10033158-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "cb2189f202cb22de850d052898560cb0b2ac40e2f4162f6563875bf753c3c2a9"
+    },
+    {
+      "artist": "Holger Czukay, Jah Wobble & Jaki Liebezeit",
+      "url": "https://tidal.com/artist/holger-czukay-jah-wobble-jaki-liebezeit/10034346",
+      "imageSource": "https://resources.tidal.com/images/7917a6ef/8295/44bd/bda5/5a182a3235a1/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10034346-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "bc450af4fe9ae25bae4e3f4d80e6b34602a744d8877a4f0d5067c71a9c8728b7"
+    },
+    {
+      "artist": "Chae",
+      "url": "https://tidal.com/artist/chae/10036085",
+      "imageSource": "https://resources.tidal.com/images/f09a94bb/ed12/4cf6/9c9c/b976fbf619b4/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10036085-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "bc6521973c3ce298cfc9d151550110a665d151bd41e75b58ace7e198bb5f73eb"
+    },
+    {
+      "artist": "Morisse Monty",
+      "url": "https://tidal.com/artist/morisse-monty/10036508",
+      "imageSource": "https://resources.tidal.com/images/0833ed69/ed6e/4149/ad22/302e4a6cfed7/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10036508-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "cdbd589dbe11c6bc661c990010277a099f4d9524f6ca1088deea794d5876291f"
+    },
+    {
+      "artist": "Anna Stevens",
+      "url": "https://tidal.com/artist/anna-stevens/10037437",
+      "imageSource": "https://resources.tidal.com/images/6d0f2bed/a009/4606/878b/478579c1f996/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10037437-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "20692ce12e17b331ad0bbe52b086c2f98113625906de79aa231a7ef5eb17e5bb"
+    },
+    {
+      "artist": "Caleb Souza",
+      "url": "https://tidal.com/artist/caleb-souza/10037523",
+      "imageSource": "https://resources.tidal.com/images/7e063293/6c0c/40df/bdba/5f9a69996ada/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10037523-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "fc38839e941ae42a179df4710593bcf8d7c84ddb8645d97b8e7d775787c01242"
+    },
+    {
+      "artist": "CJ Vickery",
+      "url": "https://tidal.com/artist/cj-vickery/10037635",
+      "imageSource": "https://resources.tidal.com/images/389fb37c/2c55/4f11/b851/063275ba4f95/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10037635-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "8f011094e2a67b5f64c52cd17f6ba17d000fd520e9aefcb5166156cbc1994853"
+    },
+    {
+      "artist": "Mourn the Light",
+      "url": "https://tidal.com/artist/mourn-the-light/10037647",
+      "imageSource": "https://resources.tidal.com/images/b87bf9fb/bedf/4a14/b543/b94ef2904183/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10037647-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "f02abb1c17111d8e39b4fb54c14a97c7c30af0d81ffec7392258b0e12e21bab8"
+    },
+    {
+      "artist": "Siag",
+      "url": "https://tidal.com/artist/siag/10037909",
+      "imageSource": "https://resources.tidal.com/images/9a1192ea/7e0f/417e/94f4/cc1d48b74ee4/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10037909-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "4eac7fa30f4ed295214a4ec626f42da50a749611a362a76f6079a43ea0987e17"
+    },
+    {
+      "artist": "Goatman",
+      "url": "https://tidal.com/artist/goatman/10038432",
+      "imageSource": "https://resources.tidal.com/images/4afb78a3/14eb/465e/9a97/96d25ef4d19b/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10038432-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "318908db9d7df0d9154f060713b70f2662c6371e6b57f0f70cadccdb6b448c4c"
+    },
+    {
+      "artist": "Маки",
+      "url": "https://tidal.com/artist/%D0%BC%D0%B0%D0%BA%D0%B8/10038730",
+      "imageSource": "https://resources.tidal.com/images/34c02020/902a/46b3/ad1f/f434af04dcb7/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10038730-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "b3fa65bf53537cac3078314b6de4e3ca97a3a00e2cdff6678cf6a2e6e77b75d6"
+    },
+    {
+      "artist": "jjjacob",
+      "url": "https://tidal.com/artist/jjjacob/10039222",
+      "imageSource": "https://resources.tidal.com/images/10d15fb8/e409/4380/b370/8d4949296af0/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10039222-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "893c17a098dbc0f9c824b24507d9775f2aa989d584d94d350731a26fc5d5c3d5"
+    },
+    {
+      "artist": "D’Angelo",
+      "url": "https://tidal.com/artist/dangelo/10039602",
+      "imageSource": "https://resources.tidal.com/images/6364a79f/bc25/4923/87c8/c2c347ff4f39/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10039602-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "4acf150781615546a6926e9895e990a9ce78d8516bcbbf0d3eebbee17649af22"
+    },
+    {
+      "artist": "The RaRa",
+      "url": "https://tidal.com/artist/the-rara/10039659",
+      "imageSource": "https://resources.tidal.com/images/6c7f8e56/c418/4a97/8345/8bef2e068add/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10039659-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "7b64b82b90e3e85e1ad0a158be34e7e026ace8904a6709041f9fdbfd5a8aee76"
+    },
+    {
+      "artist": "Ananya Sharma",
+      "url": "https://tidal.com/artist/ananya-sharma/10040442",
+      "imageSource": "https://resources.tidal.com/images/555c172c/3ec0/43ce/91e5/acc24add9148/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10040442-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "481211b55530372300cd37a2f026432849e691402f13e44fc6fa557c8ae96b90"
+    },
+    {
+      "artist": "Empyrean Lights",
+      "url": "https://tidal.com/artist/empyrean-lights/10040779",
+      "imageSource": "https://resources.tidal.com/images/7d65567e/4984/4c88/8bed/e6eb12e3ee5d/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10040779-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "6f0638b7d9779a004ab97d10169a7a6743dd1b2e84757fd27eab520406683842"
+    },
+    {
+      "artist": "Kaipanta",
+      "url": "https://tidal.com/artist/kaipanta/10040995",
+      "imageSource": "https://resources.tidal.com/images/e2efd358/c75c/4681/949b/93b26cff8775/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10040995-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "67a3a8cbcca980824b7dd0fd6ec03373b76282c8047f066f9b52ae0709cf25cd"
+    },
+    {
+      "artist": "Varela el Varón",
+      "url": "https://tidal.com/artist/varela-el-var%C3%B3n/10041014",
+      "imageSource": "https://resources.tidal.com/images/6dba7e38/a92b/42f6/b929/8036ac6ba26b/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10041014-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "f4d116ed646480d7e2c18aa798af5f24649b928f060c394f64a161430dfc4016"
+    },
+    {
+      "artist": "Brayton Lewis",
+      "url": "https://tidal.com/artist/brayton-lewis/10041955",
+      "imageSource": "https://resources.tidal.com/images/93128d90/ed91/4617/a18e/add4b8b14ef3/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10041955-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "4375bf3856e5365c835783c814f6f5b00b2f49da529d568003f42a9ed295e964"
+    },
+    {
+      "artist": "Punku",
+      "url": "https://tidal.com/artist/punku/10042297",
+      "imageSource": "https://resources.tidal.com/images/70ebf53a/89e4/4e2a/b609/cea45003bcca/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10042297-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "a94f8a20c1a74de9361cb2aa95d2a8f2211858ee86967d7d739b3c674dbc91ab"
+    },
+    {
+      "artist": "Diaf",
+      "url": "https://tidal.com/artist/diaf/10043236",
+      "imageSource": "https://resources.tidal.com/images/3e4a0872/0d33/4c7f/b11e/8f781acc7be0/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10043236-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "1ab3f43139ef2337cee01412799d806630c1719290dac392895231fac555f0a0"
+    },
+    {
+      "artist": "Gor Sujyan",
+      "url": "https://tidal.com/artist/gor-sujyan/10043713",
+      "imageSource": "https://resources.tidal.com/images/5367d0f6/b121/42a1/adb5/bfd061b9f5be/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10043713-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "9d12ee03ac6c3acd63112803381268003da43dbd2dea4570bd348ef7dd8daf37"
+    },
+    {
+      "artist": "Padme",
+      "url": "https://tidal.com/artist/padme/10043812",
+      "imageSource": "https://resources.tidal.com/images/9ca408c9/28d2/467b/84ad/8c0236f801ab/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10043812-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "685447c95b072be04ac650d839eb256174cc747344e80fec66f8d25d5cc5bddb"
+    },
+    {
+      "artist": "Gerard Pastor",
+      "url": "https://tidal.com/artist/gerard-pastor/10043933",
+      "imageSource": "https://resources.tidal.com/images/c60e47f0/2ac0/4070/a03b/8343796c64e3/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10043933-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "44b678aff83eef7835c4f873ad1c289414cf152a512ff292f56a2c2d36485197"
+    },
+    {
+      "artist": "Senor Coconut and his orchestra",
+      "url": "https://tidal.com/artist/senor-coconut-and-his-orchestra/10044160",
+      "imageSource": "https://resources.tidal.com/images/60bbc0e5/38d8/42af/bc55/56ffd966521d/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10044160-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "75711818a923449f6eb0bfb872bd3fbd7cce6a21429a239e7fa9d92468bca65a"
+    },
+    {
+      "artist": "Farma",
+      "url": "https://tidal.com/artist/farma/10045616",
+      "imageSource": "https://resources.tidal.com/images/e16f89c5/9951/49dc/a699/f2a80bae0a84/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10045616-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "c90c1d4d6cb33db39f579d48249cf80221e6a2e89536be22ec8b6b4bb3495db9"
+    },
+    {
+      "artist": "Average Rap Band",
+      "url": "https://tidal.com/artist/average-rap-band/10046433",
+      "imageSource": "https://resources.tidal.com/images/e97633af/2915/4c42/b0e5/4f2e57644033/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10046433-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "7a21a1d66f73a5a0ffed66ff625e797c942d11d57d2caafb6080cf04e0779d6c"
+    },
+    {
+      "artist": "CRCK LCKS",
+      "url": "https://tidal.com/artist/crck-lcks/10046820",
+      "imageSource": "https://resources.tidal.com/images/d7196877/6188/418f/b743/4b671f9ce3ef/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10046820-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "b7df44e59e7ec80931d46fbbaf069dda09ceec7cbf97f13a82c79ffd1509dde0"
+    },
+    {
+      "artist": "Axo",
+      "url": "https://tidal.com/artist/axo/10046862",
+      "imageSource": "https://resources.tidal.com/images/e225ab9a/52bb/4d36/a099/5c5dac3e9a9c/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10046862-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "24bd52148cf952820675d06722adfa19f10093190e84d9729e6408c35c8cd933"
+    },
+    {
+      "artist": "Péloquin-Sauvageau",
+      "url": "https://tidal.com/artist/p%C3%A9loquin-sauvageau/10047251",
+      "imageSource": "https://resources.tidal.com/images/0b365d84/bc15/46ba/a440/7727f35d86ee/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10047251-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "06bf69aab59725449f0179c3db3f898a6c0ad95b11f8cb6e6b18cb358c3e14c7"
+    },
+    {
+      "artist": "Ber",
+      "url": "https://tidal.com/artist/ber/10047535",
+      "imageSource": "https://resources.tidal.com/images/181129b7/36b4/4ead/9799/3b8853eca1e5/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10047535-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "7d35a6deac5f8eaf5dc711a41743829c7953cf017fff207de02c98125a216e76"
+    },
+    {
+      "artist": "Lsc",
+      "url": "https://tidal.com/artist/lsc/10047666",
+      "imageSource": "https://resources.tidal.com/images/97f98984/8afc/4089/8d37/a78f64b33532/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10047666-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "0d598b73a6652382ad4454eed2228dd69cb52e910042d07128f4257d240c7604"
+    },
+    {
+      "artist": "Reason Why",
+      "url": "https://tidal.com/artist/reason-why/10049338",
+      "imageSource": "https://resources.tidal.com/images/04f7a635/35f0/4f6a/9b0e/2e792df0aa39/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10049338-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "bbc0d8a62ba5de04247f48bb35614d041ab2a32bf6f4bf621f0cb9fb7410d019"
+    },
+    {
+      "artist": "Matt Gibson",
+      "url": "https://tidal.com/artist/matt-gibson/10049558",
+      "imageSource": "https://resources.tidal.com/images/95b15094/8ee7/4a52/85ba/ad19554b00fe/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10049558-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "04c47e2fbc6faa128babdbf5094533ba1b53f87e5c5c49f59cb9dad3b5fa910b"
+    },
+    {
+      "artist": "Living In Fear",
+      "url": "https://tidal.com/artist/living-in-fear/10049731",
+      "imageSource": "https://resources.tidal.com/images/db5e7242/cf11/43d7/a71f/49a10ccdbcf6/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10049731-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "4ad103a84ae8853e0aceccab08e68ac7ea18de73aa691a92784739352a2a5298"
+    },
+    {
+      "artist": "Ali Bakgor",
+      "url": "https://tidal.com/artist/ali-bakgor/10049984",
+      "imageSource": "https://resources.tidal.com/images/090078d4/bf4c/4b56/8dac/1c6509d3018f/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10049984-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "265b45d52b047ebae521aad1abe391da23aa0e41f224af154dd161ca1491f664"
+    },
+    {
+      "artist": "Henri Werner",
+      "url": "https://tidal.com/artist/henri-werner/10050138",
+      "imageSource": "https://resources.tidal.com/images/22b9c02d/30a9/40f0/9624/ce8e89ea140c/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10050138-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "442c9a5853f87cdb133076332e636c51cd8470834cab4856934350ff18751a9b"
+    },
+    {
+      "artist": "Insoportable",
+      "url": "https://tidal.com/artist/insoportable/10051302",
+      "imageSource": "https://resources.tidal.com/images/491ae06e/ca69/4262/827d/94822a838809/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10051302-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "0195c59c15c0339b63f406e0bce8392f04ba33659e476728f8c138cda1a4a2dc"
+    },
+    {
+      "artist": "BUFFALA",
+      "url": "https://tidal.com/artist/buffala/10052050",
+      "imageSource": "https://resources.tidal.com/images/17de9678/f57d/4157/a7ae/c1a1ceee0c71/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10052050-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "85e1552aa94685d2c1baee7ef091adf9071242b3c7bb4f2b4eb60427773dbc86"
+    },
+    {
+      "artist": "Dj Hans",
+      "url": "https://tidal.com/artist/dj-hans/10052702",
+      "imageSource": "https://resources.tidal.com/images/0ec045a3/4be4/4409/b202/74ac99034a29/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10052702-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "fe4a58bed0752031d4c9109b4cea3c643b5835e57a22431c11b5b5557554d345"
+    },
+    {
+      "artist": "808milli",
+      "url": "https://tidal.com/artist/808milli/10052904",
+      "imageSource": "https://resources.tidal.com/images/c80a7678/ff57/4650/b781/71c07ebe2bb7/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10052904-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "7d0ec763c8d27b81bbd1aeac8303741adbf7c60407fa89b0ef79e06bb5f2cbc3"
+    },
+    {
+      "artist": "Kristín Þóra Haraldsdóttir",
+      "url": "https://tidal.com/artist/krist%C3%ADn-%C3%BE%C3%B3ra-haraldsd%C3%B3ttir/10053418",
+      "imageSource": "https://resources.tidal.com/images/60899a65/a4a4/4e13/a35c/b1720e0b08d5/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10053418-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "ebfb307c3b9056456d840f100fd668734a24b14cfc158fa90123e1fec860e11a"
+    },
+    {
+      "artist": "GRINGLO",
+      "url": "https://tidal.com/artist/gringlo/10053432",
+      "imageSource": "https://resources.tidal.com/images/7f0e43d0/59be/469d/af4e/fcbb52e26d14/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10053432-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "42c098c74249893439809550418455c41b39fbf71e3763e53dcff09380913e34"
+    },
+    {
+      "artist": "Balaphonik Sound System",
+      "url": "https://tidal.com/artist/balaphonik-sound-system/10054801",
+      "imageSource": "https://resources.tidal.com/images/1025d8e6/99c6/41ec/836c/08f1b72c4e99/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10054801-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "9b3da617c4f866c9029518527050f97f157511fa1ef8d688de16013618dabb87"
+    },
+    {
+      "artist": "Los Brujoz",
+      "url": "https://tidal.com/artist/los-brujoz/10055165",
+      "imageSource": "https://resources.tidal.com/images/4a5cf381/0d35/407e/8bfb/9871f762514b/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10055165-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "30d625fcc3d67eedb07bc5a6ac4267aa0c2070de2015019abc9b75ed49e7dc31"
+    },
+    {
+      "artist": "Motat",
+      "url": "https://tidal.com/artist/motat/10055595",
+      "imageSource": "https://resources.tidal.com/images/fd39a965/27c3/47b9/bc57/8c5c871b7186/1280x1280.jpg",
+      "image": "images/discovery/spotlight-10055595-portrait.jpg",
+      "width": 1280,
+      "height": 1280,
+      "sha256": "229492c4de24fbc6e66f8ec1e3e2e59a97740cd56456d41406c89965529bdf68"
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://tidal.com/artist/anykara/10001207",
+      "reason": "Command '['curl', '--fail', '--location', '--silent', '--show-error', '--max-time', '30', 'https://resources.tidal.com/images/88aa791c/dcac/"
+    },
+    {
+      "url": "https://tidal.com/artist/havs/10008995",
+      "reason": "Command '['curl', '--fail', '--location', '--silent', '--show-error', '--max-time', '30', 'https://resources.tidal.com/images/88fc4515/492b/"
+    },
+    {
+      "url": "https://tidal.com/artist/salf/10013876",
+      "reason": "Command '['curl', '--fail', '--location', '--silent', '--show-error', '--max-time', '30', 'https://resources.tidal.com/images/dc617f0f/3541/"
+    },
+    {
+      "url": "https://tidal.com/artist/felix-hauptmann/10021370",
+      "reason": "Image under 1000px"
+    },
+    {
+      "url": "https://tidal.com/artist/graffiti-ghosts/10025226",
+      "reason": "Command '['curl', '--fail', '--location', '--silent', '--show-error', '--max-time', '30', 'https://resources.tidal.com/images/fe677931/7748/"
+    },
+    {
+      "url": "https://tidal.com/artist/ai-que/10026090",
+      "reason": "Command '['curl', '--fail', '--location', '--silent', '--show-error', '--max-time', '30', 'https://resources.tidal.com/images/075b3a2e/6cc5/"
+    },
+    {
+      "url": "https://tidal.com/artist/teddy-3/10033862",
+      "reason": "Command '['curl', '--fail', '--location', '--silent', '--show-error', '--max-time', '30', 'https://resources.tidal.com/images/fe2afad6/85f8/"
+    }
+  ]
+}

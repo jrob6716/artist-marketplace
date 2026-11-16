@@ -38,7 +38,7 @@ const releases = [
     slug: artist.slug,
     genre: artist.genre,
     style: "reference",
-    type: `${artist.release.trackCount} tracks · Reference profile`,
+    type: artist.release.trackCount === 0 ? "Reference profile" : `${artist.release.trackCount} tracks · Reference profile`,
     image: artist.artwork,
     location: artist.location,
     reference: true,
@@ -177,7 +177,7 @@ export default function App() {
                   {release.image ? (
                     <img
                       src={`${import.meta.env.BASE_URL}${release.image}`}
-                      alt={`${release.title} cover artwork`}
+                      alt={release.genre === "Artist spotlight" ? `${release.artist} artist portrait` : `${release.title} cover artwork`}
                       width="400"
                       height="400"
                       loading="lazy"
@@ -195,10 +195,10 @@ export default function App() {
                   <span className="open">↗</span>
                 </div>
                 <div className="release-meta">
-                  <h3>{release.title}</h3>
+                  <h3>{release.genre === "Artist spotlight" ? release.artist : release.title}</h3>
                   <span>↗</span>
                 </div>
-                <p className="release-artist-name"><span>{release.artist}</span><ArtistBadge /></p>
+                <p className="release-artist-name"><span>{release.genre === "Artist spotlight" ? "Artist spotlight" : release.artist}</span><ArtistBadge /></p>
                 <small>
                   {release.genre} / {release.type}
                 </small>
