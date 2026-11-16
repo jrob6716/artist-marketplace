@@ -1,3 +1,4 @@
+import { genreStyleGroups, matchesGenreStyle } from "./genreStyles";
 import { discoveryArtists } from "./discovery";
 
 export const moodPresets = [
@@ -42,7 +43,10 @@ export function generateMoodPlaylist(mood: MoodId, prompt: string, count = 10, v
     .map(({ slug, name, image, genre, reason }) => ({ slug, name, image, genre, reason }));
 }
 
-export const mixGenres = [...new Set(catalog.map(artist => artist.genre))].sort();
+export const mixGenres = genreStyleGroups.flatMap(group => [group.genre, ...group.styles.map(style => style.label)]);
+export function genreMatchCount(selection: string): number {
+  return catalog.filter(artist => matchesGenreStyle(artist, selection)).length;
+}
 export function generateGenrePlaylist(genres: string[], prompt: string, count = 10, variation = 0): MoodPick[] {
   const selected = [...new Set(genres)].filter(genre => mixGenres.includes(genre));
   if (!selected.length) return [];
@@ -51,7 +55,7 @@ export function generateGenrePlaylist(genres: string[], prompt: string, count = 
   const tokens = [...new Set(input.split(/[^a-z0-9-]+/).filter(token => token.length > 2 && !ignored.has(token) && !excluded.includes(token)))];
   const buckets = selected.map(genre => catalog.filter(artist => {
     const text = `${artist.genre} ${artist.name} ${artist.text}`.toLowerCase();
-    return artist.genre === genre && !excluded.some(word => text.includes(word));
+    return matchesGenreStyle(artist, genre) && !excluded.some(word => text.includes(word));
   }).map(artist => {
     const text = `${artist.genre} ${artist.name} ${artist.text}`.toLowerCase();
     const matches = tokens.filter(token => text.includes(token));
@@ -63,7 +67,7 @@ export function generateGenrePlaylist(genres: string[], prompt: string, count = 
   for (let index = 0; picks.length < limit && buckets.some(bucket => bucket.length > index); index++) {
     for (const bucket of buckets) {
       const artist = bucket[index];
-      if (artist && picks.length < limit) {
+      if (artist && picks.length < limit && !picks.some(pick => pick.slug === artist.slug)) {
         const { slug, name, image, genre, reason } = artist;
         picks.push({ slug, name, image, genre, reason });
       }
