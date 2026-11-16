@@ -1,4 +1,4 @@
-import MoodPlaylistBuilder from "./MoodPlaylistBuilder";
+import MixStudio from "./MixStudio";
 import { useEffect, useId, useRef, useState } from "react";
 import type { ReactNode, FormEvent } from "react";
 import { addPlaylistItem, parsePlaylists, playlistName, playlistStorageKey, removePlaylistItem } from "./data/playlists";
@@ -61,12 +61,12 @@ export function PlaylistProvider({ children }: { children: ReactNode }) {
     <dialog className={`playlist-dialog${modal?.mode === "mood" ? " mood-dialog" : ""}`} ref={dialog} aria-labelledby={`${id}-title`} aria-describedby={`${id}-note`} onCancel={event => { event.preventDefault(); setModal(null); }} onClose={() => setModal(null)}>
       {modal && <>
         <button className="playlist-close" type="button" aria-label="Close playlist dialog" onClick={() => setModal(null)}>×</button>
-        <span className="playlist-eyebrow">{modal.mode === "mood" ? "✧ AI PLAYLIST / MOOD MIX DEMO" : "YOUR OWN LITTLE UNIVERSE"}</span>
-        <h2 id={`${id}-title`}>{modal.mode === "mood" ? "Your mood. Your mix." : modal.mode === "add" ? "Add to playlist" : modal.mode === "delete" ? "Delete playlist?" : modal.mode === "rename" ? "Rename playlist" : "Create a playlist"}</h2>
-        <p id={`${id}-note`}>{modal.mode === "mood" ? "AI playlist concept · This demo matches moods and keywords locally, without an AI service. It curates existing artist previews; it does not generate music. Saved on this device only, with no audio playback." : "Local demo · Playlist collections contain artist and release previews. Saved on this device only; no audio playback."}</p>
-        {modal.mode === "mood" ? <MoodPlaylistBuilder onSave={draft => {
+        <span className="playlist-eyebrow">{modal.mode === "mood" ? "✧ MIX STUDIO / YOUR SOUND, YOUR WAY" : "YOUR OWN LITTLE UNIVERSE"}</span>
+        <h2 id={`${id}-title`}>{modal.mode === "mood" ? "Make it your mix." : modal.mode === "add" ? "Add to playlist" : modal.mode === "delete" ? "Delete playlist?" : modal.mode === "rename" ? "Rename playlist" : "Create a playlist"}</h2>
+        <p id={`${id}-note`}>{modal.mode === "mood" ? "Mix Studio · Build by mood or genre, using local profile matching. It curates existing artist previews; it does not generate music. Saved on this device only, with no audio playback." : "Local demo · Playlist collections contain artist and release previews. Saved on this device only; no audio playback."}</p>
+        {modal.mode === "mood" ? <MixStudio onSave={draft => {
           const playlist: Playlist = { ...draft, id: crypto.randomUUID() };
-          commit([...playlists, playlist], "Mood playlist created on this device.");
+          commit([...playlists, playlist], "Mix Studio playlist created on this device.");
           setModal(null); window.location.hash = `/playlist/${playlist.id}`;
         }} /> : modal.mode === "add" ? <>
           <p className="playlist-item-name">{modal.artist}</p>
@@ -98,7 +98,7 @@ export function PlaylistSidebar({ route }: { route: string }) {
   return <section className="sidebar-playlists" aria-label="Your playlists">
     <div className="sidebar-playlist-heading"><a href="#/playlists">YOUR PLAYLISTS</a><button type="button" onClick={() => open({ mode: "create" })} aria-label="Create playlist">+</button></div>
     <button type="button" className="playlist-create" onClick={() => open({ mode: "create" })}><span>＋</span> Create playlist</button>
-    <button type="button" className="playlist-create playlist-mood-create" onClick={() => open({ mode: "mood" })}><span>✧</span> AI playlist <small>DEMO</small></button>
+    <button type="button" className="playlist-create playlist-mood-create" onClick={() => open({ mode: "mood" })}><span>✧</span> Mix Studio <small>DEMO</small></button>
     <div className="sidebar-playlist-links">{playlists.map(playlist => <a key={playlist.id} href={`#/playlist/${playlist.id}`} aria-current={route === `#/playlist/${playlist.id}` ? "page" : undefined}><span>♫</span><span>{playlist.name}<small>{playlist.items.length} previews</small></span></a>)}</div>
     <p className="playlist-local-note">Saved on this device · Demo</p>
   </section>;
@@ -106,13 +106,13 @@ export function PlaylistSidebar({ route }: { route: string }) {
 export function PlaylistLibrary() {
   const { playlists, open } = usePlaylists();
   return <section className="playlist-library">
-    <div className="playlist-library-heading"><div><p className="eyebrow">Your collection / local demo</p><h1>Your playlists</h1><p>Make a little room for your next favorite. Collect artist and release previews on this device.</p></div><div className="playlist-library-buttons"><button className="playlist-primary playlist-mood-launch" type="button" onClick={() => open({ mode: "mood" })}>✧ AI playlist <small>DEMO</small></button><button className="playlist-primary" type="button" onClick={() => open({ mode: "create" })}>+ Create playlist</button></div></div>
-    {playlists.length ? <div className="playlist-library-grid">{playlists.map(playlist => <a href={`#/playlist/${playlist.id}`} key={playlist.id}><span className="playlist-tile">♫</span><h2>{playlist.name}</h2><p>{playlist.items.length} previews · {playlist.mood ? `${playlist.mood} mood mix · ` : ""}Local demo</p></a>)}</div> : <div className="playlist-empty"><span>♫</span><h2>A collection of your own.</h2><p>Create a playlist, then use the + button on any discovery to add it.</p><button className="playlist-primary" type="button" onClick={() => open({ mode: "create" })}>Create your first playlist</button></div>}
+    <div className="playlist-library-heading"><div><p className="eyebrow">Your collection / local demo</p><h1>Your playlists</h1><p>Make a little room for your next favorite. Collect artist and release previews on this device.</p></div><div className="playlist-library-buttons"><button className="playlist-primary playlist-mood-launch" type="button" onClick={() => open({ mode: "mood" })}>✧ Mix Studio <small>DEMO</small></button><button className="playlist-primary" type="button" onClick={() => open({ mode: "create" })}>+ Create playlist</button></div></div>
+    {playlists.length ? <div className="playlist-library-grid">{playlists.map(playlist => <a href={`#/playlist/${playlist.id}`} key={playlist.id}><span className="playlist-tile">♫</span><h2>{playlist.name}</h2><p>{playlist.items.length} previews · {playlist.genres?.length ? `${playlist.genres.join(" + ")} mix · ` : playlist.mood ? `${playlist.mood} mood mix · ` : ""}Local demo</p></a>)}</div> : <div className="playlist-empty"><span>♫</span><h2>A collection of your own.</h2><p>Create a playlist, then use the + button on any discovery to add it.</p><button className="playlist-primary" type="button" onClick={() => open({ mode: "create" })}>Create your first playlist</button></div>}
   </section>;
 }
 export function PlaylistActions({ playlist }: { playlist: Playlist }) {
   const { open } = usePlaylists();
-  return <div className="playlist-page-actions"><p>♫ {playlist.items.length} previews · {playlist.mood ? `${playlist.mood} mood mix · ` : ""}Saved on this device · No audio playback{playlist.mood && <span className="playlist-mood-note">Local mood matching demo · Curated previews, no music generation</span>}</p><div><a href="#/discover">+ Add discoveries</a><button type="button" onClick={() => open({ mode: "rename", id: playlist.id })}>Rename</button><button type="button" onClick={() => open({ mode: "delete", id: playlist.id })}>Delete</button></div></div>;
+  return <div className="playlist-page-actions"><p>♫ {playlist.items.length} previews · {playlist.genres?.length ? `${playlist.genres.join(" + ")} mix · ` : playlist.mood ? `${playlist.mood} mood mix · ` : ""}Saved on this device · No audio playback{(playlist.mood || playlist.genres?.length) && <span className="playlist-mood-note">Mix Studio · Local mood and genre matching · Curated previews, no music generation</span>}</p><div><a href="#/discover">+ Add discoveries</a><button type="button" onClick={() => open({ mode: "rename", id: playlist.id })}>Rename</button><button type="button" onClick={() => open({ mode: "delete", id: playlist.id })}>Delete</button></div></div>;
 }
 export function PlaylistItemButton({ slug, artist, playlistId }: { slug: string; artist: string; playlistId?: string }) {
   const { open, remove } = usePlaylists();

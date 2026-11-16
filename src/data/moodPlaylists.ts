@@ -41,3 +41,33 @@ export function generateMoodPlaylist(mood: MoodId, prompt: string, count = 10, v
     .slice(0, Math.min(20, Math.max(1, Math.floor(count) || 10)))
     .map(({ slug, name, image, genre, reason }) => ({ slug, name, image, genre, reason }));
 }
+
+export const mixGenres = [...new Set(catalog.map(artist => artist.genre))].sort();
+export function generateGenrePlaylist(genres: string[], prompt: string, count = 10, variation = 0): MoodPick[] {
+  const selected = [...new Set(genres)].filter(genre => mixGenres.includes(genre));
+  if (!selected.length) return [];
+  const input = prompt.toLowerCase();
+  const excluded = [...input.matchAll(/\b(?:no|not|without|avoid)\s+([a-z]+(?:-hop)?)/g)].map(match => match[1]);
+  const tokens = [...new Set(input.split(/[^a-z0-9-]+/).filter(token => token.length > 2 && !ignored.has(token) && !excluded.includes(token)))];
+  const buckets = selected.map(genre => catalog.filter(artist => {
+    const text = `${artist.genre} ${artist.name} ${artist.text}`.toLowerCase();
+    return artist.genre === genre && !excluded.some(word => text.includes(word));
+  }).map(artist => {
+    const text = `${artist.genre} ${artist.name} ${artist.text}`.toLowerCase();
+    const matches = tokens.filter(token => text.includes(token));
+    return { ...artist, score: matches.length, tie: tieBreak(artist.slug, variation), reason: matches.length ? `${genre} · matches “${matches[0]}”` : `From your ${genre.toLowerCase()} selection` };
+  }).sort((a, b) => b.score - a.score || b.tie - a.tie));
+  const picks: MoodPick[] = [];
+  const limit = Math.min(20, Math.max(1, Math.floor(count) || 10));
+  // Alternate between genres so each selected genre gets space in the mix.
+  for (let index = 0; picks.length < limit && buckets.some(bucket => bucket.length > index); index++) {
+    for (const bucket of buckets) {
+      const artist = bucket[index];
+      if (artist && picks.length < limit) {
+        const { slug, name, image, genre, reason } = artist;
+        picks.push({ slug, name, image, genre, reason });
+      }
+    }
+  }
+  return picks;
+}
