@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import LandingPage from "./LandingPage";
 import ArtistPage from "./ArtistPage";
 import M3ttaPage from "./M3ttaPage";
 import "./App.css";
@@ -44,6 +45,11 @@ const releases = [
   })),
 ];
 
+function isSaved(slug: string) {
+  try { return localStorage.getItem(`reference-${slug}`) === "yes"; }
+  catch { return false; }
+}
+
 export default function App() {
   const [genre, setGenre] = useState("All sounds");
   const [query, setQuery] = useState("");
@@ -51,7 +57,7 @@ export default function App() {
   const [route, setRoute] = useState(window.location.hash);
   useEffect(() => {
     const update = () => {
-      const next = window.location.hash.startsWith("#/artist/");
+      const next = window.location.hash.startsWith("#/") || window.location.hash === "#discover";
       setRoute(window.location.hash);
       if (next || window.location.hash === "") window.scrollTo(0, 0);
       else
@@ -85,90 +91,43 @@ export default function App() {
         </a>
       </div>
     );
+  const isPlatform = route === "#/discover" || route === "#discover" || route === "#/collection";
+  if (!isPlatform) return <LandingPage />;
+  const collection = route === "#/collection";
   const normalizedQuery = query.trim().toLocaleLowerCase();
   const filteredReleases = releases.filter(
     (release) =>
+      (!collection || isSaved(release.slug)) &&
       (genre === "All sounds" || release.genre === genre) &&
       `${release.artist} ${release.title} ${release.genre} ${release.location} ${release.searchText}`
         .toLocaleLowerCase()
         .includes(normalizedQuery),
   );
   return (
-    <div className="marketplace-page">
-      <header>
-        <a className="brand" href="#">
-          am<span>↗</span>
-          <span className="brand-name">artist marketplace</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#discover">Discover music</a>
-          <a href="#artists">For artists ↗</a>
+    <div className="marketplace-page platform-page">
+      <aside className="platform-sidebar">
+        <a className="brand" href="#" aria-label="Artist Marketplace home">am<span>↗</span></a>
+        <span className="sidebar-caption">YOUR MUSIC UNIVERSE</span>
+        <nav aria-label="Platform navigation">
+          <a className={!collection ? "selected" : ""} href="#/discover"><span>◈</span> Discover</a>
+          <a className={collection ? "selected" : ""} href="#/collection"><span>♡</span> Saved previews</a>
         </nav>
-        <span className="prototype">Early concept / 001</span>
-      </header>
-      <main>
-        <section className="hero">
-          <div className="hero-copy">
-            <p className="eyebrow">Independent music. Individual worlds.</p>
-            <h1>
-              Your music.
-              <br />
-              Your space.
-              <br />
-              <em>Your terms.</em>
-            </h1>
-            <div className="hero-bottom">
-              <p>
-                A place for artists to build their own world.
-                <br />
-                And for listeners to find something that stays.
-              </p>
-              <a className="button" href="#discover">
-                Find your next favorite <span>↗</span>
-              </a>
-            </div>
-          </div>
-          <div className="hero-art" aria-hidden="true">
-            <div className="orbit orbit-one" />
-            <div className="orbit orbit-two" />
-            <div className="record">
-              <div className="record-label">
-                am
-                <br />
-                <small>SIDE A / INDEPENDENT</small>
-              </div>
-            </div>
-            <span className="art-caption">
-              Made by artists.
-              <br />
-              Kept in motion by you.
-            </span>
-            <span className="art-number">33⅓</span>
-          </div>
-        </section>
-        <div className="ticker">
-          <span>ARTIST OWNED SPACES</span>
-          <b>✳</b>
-          <span>DIRECT CONNECTIONS</span>
-          <b>✳</b>
-          <span>DISCOVERY WITHOUT LIMITS</span>
-          <b>✳</b>
-          <span>INDEPENDENT BY DESIGN</span>
-        </div>
+        <div className="sidebar-picks"><span className="sidebar-caption">ARTIST SPOTLIGHTS</span><a href="#/artist/m3tta">M3TTA <span>↗</span></a><a href="#/artist/mira-sol">Mira Sol <span>↗</span></a></div>
+        <div className="sidebar-bottom"><p>Independent music.<br/>Individual worlds.</p><a href="#">About artist marketplace ↗</a><small>Working concept / 001</small></div>
+      </aside>
+      <main className="platform-main">
+        <div className="platform-topbar"><span>Music / {collection ? "Your collection" : "Discover"}</span><a href="#">artist marketplace <span>↗</span></a></div>
+        {!collection && <section className="platform-feature">
+          <img src={`${import.meta.env.BASE_URL}images/m3tta-third-state-sculpture.jpg`} alt="Third State by M3TTA"/>
+          <div className="platform-feature-copy"><p className="eyebrow">IN THE SPOTLIGHT / M3TTA</p><h1>Find your<br/>third state.</h1><p>Electronic explorations. A world between movement and stillness.</p><a className="brand-cta" href="#/artist/m3tta">Explore M3TTA <span>↗</span></a></div><span className="feature-index">01 / ARTIST CONCEPT</span>
+        </section>}
         <section id="discover" className="discover">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">The discovery desk</p>
-              <h2>
-                Good music.
-                <br />
-                New connections.
-              </h2>
+              <p className="eyebrow">{collection ? "Your collection" : "A little discovery goes a long way"}</p>
+              <h2>{collection ? "Saved previews" : "Discover your next favorite"}</h2>
             </div>
-            <p>
-              27 artist spaces to explore.
-              <br />2 artist concepts + 25 artist reference profiles.
-            </p>
+            <p>{collection ? "Artist worlds you’ve saved on this device." : "27 artist spaces. Endless possibilities."}</p>
           </div>
           <div className="discovery-search-row">
             <label className="discovery-search">
@@ -247,8 +206,9 @@ export default function App() {
           </div>
           {filteredReleases.length === 0 && (
             <div className="discovery-empty">
-              <h3>No matches yet.</h3>
-              <p>Try another name, sound, or location.</p>
+              <h3>{collection && !query && genre === "All sounds" ? "Your collection starts here." : "No matches yet."}</h3>
+              <p>{collection ? "Save a reference artist preview to find it here. You can also search or filter your saved previews." : "Try another name, sound, or location."}</p>
+              {collection && <a className="brand-cta" href="#/discover">Discover artists ↗</a>}
               <button
                 className="button light"
                 onClick={() => {
@@ -279,41 +239,8 @@ export default function App() {
             )}
           </div>
         </section>
-        <section id="artists" className="artist-section">
-          <p className="eyebrow">A home for your sound</p>
-          <h2>
-            More than a profile.
-            <br />A world of your own.
-          </h2>
-          <div className="artist-bottom">
-            <p>
-              Your releases, your story, your visual identity.
-              <br />
-              We’re building a marketplace around the people who make the music.
-            </p>
-            <button
-              className="button light"
-              onClick={() => {
-                window.location.hash = "/artist/mira-sol";
-              }}
-            >
-              Explore Mira Sol ↗
-            </button>
-            <a className="button light" href="#/artist/m3tta">
-              Explore M3TTA ↗
-            </a>
-          </div>
-        </section>
+        <footer className="platform-footer"><p>Independent by design.</p><small>2 artist concepts + 25 artist reference profiles · Preview only</small><a href="#">About us ↗</a></footer>
       </main>
-      <footer>
-        <a className="brand" href="#">
-          am↗
-        </a>
-        <p>Independent by design.</p>
-        <small>
-          Working concept · Sample artists and releases · No purchases available
-        </small>
-      </footer>
     </div>
   );
 }

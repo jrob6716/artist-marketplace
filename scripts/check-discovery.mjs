@@ -51,12 +51,33 @@ try {
   }
   globalThis.window = { location: { hash: "" } };
   const home = renderToString(React.createElement(App));
-  assert.ok(home.includes("25 artist reference profiles"));
+  assert.ok(home.includes("Music brings us."));
+  assert.ok(home.includes("#/discover"));
+  assert.ok(!home.includes('class="release"'));
+  globalThis.window = { location: { hash: "#/discover" } };
+  const platform = renderToString(React.createElement(App));
+  assert.ok(platform.includes("Discover your next favorite"));
+  assert.ok(platform.includes("25 artist reference profiles"));
   assert.ok(!/bandcamp/i.test(home), "Homepage contains unwanted platform copy or links");
   assert.ok(
-    home.includes("#/artist/m3tta") && home.includes("#/artist/mira-sol"),
+    platform.includes("#/artist/m3tta") && platform.includes("#/artist/mira-sol"),
   );
-  assert.equal((home.match(/class="release"/g) || []).length, 12);
+  assert.equal((platform.match(/class="release"/g) || []).length, 12);
+  for (const hash of ["#discover", "#/collection"]) {
+    globalThis.window = { location: { hash } };
+    const page = renderToString(React.createElement(App));
+    assert.ok(page.includes("Platform navigation"));
+    if (hash === "#/collection") {
+      assert.ok(page.includes("Saved previews"));
+      assert.ok(page.includes("Your collection starts here."));
+    }
+  }
+  globalThis.localStorage = { getItem: key => key === `reference-${records[0].slug}` ? "yes" : null };
+  globalThis.window = { location: { hash: "#/collection" } };
+  const saved = renderToString(React.createElement(App));
+  assert.equal((saved.match(/class="release"/g) || []).length, 1);
+  assert.ok(saved.includes(records[0].release.title));
+  globalThis.localStorage = { getItem: () => null };
   for (const [route, marker] of [
     ["m3tta", "JASON ROBINSON."],
     ["mira-sol", "Mira Sol"],
