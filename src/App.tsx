@@ -1,3 +1,5 @@
+import { usePlaylists } from "./PlaylistContext";
+import { PlaylistProvider, PlaylistSidebar, PlaylistLibrary, PlaylistActions, PlaylistItemButton } from "./Playlists";
 import { demoPopularity } from "./data/popularity";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useState } from "react";
@@ -5,6 +7,7 @@ import LandingPage from "./LandingPage";
 import ArtistPage from "./ArtistPage";
 import M3ttaPage from "./M3ttaPage";
 import "./App.css";
+import "./Playlists.css";
 import DiscoveryArtistPage from "./DiscoveryArtistPage";
 import { discoveryArtists, discoveryGenres } from "./data/discovery";
 
@@ -55,6 +58,11 @@ function isSaved(slug: string) {
 }
 
 export default function App() {
+  return <PlaylistProvider><AppContent /></PlaylistProvider>;
+}
+
+function AppContent() {
+  const { playlists } = usePlaylists();
   const [view, setView] = useState<"grid" | "list">(() => {
     try { return localStorage.getItem("discovery-view") === "list" ? "list" : "grid"; }
     catch { return "grid"; }
@@ -71,6 +79,9 @@ export default function App() {
     const update = () => {
       const next = window.location.hash.startsWith("#/") || window.location.hash === "#discover";
       setRoute(window.location.hash);
+      if (window.location.hash.startsWith("#/playlist")) {
+        setGenre("All sounds"); setQuery(""); setVisibleCount(50);
+      }
       if (next || window.location.hash === "") window.scrollTo(0, 0);
       else
         requestAnimationFrame(() =>
@@ -103,12 +114,16 @@ export default function App() {
         </a>
       </div>
     );
-  const isPlatform = route === "#/discover" || route === "#discover" || route === "#/collection";
+  const isPlatform = route === "#/discover" || route === "#discover" || route === "#/collection" || route === "#/playlists" || route.startsWith("#/playlist/");
   if (!isPlatform) return <LandingPage />;
   const collection = route === "#/collection";
+  const library = route === "#/playlists";
+  const playlistRoute = route.startsWith("#/playlist/");
+  const playlist = playlistRoute ? playlists.find(item => `#/playlist/${item.id}` === route) : undefined;
   const normalizedQuery = query.trim().toLocaleLowerCase();
   const filteredReleases = releases.filter(
     (release) =>
+      (!playlistRoute || Boolean(playlist?.items.includes(release.slug))) &&
       (!collection || isSaved(release.slug)) &&
       (genre === "All sounds" || release.genre === genre) &&
       `${release.artist} ${release.title} ${release.genre} ${release.location} ${release.searchText}`
@@ -121,26 +136,29 @@ export default function App() {
         <a className="brand" href="#" aria-label="Artist Marketplace home">am<span>↗</span></a>
         <span className="sidebar-caption">YOUR MUSIC UNIVERSE</span>
         <nav aria-label="Platform navigation">
-          <a className={!collection ? "selected" : ""} href="#/discover"><span>◈</span> Discover</a>
+          <a className={!collection && !library && !playlistRoute ? "selected" : ""} href="#/discover"><span>◈</span> Discover</a>
           <a className={collection ? "selected" : ""} href="#/collection"><span>♡</span> Saved previews</a>
+          <a className={library || playlistRoute ? "selected" : ""} href="#/playlists"><span>♫</span> Playlists</a>
         </nav>
+        <PlaylistSidebar route={route} />
         <div className="sidebar-picks"><span className="sidebar-caption">ARTIST SPOTLIGHTS</span><a href="#/artist/m3tta">M3TTA <span>↗</span></a><a href="#/artist/mira-sol">Mira Sol <span>↗</span></a></div>
         <div className="sidebar-bottom"><p>Independent music.<br/>Individual worlds.</p><a href="#">About artist marketplace ↗</a><small>Working concept / 001</small></div>
       </aside>
       <main className="platform-main">
-        <div className="platform-topbar"><span>Music / {collection ? "Your collection" : "Discover"}</span><a href="#">artist marketplace <span>↗</span></a></div>
-        {!collection && <section className="platform-feature">
+        <div className="platform-topbar"><span>Music / {playlist?.name ?? (library || playlistRoute ? "Playlists" : collection ? "Your collection" : "Discover")}</span><a href="#">artist marketplace <span>↗</span></a></div>
+        {!collection && !library && !playlistRoute && <section className="platform-feature">
           <img src={`${import.meta.env.BASE_URL}images/m3tta-third-state-sculpture.jpg`} alt="Third State by M3TTA"/>
           <div className="platform-feature-copy"><p className="eyebrow">IN THE SPOTLIGHT / M3TTA</p><h1>Find your<br/>third state.</h1><p>Electronic explorations. A world between movement and stillness.</p><a className="brand-cta" href="#/artist/m3tta">Explore M3TTA <span>↗</span></a></div><span className="feature-index">01 / ARTIST CONCEPT</span>
         </section>}
-        <section id="discover" className="discover">
+        {library ? <PlaylistLibrary /> : <section id="discover" className="discover">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">{collection ? "Your collection" : "A little discovery goes a long way"}</p>
-              <h2>{collection ? "Saved previews" : "Discover your next favorite"}</h2>
+              <p className="eyebrow">{playlistRoute ? "Your playlist / local demo" : collection ? "Your collection" : "A little discovery goes a long way"}</p>
+              <h2>{playlist?.name ?? (playlistRoute ? "Playlist not found" : collection ? "Saved previews" : "Discover your next favorite")}</h2>
             </div>
-            <p>{collection ? "Artist worlds you’ve saved on this device." : `${releases.length} artist spaces. Endless possibilities.`}</p>
+            <p>{playlistRoute ? "Your discoveries, all in one place." : collection ? "Artist worlds you’ve saved on this device." : `${releases.length} artist spaces. Endless possibilities.`}</p>
           </div>
+          {playlist && <PlaylistActions playlist={playlist} />}
           <div className="discovery-search-row">
             <label className="discovery-search">
               <span>SEARCH THE COLLECTION</span>
@@ -184,10 +202,10 @@ export default function App() {
           {view === "list" && <div className="discovery-list-heading" aria-hidden="true"><span>#</span><span>Artist / release</span><span>Demo popularity</span></div>}
           <div className={`releases${view === "list" ? " releases-list" : ""}`} data-view={view}>
             {filteredReleases.slice(0, visibleCount).map((release) => (
+              <div className="release-item" key={release.slug}>
               <a
                 className="release"
                 data-popularity={release.popularity}
-                key={release.slug}
                 href={`#/artist/${release.slug}`}
                 aria-label={`Explore ${release.artist} artist preview`}
               >
@@ -230,13 +248,15 @@ export default function App() {
                   <span><strong>{release.popularity}<small>/100</small></strong><em>DEMO</em></span>
                 </div>
               </a>
+              <PlaylistItemButton slug={release.slug} artist={release.artist} playlistId={playlist?.id} />
+              </div>
             ))}
           </div>
           {filteredReleases.length === 0 && (
             <div className="discovery-empty">
-              <h3>{collection && !query && genre === "All sounds" ? "Your collection starts here." : "No matches yet."}</h3>
-              <p>{collection ? "Save a reference artist preview to find it here. You can also search or filter your saved previews." : "Try another name, sound, or location."}</p>
-              {collection && <a className="brand-cta" href="#/discover">Discover artists ↗</a>}
+              <h3>{playlistRoute && !query && genre === "All sounds" ? (playlist ? "Your playlist starts here." : "This playlist is no longer available.") : collection && !query && genre === "All sounds" ? "Your collection starts here." : "No matches yet."}</h3>
+              <p>{playlistRoute ? "Explore Discover and use the + button to collect artist and release previews." : collection ? "Save a reference artist preview to find it here. You can also search or filter your saved previews." : "Try another name, sound, or location."}</p>
+              {(collection || playlistRoute) && <a className="brand-cta" href="#/discover">Discover artists ↗</a>}
               <button
                 className="button light"
                 onClick={() => {
@@ -266,7 +286,7 @@ export default function App() {
               </button>
             )}
           </div>
-        </section>
+        </section>}
         <footer className="platform-footer"><p>Independent by design.</p><small>2 artist concepts + {discoveryArtists.length} artist reference profiles · Preview only</small><a href="#">About us ↗</a></footer>
       </main>
     </div>

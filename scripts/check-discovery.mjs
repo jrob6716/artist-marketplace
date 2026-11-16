@@ -100,6 +100,32 @@ try {
   assert.equal((saved.match(/class="release"/g) || []).length, 1);
   assert.ok(saved.includes(records[0].release.title));
   globalThis.localStorage = { getItem: () => null };
+  const { parsePlaylists, playlistName, addPlaylistItem, removePlaylistItem, playlistStorageKey } = await server.ssrLoadModule("/src/data/playlists.ts");
+  assert.deepEqual(parsePlaylists("invalid JSON"), []);
+  assert.deepEqual(parsePlaylists('{"not":"an array"}'), []);
+  assert.throws(() => playlistName("   "));
+  assert.equal(playlistName("  Night discoveries  "), "Night discoveries");
+  const storedPlaylist = { id: "night-test", name: "Night discoveries", items: [records[0].slug, records[0].slug] };
+  const initialPlaylists = parsePlaylists(JSON.stringify([storedPlaylist, { ...storedPlaylist }, { id: "bad" }]));
+  assert.equal(initialPlaylists.length, 1);
+  assert.deepEqual(initialPlaylists[0].items, [records[0].slug]);
+  const added = addPlaylistItem(initialPlaylists, "night-test", "m3tta");
+  assert.deepEqual(addPlaylistItem(added, "night-test", "m3tta"), added);
+  assert.deepEqual(removePlaylistItem(added, "night-test", records[0].slug)[0].items, ["m3tta"]);
+  assert.deepEqual(initialPlaylists[0].items, [records[0].slug], "Playlist edits must not mutate previous state");
+  globalThis.localStorage = { getItem: key => key === playlistStorageKey ? JSON.stringify(added) : null };
+  globalThis.window = { location: { hash: "#/playlist/night-test" } };
+  const playlist = renderToString(React.createElement(App));
+  assert.ok(playlist.includes("Night discoveries"));
+  assert.ok(playlist.includes("No audio playback"));
+  assert.ok(playlist.includes("Remove M3TTA from playlist"));
+  assert.equal((playlist.match(/class="release"/g) || []).length, 2);
+  globalThis.window = { location: { hash: "#/playlists" } };
+  assert.ok(renderToString(React.createElement(App)).includes("Night discoveries"));
+  globalThis.localStorage = { getItem: () => null };
+  assert.ok(renderToString(React.createElement(App)).includes("Create your first playlist"));
+  globalThis.window = { location: { hash: "#/playlist/missing" } };
+  assert.ok(renderToString(React.createElement(App)).includes("Playlist not found"));
   for (const [route, marker] of [
     ["m3tta", "JASON ROBINSON."],
     ["mira-sol", "Mira Sol"],
