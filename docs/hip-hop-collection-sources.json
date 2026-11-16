@@ -1,0 +1,54 @@
+{
+  "collectedAt": "2026-11-16",
+  "audioImported": false,
+  "sources": [
+    {
+      "artist": "J. Cole",
+      "artistUrl": "https://tidal.com/artist/j-cole/3652822",
+      "releaseUrl": "https://tidal.com/album/496439179",
+      "artwork": "https://resources.tidal.com/images/c10800f8/d5ae/46b5/86eb/dc0d35c44ac5/1280x1280.jpg",
+      "portrait": "https://resources.tidal.com/images/148ea247/6f8a/4e5f/9d2e/210f2c8b5ba5/750x750.jpg",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "JID",
+      "artistUrl": "https://tidal.com/artist/jid/7061089",
+      "releaseUrl": "https://tidal.com/album/244890547",
+      "artwork": "https://resources.tidal.com/images/bce2b673/3f9d/4490/b31a/3825e5b856b6/1280x1280.jpg",
+      "portrait": "https://resources.tidal.com/images/1306be42/7ebf/41a3/837b/9cf0d35fae72/750x750.jpg",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "artistUrl": "https://tidal.com/artist/kendrick-lamar/3816041",
+      "releaseUrl": "https://tidal.com/album/81893085",
+      "artwork": "https://resources.tidal.com/images/ab59a531/a587/416d/ab99/09d568870d9e/1280x1280.jpg",
+      "portrait": "https://resources.tidal.com/images/84d81b7a/a12e/4a3e/bda4/d0527cb1c8cf/750x750.jpg",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "Smino",
+      "artistUrl": "https://tidal.com/artist/smino/71647262",
+      "releaseUrl": "https://tidal.com/album/71281371",
+      "artwork": "https://resources.tidal.com/images/7a5932c7/6f13/4c58/b4f7/2d34e60aea02/1280x1280.jpg",
+      "portrait": "https://resources.tidal.com/images/538c088b/7d8e/4acf/b837/fcd2558d6454/750x750.jpg",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "Isaiah Rashad",
+      "artistUrl": "https://tidal.com/artist/isaiah-rashad/4953055",
+      "releaseUrl": "https://tidal.com/album/192216890",
+      "artwork": "https://resources.tidal.com/images/b4d5cc08/d766/492a/89d5/d800ac02e0c1/1280x1280.jpg",
+      "portrait": "https://resources.tidal.com/images/1cc81374/7d96/4eb2/b9c9/1a4d95386a6e/750x750.jpg",
+      "trackMetadataAvailable": false
+    },
+    {
+      "artist": "Mac Miller",
+      "artistUrl": "https://tidal.com/artist/mac-miller/3905394",
+      "releaseUrl": "https://tidal.com/album/308765026",
+      "artwork": "https://resources.tidal.com/images/434f6a2e/2618/4f89/bf76/8885a9bc46ee/1280x1280.jpg",
+      "portrait": "https://resources.tidal.com/images/8772e82a/c785/419a/8669/ec3f6affc31c/750x750.jpg",
+      "trackMetadataAvailable": false
+    }
+  ]
+}

@@ -101,6 +101,14 @@ try {
   assert.ok(saved.includes(records[0].release.title));
   globalThis.localStorage = { getItem: () => null };
   const { genrePages, curatedMixes, genreCatalog, styleSlug } = await server.ssrLoadModule("/src/data/genrePages.ts");
+  const hipHop = genreCatalog("Hip-Hop");
+  assert.equal(hipHop[0].artist, "J. Cole");
+  for (const name of ["J. Cole", "Kendrick Lamar", "JID", "Mac Miller", "Isaiah Rashad", "Smino"]) {
+    const artist = records.find(item => item.name === name);
+    assert.ok(artist && artist.genre === "Hip-Hop", `${name}: missing hip-hop profile`);
+    assert.ok(artist.portrait, `${name}: missing artist photo`);
+    assert.ok(hipHop.some(item => item.artist === name));
+  }
   globalThis.window = { location: { hash: "#/explore" } };
   const explore = renderToString(React.createElement(App));
   assert.ok(explore.includes("Moods &amp; moments"));

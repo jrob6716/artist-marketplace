@@ -10,27 +10,31 @@ def metadata(url,kind):
   data=json.loads(block)
   if data.get('@type')==kind:return data
  raise ValueError(f'No public {kind} metadata: {url}')
-def image(url,path):
+def image(url,path,minimum=1000):
+ original=url
  url=re.sub(r'\d+x\d+\.jpg$','1280x1280.jpg',url)
  if not url.startswith('https://resources.tidal.com/images/'):raise ValueError('Unexpected image source')
- blob=tidal.fetch(url)
+ try:blob=tidal.fetch(url)
+ except Exception:
+  if minimum>=1000:raise
+  url=original;blob=tidal.fetch(url)
  with tempfile.TemporaryDirectory() as tmp:
   temp=pathlib.Path(tmp)/'image.jpg';temp.write_bytes(blob)
   meta=subprocess.check_output(['sips','-g','pixelWidth','-g','pixelHeight',str(temp)],text=True)
   dims=[int(x) for x in re.findall(r'pixel(?:Width|Height): (\d+)',meta)]
-  if len(dims)!=2 or min(dims)<1000:raise ValueError('Low resolution image')
+  if len(dims)!=2 or min(dims)<minimum:raise ValueError('Low resolution image')
   subprocess.run(['sips','-s','format','jpeg','-s','formatOptions','78',str(temp)],check=True,capture_output=True)
   (ROOT/'public'/path).write_bytes(temp.read_bytes())
  return url
-def collect(album_id):
+def collect(album_id,genre="Electronic"):
  url=f'https://tidal.com/album/{album_id}';album=metadata(url,'MusicAlbum')
  artist=album['byArtist'][0];artist_data=metadata(artist['url'],'MusicGroup')
  artist_id=artist['url'].rstrip('/').split('/')[-1];slug='genre-artist-'+artist_id
  cover=f'images/discovery/{slug}-release.jpg';portrait=f'images/discovery/{slug}-portrait.jpg'
  cover_source=image(album['image'],cover)
- try:portrait_source=image(artist_data['image'],portrait)
+ try:portrait_source=image(artist_data['image'],portrait,minimum=700)
  except Exception:portrait='';portrait_source=''
- record={'slug':slug,'name':artist['name'],'genre':'Electronic','summary':'Explore this artist’s electronic music catalog through a public release preview.','location':'','tags':['Electronic'],'collectedAt':'2026-11-16','artwork':cover,'portrait':portrait,'release':{'title':album['name'],'date':album.get('datePublished',''),'trackCount':0,'tracks':[]}}
+ record={'slug':slug,'name':artist['name'],'genre':genre,'summary':f'Explore {artist["name"]} through {album["name"]}, a public release preview.','location':'','tags':[genre]+(['Rap'] if genre=='Hip-Hop' else []),'collectedAt':'2026-11-16','artwork':cover,'portrait':portrait,'release':{'title':album['name'],'date':album.get('datePublished',''),'trackCount':0,'tracks':[]}}
  source={'artist':artist['name'],'artistUrl':artist['url'],'releaseUrl':url,'artwork':cover_source,'portrait':portrait_source,'trackMetadataAvailable':False}
  print(artist['name'],album['name'],flush=True)
  return record,source

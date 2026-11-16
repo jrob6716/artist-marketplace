@@ -1,5 +1,125 @@
 [
   {
+    "slug": "genre-artist-3652822",
+    "name": "J. Cole",
+    "genre": "Hip-Hop",
+    "summary": "Explore J. Cole through The Fall-Off, a public release preview.",
+    "location": "",
+    "tags": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-3652822-release.jpg",
+    "portrait": "images/discovery/genre-artist-3652822-portrait.jpg",
+    "release": {
+      "title": "The Fall-Off",
+      "date": "2026-02-06",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-7061089",
+    "name": "JID",
+    "genre": "Hip-Hop",
+    "summary": "Explore JID through The Forever Story, a public release preview.",
+    "location": "",
+    "tags": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-7061089-release.jpg",
+    "portrait": "images/discovery/genre-artist-7061089-portrait.jpg",
+    "release": {
+      "title": "The Forever Story",
+      "date": "2022-08-24",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-3816041",
+    "name": "Kendrick Lamar",
+    "genre": "Hip-Hop",
+    "summary": "Explore Kendrick Lamar through DAMN. COLLECTORS EDITION., a public release preview.",
+    "location": "",
+    "tags": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-3816041-release.jpg",
+    "portrait": "images/discovery/genre-artist-3816041-portrait.jpg",
+    "release": {
+      "title": "DAMN. COLLECTORS EDITION.",
+      "date": "2017-04-14",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-71647262",
+    "name": "Smino",
+    "genre": "Hip-Hop",
+    "summary": "Explore Smino through blkswn, a public release preview.",
+    "location": "",
+    "tags": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-71647262-release.jpg",
+    "portrait": "images/discovery/genre-artist-71647262-portrait.jpg",
+    "release": {
+      "title": "blkswn",
+      "date": "2017-03-14",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-4953055",
+    "name": "Isaiah Rashad",
+    "genre": "Hip-Hop",
+    "summary": "Explore Isaiah Rashad through The House Is Burning, a public release preview.",
+    "location": "",
+    "tags": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-4953055-release.jpg",
+    "portrait": "images/discovery/genre-artist-4953055-portrait.jpg",
+    "release": {
+      "title": "The House Is Burning",
+      "date": "2021-07-30",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
+    "slug": "genre-artist-3905394",
+    "name": "Mac Miller",
+    "genre": "Hip-Hop",
+    "summary": "Explore Mac Miller through Swimming, a public release preview.",
+    "location": "",
+    "tags": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "collectedAt": "2026-11-16",
+    "artwork": "images/discovery/genre-artist-3905394-release.jpg",
+    "portrait": "images/discovery/genre-artist-3905394-portrait.jpg",
+    "release": {
+      "title": "Swimming",
+      "date": "2018-08-03",
+      "trackCount": 0,
+      "tracks": []
+    }
+  },
+  {
     "slug": "genre-artist-7164492",
     "name": "Eli Brown",
     "genre": "Electronic",
