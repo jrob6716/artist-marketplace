@@ -100,6 +100,23 @@ try {
   assert.equal((saved.match(/class="release"/g) || []).length, 1);
   assert.ok(saved.includes(records[0].release.title));
   globalThis.localStorage = { getItem: () => null };
+  const { generateMoodPlaylist } = await server.ssrLoadModule("/src/data/moodPlaylists.ts");
+  const focusMix = generateMoodPlaylist("focus", "soft ambient without rock", 10);
+  const energyMix = generateMoodPlaylist("energy", "dance house", 10);
+  assert.equal(focusMix.length, 10);
+  assert.equal(new Set(focusMix.map(item => item.slug)).size, 10);
+  assert.ok(focusMix.every(item => item.genre !== "Rock"));
+  assert.ok(focusMix.some(item => item.genre === "Ambient"));
+  assert.notDeepEqual(focusMix.map(item => item.slug), energyMix.map(item => item.slug));
+  assert.deepEqual(focusMix, generateMoodPlaylist("focus", "soft ambient without rock", 10));
+  assert.notDeepEqual(focusMix, generateMoodPlaylist("focus", "soft ambient without rock", 10, 1));
+  for (const pick of [...focusMix, ...energyMix]) {
+    assert.ok(records.some(item => item.slug === pick.slug) || ["m3tta", "mira-sol"].includes(pick.slug));
+    assert.ok(existsSync(new URL(`../public/${pick.image}`, import.meta.url)));
+    assert.ok(pick.reason);
+  }
+  assert.equal(generateMoodPlaylist("unwind", "", 6).length, 6);
+  assert.equal(generateMoodPlaylist("focus", "no ambient no electronic no jazz no folk no rock no pop no experimental no hip-hop no spoken", 10).length, 0);
   const { parsePlaylists, playlistName, addPlaylistItem, removePlaylistItem, playlistStorageKey } = await server.ssrLoadModule("/src/data/playlists.ts");
   assert.deepEqual(parsePlaylists("invalid JSON"), []);
   assert.deepEqual(parsePlaylists('{"not":"an array"}'), []);
@@ -120,6 +137,15 @@ try {
   assert.ok(playlist.includes("No audio playback"));
   assert.ok(playlist.includes("Remove M3TTA from playlist"));
   assert.equal((playlist.match(/class="release"/g) || []).length, 2);
+  const storedMix = { id: "focus-test", name: "In the flow", items: focusMix.map(item => item.slug), mood: "Focus", prompt: "soft ambient without rock" };
+  assert.equal(parsePlaylists(JSON.stringify([storedMix]))[0].mood, "Focus");
+  globalThis.localStorage = { getItem: key => key === playlistStorageKey ? JSON.stringify([storedMix, ...added]) : null };
+  globalThis.window = { location: { hash: "#/playlist/focus-test" } };
+  const mixPage = renderToString(React.createElement(App));
+  assert.ok(mixPage.includes("Focus<!-- --> mood mix") || mixPage.includes("Focus mood mix"));
+  assert.ok(mixPage.includes("Your saved mix sequence"));
+  const renderedSlugs = [...mixPage.matchAll(/class="release"[^>]*href="#\/artist\/([^"]+)"/g)].map(match => match[1]);
+  assert.deepEqual(renderedSlugs, storedMix.items);
   globalThis.window = { location: { hash: "#/playlists" } };
   assert.ok(renderToString(React.createElement(App)).includes("Night discoveries"));
   globalThis.localStorage = { getItem: () => null };

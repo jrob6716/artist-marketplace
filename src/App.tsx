@@ -129,7 +129,7 @@ function AppContent() {
       `${release.artist} ${release.title} ${release.genre} ${release.location} ${release.searchText}`
         .toLocaleLowerCase()
         .includes(normalizedQuery),
-  );
+  ).sort((a, b) => playlist ? playlist.items.indexOf(a.slug) - playlist.items.indexOf(b.slug) : a.rank - b.rank);
   return (
     <div className="marketplace-page platform-page">
       <aside className="platform-sidebar">
@@ -193,7 +193,7 @@ function AppContent() {
             ))}
           </div>
           <div className="discovery-display-bar">
-            <div className="discovery-sort-note"><strong>↗ Most popular</strong><span>Generated demo scores · highest first</span></div>
+            <div className="discovery-sort-note"><strong>{playlist ? "♫ Playlist order" : "↗ Most popular"}</strong><span>{playlist ? "Your saved mix sequence" : "Generated demo scores · highest first"}</span></div>
             <div className="discovery-view-toggle" role="group" aria-label="Artist display layout">
               <button type="button" aria-pressed={view === "grid"} onClick={() => changeView("grid")}><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M1 1h5v5H1zM10 1h5v5h-5zM1 10h5v5H1zM10 10h5v5h-5z" stroke="currentColor"/></svg>Grid</button>
               <button type="button" aria-pressed={view === "list"} onClick={() => changeView("list")}><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M1 3h2m3 0h9M1 8h2m3 0h9M1 13h2m3 0h9" stroke="currentColor" strokeWidth="1.5"/></svg>List</button>
@@ -209,7 +209,7 @@ function AppContent() {
                 href={`#/artist/${release.slug}`}
                 aria-label={`Explore ${release.artist} artist preview`}
               >
-                <span className="release-rank" aria-label={`Demo popularity rank ${release.rank}`}>{String(release.rank).padStart(2, "0")}</span>
+                <span className="release-rank" aria-label={playlist ? `Playlist position ${playlist.items.indexOf(release.slug) + 1}` : `Demo popularity rank ${release.rank}`}>{String(playlist ? playlist.items.indexOf(release.slug) + 1 : release.rank).padStart(2, "0")}</span>
                 <div
                   className={`cover ${release.style} ${release.image ? "image-cover" : ""}`}
                 >

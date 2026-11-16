@@ -1,4 +1,4 @@
-export type Playlist = { id: string; name: string; items: string[] };
+export type Playlist = { id: string; name: string; items: string[]; mood?: string; prompt?: string };
 export const playlistStorageKey = "artist-marketplace-playlists";
 
 export function parsePlaylists(value: string | null): Playlist[] {
@@ -9,7 +9,7 @@ export function parsePlaylists(value: string | null): Playlist[] {
     return data.filter((item): item is Playlist => {
       if (!item || typeof item.id !== "string" || !/^[a-zA-Z0-9-]+$/.test(item.id) || ids.has(item.id) || typeof item.name !== "string" || !item.name.trim() || !Array.isArray(item.items) || !item.items.every((slug: unknown) => typeof slug === "string")) return false;
       ids.add(item.id); return true;
-    }).map(item => ({ id: item.id, name: item.name.trim().slice(0, 80), items: [...new Set(item.items)] }));
+    }).map(item => ({ id: item.id, name: item.name.trim().slice(0, 80), items: [...new Set(item.items)], ...(typeof item.mood === "string" ? { mood: item.mood.slice(0, 40) } : {}), ...(typeof item.prompt === "string" ? { prompt: item.prompt.slice(0, 300) } : {}) }));
   } catch { return []; }
 }
 export function playlistName(value: string): string {
