@@ -46,6 +46,8 @@ try {
       page.includes("This artist has not joined or endorsed this marketplace."),
     );
     assert.ok(page.includes(artist.artwork));
+    assert.ok(page.includes("Verified artist badge demo."));
+    assert.ok(page.includes("have not been verified."));
     assert.ok(!/bandcamp/i.test(page), `${artist.slug}: unwanted platform mention or link`);
     assert.ok(!page.includes("<audio") && !page.includes("<iframe"));
   }
@@ -63,6 +65,7 @@ try {
     platform.includes("#/artist/m3tta") && platform.includes("#/artist/mira-sol"),
   );
   assert.equal((platform.match(/class="release"/g) || []).length, 12);
+  assert.equal((platform.match(/Verified artist badge demo\./g) || []).length, 12);
   for (const hash of ["#discover", "#/collection"]) {
     globalThis.window = { location: { hash } };
     const page = renderToString(React.createElement(App));

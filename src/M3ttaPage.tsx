@@ -1,3 +1,4 @@
+import ArtistBadge from "./ArtistBadge";
 import { useEffect, useRef, useState } from "react";
 import type { MouseEvent } from "react";
 import "./M3ttaPage.css";
@@ -284,6 +285,7 @@ export default function M3ttaPage() {
           <strong>
             M3TTA <span>✳</span>
           </strong>
+          <ArtistBadge />
           <p>Jason Robinson · Producer, composer & programmer.</p>
           <div className="mt-tags">
             <span>PROGRESSIVE HOUSE</span>

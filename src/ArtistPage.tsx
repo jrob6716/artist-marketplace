@@ -1,3 +1,4 @@
+import ArtistBadge from "./ArtistBadge";
 import { useEffect, useRef, useState } from "react";
 import type { MouseEvent } from "react";
 import "./ArtistPage.css";
@@ -263,6 +264,7 @@ export default function ArtistPage() {
               ✳
             </span>
           </strong>
+          <ArtistBadge />
           <p>Producer, songwriter & collector of small moments.</p>
           <div className="ms-tags">
             <span>Electronic</span>

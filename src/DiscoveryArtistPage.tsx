@@ -1,3 +1,4 @@
+import ArtistBadge from "./ArtistBadge";
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import type { DiscoveryArtist } from "./data/discovery";
@@ -135,7 +136,7 @@ export default function DiscoveryArtistPage({
           height="80"
         />
         <div>
-          <strong>{artist.name}</strong>
+          <strong>{artist.name}</strong><ArtistBadge />
           <p>{artist.location || artist.genre}</p>
           <div className="ref-tags">
             {artist.tags.slice(0, 5).map((tag) => (
@@ -254,6 +255,7 @@ export default function DiscoveryArtistPage({
                   {item.name}
                   <span>↗</span>
                 </h3>
+                <ArtistBadge />
                 <p>{item.release.title}</p>
                 <small>{item.genre}</small>
               </a>

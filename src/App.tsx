@@ -1,3 +1,4 @@
+import ArtistBadge from "./ArtistBadge";
 import { useEffect, useState } from "react";
 import LandingPage from "./LandingPage";
 import ArtistPage from "./ArtistPage";
@@ -197,7 +198,7 @@ export default function App() {
                   <h3>{release.title}</h3>
                   <span>↗</span>
                 </div>
-                <p>{release.artist}</p>
+                <p className="release-artist-name"><span>{release.artist}</span><ArtistBadge /></p>
                 <small>
                   {release.genre} / {release.type}
                 </small>
