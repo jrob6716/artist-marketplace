@@ -99,8 +99,8 @@ function AppContent() {
         <a className="brand" href="#" aria-label="Artist Marketplace home">am<span>↗</span></a>
         <span className="sidebar-caption">YOUR MUSIC UNIVERSE</span>
         <nav aria-label="Platform navigation">
-          <a className={!collection && !library && !playlistRoute && !exploreRoute ? "selected" : ""} href="#/discover"><span>◈</span> Discover</a>
           <a className={exploreRoute ? "selected" : ""} href="#/explore"><span>◎</span> Explore</a>
+          <a className={!collection && !library && !playlistRoute && !exploreRoute ? "selected" : ""} href="#/discover"><span>◈</span> Discover</a>
           <a className={collection ? "selected" : ""} href="#/collection"><span>♡</span> Saved previews</a>
           <a className={library || playlistRoute ? "selected" : ""} href="#/playlists"><span>♫</span> Playlists</a>
         </nav>
