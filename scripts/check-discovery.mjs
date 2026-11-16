@@ -75,6 +75,16 @@ try {
   );
   assert.equal((platform.match(/class="release"/g) || []).length, Math.min(50, records.length + 2));
   assert.equal((platform.match(/Verified artist badge demo\./g) || []).length, Math.min(50, records.length + 2));
+  const scores = [...platform.matchAll(/data-popularity="(\d+)"/g)].map(match => Number(match[1]));
+  assert.equal(scores.length, 50);
+  assert.deepEqual(scores, [...scores].sort((a, b) => b - a));
+  assert.ok(platform.includes("Generated demo scores"));
+  globalThis.localStorage = { getItem: key => key === "discovery-view" ? "list" : null };
+  const list = renderToString(React.createElement(App));
+  assert.ok(list.includes('data-view="list"'));
+  assert.ok(list.includes('class="releases releases-list"'));
+  assert.deepEqual([...list.matchAll(/data-popularity="(\d+)"/g)].map(match => Number(match[1])), scores);
+  globalThis.localStorage = { getItem: () => null };
   for (const hash of ["#discover", "#/collection"]) {
     globalThis.window = { location: { hash } };
     const page = renderToString(React.createElement(App));

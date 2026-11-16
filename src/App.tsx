@@ -1,3 +1,4 @@
+import { demoPopularity } from "./data/popularity";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useState } from "react";
 import LandingPage from "./LandingPage";
@@ -44,7 +45,9 @@ const releases = [
     reference: true,
     searchText: artist.tags.join(" "),
   })),
-];
+].map(release => ({ ...release, popularity: demoPopularity(release.slug) }))
+  .sort((a, b) => b.popularity - a.popularity || a.artist.localeCompare(b.artist))
+  .map((release, index) => ({ ...release, rank: index + 1 }));
 
 function isSaved(slug: string) {
   try { return localStorage.getItem(`reference-${slug}`) === "yes"; }
@@ -52,6 +55,14 @@ function isSaved(slug: string) {
 }
 
 export default function App() {
+  const [view, setView] = useState<"grid" | "list">(() => {
+    try { return localStorage.getItem("discovery-view") === "list" ? "list" : "grid"; }
+    catch { return "grid"; }
+  });
+  function changeView(next: "grid" | "list") {
+    setView(next);
+    try { localStorage.setItem("discovery-view", next); } catch { /* Preference remains active for this session. */ }
+  }
   const [genre, setGenre] = useState("All sounds");
   const [query, setQuery] = useState("");
   const [visibleCount, setVisibleCount] = useState(50);
@@ -163,14 +174,24 @@ export default function App() {
               </button>
             ))}
           </div>
-          <div className="releases">
+          <div className="discovery-display-bar">
+            <div className="discovery-sort-note"><strong>↗ Most popular</strong><span>Generated demo scores · highest first</span></div>
+            <div className="discovery-view-toggle" role="group" aria-label="Artist display layout">
+              <button type="button" aria-pressed={view === "grid"} onClick={() => changeView("grid")}><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M1 1h5v5H1zM10 1h5v5h-5zM1 10h5v5H1zM10 10h5v5h-5z" stroke="currentColor"/></svg>Grid</button>
+              <button type="button" aria-pressed={view === "list"} onClick={() => changeView("list")}><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M1 3h2m3 0h9M1 8h2m3 0h9M1 13h2m3 0h9" stroke="currentColor" strokeWidth="1.5"/></svg>List</button>
+            </div>
+          </div>
+          {view === "list" && <div className="discovery-list-heading" aria-hidden="true"><span>#</span><span>Artist / release</span><span>Demo popularity</span></div>}
+          <div className={`releases${view === "list" ? " releases-list" : ""}`} data-view={view}>
             {filteredReleases.slice(0, visibleCount).map((release) => (
               <a
                 className="release"
+                data-popularity={release.popularity}
                 key={release.slug}
                 href={`#/artist/${release.slug}`}
                 aria-label={`Explore ${release.artist} artist preview`}
               >
+                <span className="release-rank" aria-label={`Demo popularity rank ${release.rank}`}>{String(release.rank).padStart(2, "0")}</span>
                 <div
                   className={`cover ${release.style} ${release.image ? "image-cover" : ""}`}
                 >
@@ -194,6 +215,7 @@ export default function App() {
                   </span>
                   <span className="open">↗</span>
                 </div>
+                <div className="release-info">
                 <div className="release-meta">
                   <h3>{release.genre === "Artist spotlight" ? release.artist : release.title}</h3>
                   <span>↗</span>
@@ -202,6 +224,11 @@ export default function App() {
                 <small>
                   {release.genre} / {release.type}
                 </small>
+                </div>
+                <div className="release-popularity" aria-label={`Demo popularity: ${release.popularity} out of 100. Generated for this mockup.`} title="Generated mock score, not real audience or streaming data.">
+                  <span className="popularity-bars" aria-hidden="true">{[1, 2, 3, 4, 5].map(bar => <i key={bar} className={bar <= Math.ceil(release.popularity / 20) ? "lit" : ""} />)}</span>
+                  <span><strong>{release.popularity}<small>/100</small></strong><em>DEMO</em></span>
+                </div>
               </a>
             ))}
           </div>
