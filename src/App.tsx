@@ -167,7 +167,7 @@ export default function App() {
             </div>
             <p>
               27 artist spaces to explore.
-              <br />2 artist concepts + 25 Bandcamp reference profiles.
+              <br />2 artist concepts + 25 artist reference profiles.
             </p>
           </div>
           <div className="discovery-search-row">
@@ -264,7 +264,7 @@ export default function App() {
           <div className="discovery-bottom">
             <p>
               Reference profiles are independent design mockups using public
-              Bandcamp metadata and images. No affiliation, audio, or purchases.
+              artist information and images. No affiliation, audio, or purchases.
             </p>
             {visibleCount < filteredReleases.length && (
               <button

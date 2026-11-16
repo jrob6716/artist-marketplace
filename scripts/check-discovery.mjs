@@ -13,10 +13,6 @@ assert.equal(records.length, 25);
 assert.equal(new Set(records.map((x) => x.slug)).size, 25);
 for (const artist of records) {
   assert.ok(artist.name && artist.release.title && artist.summary);
-  assert.equal(
-    new URL(artist.sourceUrl).hostname.endsWith(".bandcamp.com"),
-    true,
-  );
   for (const field of ["artwork", "portrait"])
     if (artist[field])
       assert.ok(
@@ -50,12 +46,13 @@ try {
       page.includes("This artist has not joined or endorsed this marketplace."),
     );
     assert.ok(page.includes(artist.artwork));
-    assert.ok(page.includes(artist.sourceUrl));
+    assert.ok(!/bandcamp/i.test(page), `${artist.slug}: unwanted platform mention or link`);
     assert.ok(!page.includes("<audio") && !page.includes("<iframe"));
   }
   globalThis.window = { location: { hash: "" } };
   const home = renderToString(React.createElement(App));
-  assert.ok(home.includes("25 Bandcamp reference profiles"));
+  assert.ok(home.includes("25 artist reference profiles"));
+  assert.ok(!/bandcamp/i.test(home), "Homepage contains unwanted platform copy or links");
   assert.ok(
     home.includes("#/artist/m3tta") && home.includes("#/artist/mira-sol"),
   );

@@ -97,7 +97,7 @@ export default function DiscoveryArtistPage({
         <span>DESIGN STUDY / ARTIST PROFILE</span>
       </div>
       <div className="ref-disclosure">
-        Independent mockup based on public Bandcamp information. This artist has
+        Independent mockup based on public artist information. This artist has
         not joined or endorsed this marketplace.
       </div>
       <section className="ref-hero">
@@ -128,7 +128,7 @@ export default function DiscoveryArtistPage({
           src={asset(artist.portrait || artist.artwork)}
           alt={
             artist.portrait
-              ? `${artist.name} profile image from Bandcamp`
+              ? `${artist.name} profile image`
               : `${artist.release.title} release artwork`
           }
           width="80"
@@ -170,20 +170,8 @@ export default function DiscoveryArtistPage({
               height="700"
             />
             <div className="ref-art-caption">
-              <span>ARTWORK FROM BANDCAMP</span>
+              <span>RELEASE ARTWORK</span>
               <span>{artist.genre.toUpperCase()}</span>
-            </div>
-            <div className="ref-source-card">
-              <span>↗</span>
-              <div>
-                <strong>Support the artist at the source.</strong>
-                <p>
-                  Listen, buy, and explore the official release on Bandcamp.
-                </p>
-                <a href={artist.sourceUrl} target="_blank" rel="noreferrer">
-                  Visit the original release ↗
-                </a>
-              </div>
             </div>
           </div>
           <div className="ref-release-copy">
@@ -198,16 +186,8 @@ export default function DiscoveryArtistPage({
             </div>
             <p className="ref-release-intro">
               A window into {artist.name}’s catalog. Explore the release details
-              below, or head to the artist’s original page to listen.
+              below and discover the tracks behind the artwork.
             </p>
-            <a
-              className="ref-button"
-              href={artist.sourceUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Listen on Bandcamp <span>↗</span>
-            </a>
             <p className="ref-player-note">
               Track listing preview only. No music is hosted or played here.
             </p>
@@ -250,14 +230,6 @@ export default function DiscoveryArtistPage({
                 <span key={tag}>{tag}</span>
               ))}
             </div>
-            <a
-              className="ref-text-link"
-              href={artist.artistUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Explore the artist’s Bandcamp ↗
-            </a>
           </div>
         </section>
         <section className="ref-related">
@@ -297,9 +269,6 @@ export default function DiscoveryArtistPage({
             actions apply only to this device. No artist account, endorsement,
             audio upload, or sale is implied.
           </p>
-          <a href={artist.sourceUrl} target="_blank" rel="noreferrer">
-            View the source page ↗
-          </a>
         </aside>
       </main>
       <footer className="ref-footer">

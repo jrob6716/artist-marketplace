@@ -3,11 +3,11 @@ import concurrent.futures, html, json, pathlib, re, subprocess
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 SEEDS=[
 ('the-hanging-stars','https://thehangingstars.bandcamp.com/album/just-a-day','Folk','Harmonies and twelve-string guitars connect country, folk, and psychedelic rock.'),
-('vanessa-bedoret','https://vanessabedoret.bandcamp.com/album/about-time','Experimental','Explore the artist’s public release details and catalog on Bandcamp.'),
+('vanessa-bedoret','https://vanessabedoret.bandcamp.com/album/about-time','Experimental','Explore the artist’s public release details and catalog.'),
 ('bon','https://soundsofbon.bandcamp.com/album/woven-in-light','Spoken Word','Spoken-word poetry and music explore life, light, and reflection.'),
 ('wil-bolton','https://wilbolton.bandcamp.com/album/margins','Ambient','Sustained harmonics, quiet melodies, and field recordings shape an immersive sound.'),
 ('paris-paloma','https://parispaloma.bandcamp.com/album/the-fatal-flaw','Pop','Songwriting moves between alternative pop, indie folk, and intimate storytelling.'),
-('blue','https://officialblue.bandcamp.com/album/reflections','Pop','Explore the artist’s public release details and catalog on Bandcamp.'),
+('blue','https://officialblue.bandcamp.com/album/reflections','Pop','Explore the artist’s public release details and catalog.'),
 ('kirk-monteux','https://kirkmonteux.bandcamp.com/album/tales-from-far-away','Ambient','An astronomy-inspired ambient release with acoustic and electronic textures.'),
 ('polky','https://polkyband.bandcamp.com/album/mother-tongue','Folk','Polish folk traditions meet contemporary arrangements and fiddle-led ensemble playing.'),
 ('izerolite','https://izerolite.bandcamp.com/album/emergence','Electronic','Cinematic electronic production combines melodic ideas with festival-scale dance energy.'),
@@ -34,6 +34,10 @@ def fetch(url):
 def clean(value):return re.sub(r'\s+',' ',html.unescape(re.sub('<[^>]+>',' ',value))).strip()
 def extract(s,pattern):
  m=re.search(pattern,s,re.S);return html.unescape(m.group(1)).strip() if m else ''
+def full_size_portrait(url):
+ # Sidebar photos are 120px thumbnails; use the original for large hero images.
+ return re.sub(r'_\d+(?=\.(?:jpg|png)(?:\?|$))', '_0', url)
+
 def save_image(url,slug,kind):
  if not url:return ''
  if not re.match(r'https://[^/]*bcbits\.com/img/',url):return ''
@@ -52,6 +56,7 @@ def collect(seed):
  image=d.get('image','');image=image[0] if isinstance(image,list) else image
  # The sidebar portrait belongs to the publisher; only use it when that is the actual artist.
  portrait=extract(s,r'<img[^>]*src="([^"]+)"[^>]*class="band-photo"') if publisher.get('name','').casefold()==artist.get('name','').casefold() else ''
+ portrait=full_size_portrait(portrait)
  location=clean(extract(s,r'<span class="location secondaryText">(.*?)</span>')) if portrait else ''
  items=d.get('track',{}).get('itemListElement',[])
  tracks=[{'title':x['item'].get('name',''),'duration':x['item'].get('duration','')} for x in items if x.get('item',{}).get('name')]
@@ -71,6 +76,9 @@ if __name__=='__main__':
  order={s[0]:i for i,s in enumerate(SEEDS)};results.sort(key=lambda x:order[x['slug']])
  if failures or len(results)!=25:
   raise SystemExit('Collection incomplete; keeping the existing profile dataset unchanged. '+str(failures))
- (ROOT/'src/data/discovery-artists.json').write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n')
+ # Keep source attribution in the collection report, outside the public app dataset.
+ private_fields={'sourceUrl','artistUrl','provenance','artworkSource','portraitSource'}
+ public_results=[{key:value for key,value in record.items() if key not in private_fields} for record in results]
+ (ROOT/'src/data/discovery-artists.json').write_text(json.dumps(public_results,ensure_ascii=False,indent=2)+'\n')
  (ROOT/'docs/bandcamp-collection-report.json').write_text(json.dumps({'collected':len(results),'audioImported':False,'discoverFeedAccessible':False,'failures':failures,'sources':[{'artist':r['name'],'url':r['sourceUrl'],'artwork':r['artworkSource'],'portrait':r['portraitSource']} for r in results]},ensure_ascii=False,indent=2)+'\n')
  print(f'Finished: {len(results)} profiles; {len(failures)} failures; no audio requested.',flush=True)
