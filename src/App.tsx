@@ -1,3 +1,4 @@
+import DesignCredit from "./DesignCredit";
 import { usePlaylists } from "./PlaylistContext";
 import { PlaylistProvider, PlaylistSidebar, PlaylistLibrary, PlaylistActions, PlaylistItemButton } from "./Playlists";
 import { demoPopularity } from "./data/popularity";
@@ -287,7 +288,7 @@ function AppContent() {
             )}
           </div>
         </section>}
-        <footer className="platform-footer"><p>Independent by design.</p><small>2 artist concepts + {discoveryArtists.length} artist reference profiles · Preview only</small><a href="#">About us ↗</a></footer>
+        <footer className="platform-footer"><p>Independent by design.</p><small>2 artist concepts + {discoveryArtists.length} artist reference profiles · Preview only</small><a href="#">About us ↗</a><DesignCredit /></footer>
       </main>
     </div>
   );

@@ -1,3 +1,4 @@
+import DesignCredit from "./DesignCredit";
 import ReportArtist from "./ReportArtist";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useRef, useState } from "react";
@@ -716,7 +717,7 @@ export default function M3ttaPage() {
         <a className="mt-footer-am" href="#">
           A SPACE ON <strong>am↗</strong>
         </a>
-      </footer>
+      <DesignCredit /></footer>
       <div
         className="mt-player"
         role="region"

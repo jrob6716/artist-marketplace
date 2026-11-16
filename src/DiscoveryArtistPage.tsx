@@ -1,3 +1,4 @@
+import DesignCredit from "./DesignCredit";
 import ReportArtist from "./ReportArtist";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useState } from "react";
@@ -279,7 +280,7 @@ export default function DiscoveryArtistPage({
         </a>
         <p>Independent by design.</p>
         <a href="#discover">Back to discovery ↗</a>
-      </footer>
+      <DesignCredit /></footer>
       <div role="status" className={`ref-toast ${copied ? "show" : ""}`}>
         {copied ? "Preview link copied." : ""}
       </div>

@@ -1,3 +1,4 @@
+import DesignCredit from "./DesignCredit";
 import ReportArtist from "./ReportArtist";
 import ArtistBadge from "./ArtistBadge";
 import { useEffect, useRef, useState } from "react";
@@ -651,7 +652,7 @@ export default function ArtistPage() {
         <a href="#">
           A space on <strong>am↗</strong>
         </a>
-      </footer>
+      <DesignCredit /></footer>
       <div
         className="ms-player"
         role="region"
