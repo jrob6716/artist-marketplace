@@ -48,6 +48,7 @@ try {
     assert.ok(page.includes(artist.artwork));
     assert.ok(page.includes("Verified artist badge demo."));
     assert.ok(page.includes("have not been verified."));
+    assert.ok(page.includes("Verified artist · No AI music"));
     assert.ok(!/bandcamp/i.test(page), `${artist.slug}: unwanted platform mention or link`);
     assert.ok(!page.includes("<audio") && !page.includes("<iframe"));
   }
