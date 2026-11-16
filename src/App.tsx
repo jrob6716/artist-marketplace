@@ -54,7 +54,7 @@ function isSaved(slug: string) {
 export default function App() {
   const [genre, setGenre] = useState("All sounds");
   const [query, setQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(12);
+  const [visibleCount, setVisibleCount] = useState(50);
   const [route, setRoute] = useState(window.location.hash);
   useEffect(() => {
     const update = () => {
@@ -139,7 +139,7 @@ export default function App() {
                 value={query}
                 onChange={(event) => {
                   setQuery(event.target.value);
-                  setVisibleCount(12);
+                  setVisibleCount(50);
                 }}
               />
             </label>
@@ -156,7 +156,7 @@ export default function App() {
                 className={genre === item ? "active" : ""}
                 onClick={() => {
                   setGenre(item);
-                  setVisibleCount(12);
+                  setVisibleCount(50);
                 }}
               >
                 {item}
@@ -215,7 +215,7 @@ export default function App() {
                 onClick={() => {
                   setQuery("");
                   setGenre("All sounds");
-                  setVisibleCount(12);
+                  setVisibleCount(50);
                 }}
               >
                 Clear filters ↗
@@ -230,11 +230,11 @@ export default function App() {
             {visibleCount < filteredReleases.length && (
               <button
                 className="button light"
-                onClick={() => setVisibleCount((count) => count + 12)}
+                onClick={() => setVisibleCount((count) => count + 50)}
               >
                 Explore more artists{" "}
                 <span>
-                  + {Math.min(12, filteredReleases.length - visibleCount)}
+                  + {Math.min(50, filteredReleases.length - visibleCount)}
                 </span>
               </button>
             )}

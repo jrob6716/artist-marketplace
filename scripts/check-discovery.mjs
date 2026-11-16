@@ -65,8 +65,8 @@ try {
   assert.ok(
     platform.includes("#/artist/m3tta") && platform.includes("#/artist/mira-sol"),
   );
-  assert.equal((platform.match(/class="release"/g) || []).length, 12);
-  assert.equal((platform.match(/Verified artist badge demo\./g) || []).length, 12);
+  assert.equal((platform.match(/class="release"/g) || []).length, Math.min(50, records.length + 2));
+  assert.equal((platform.match(/Verified artist badge demo\./g) || []).length, Math.min(50, records.length + 2));
   for (const hash of ["#discover", "#/collection"]) {
     globalThis.window = { location: { hash } };
     const page = renderToString(React.createElement(App));
